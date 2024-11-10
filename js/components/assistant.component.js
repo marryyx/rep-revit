@@ -45,12 +45,15 @@ const btnAssistantClose = document.querySelector('.autodesk-widget__header .ari-
 const messageAssistant = document.querySelector('.au-assi__welcome')
 const messageAssistantClose = document.querySelector('.au-assi__top .au-assi-close')
 
-const buttonFullScreen = document.querySelector('.autodesk-widget__header .ari-fullscreen')
-const HeaderFullClass = document.querySelector('.autodesk-widget__header .header-title')
+const buttonFullScreen = document.querySelector('.autodesk-widget__header .ari-fullscreen');
+const headerFullClass = document.querySelector('.autodesk-widget__header .header-title');
+
+const contentHeight = document.querySelector('.autodesk-widget__content')
 
 const fullScreen = () => {
     autodeskWidget.classList.toggle('--full');
     HeaderFullClass.classList.toggle('--full');
+    contentHeight.classList.toggle('--full');
 };
 
 messageAssistantClose.addEventListener('click', () => {
@@ -71,6 +74,7 @@ btnAssistantClose.addEventListener('click', () => {
     auAssi.classList.remove('--hide');
     autodeskWidget.classList.add('--hide');
 
+    autodeskWidget.classList.remove('--full');
     autodeskWidget.classList.remove('--full');
     HeaderFullClass.classList.remove('--full');
 });
