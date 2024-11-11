@@ -52,7 +52,7 @@ const contentHeight = document.querySelector('.autodesk-widget__content')
 
 const fullScreen = () => {
     autodeskWidget.classList.toggle('--full');
-    HeaderFullClass.classList.toggle('--full');
+    headerFullClass.classList.toggle('--full');
     contentHeight.classList.toggle('--full');
 };
 
@@ -76,7 +76,7 @@ btnAssistantClose.addEventListener('click', () => {
 
     autodeskWidget.classList.remove('--full');
     autodeskWidget.classList.remove('--full');
-    HeaderFullClass.classList.remove('--full');
+    headerFullClass.classList.remove('--full');
 });
 
 const inputContent = document.querySelector('.autodesk-widget__input');
