@@ -46,6 +46,13 @@
     width: max-content;
 
     &.--industries {
+        &.--open {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            display: flex !important;
+        }
+
         @media (max-width: 1440px) {
             display: none;
         }
@@ -82,7 +89,7 @@
     position: relative;
 
     &.--open {
-        position: absolute;
+        height: 180px;
     }
 }
 
