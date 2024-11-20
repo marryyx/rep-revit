@@ -43,7 +43,7 @@
 .assistant-chat__header {
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 3px;
 
     padding: 0 30px;
 
@@ -55,44 +55,17 @@
     background: var(--color-black);
     border-radius: 8px 8px 0 0;
 
-    & span:first-child {
+    & h4 {
         flex: 1;
     }
 
-    & span:nth-child(2) {
+    & .button {
         font-size: 12px;
-        font-weight: 600;
-        cursor: pointer;
 
-        &:hover {
-            --close-tooltipe-opa: 1;
-        }
-    }
-
-    & span:nth-child(3) {
-        display: inline-flex;
-        font-size: 12px;
-        font-weight: 600;
-        cursor: pointer;
-
-        &:hover {
-            --close-tooltipe-opa: 1;
-        }
-
-        @media (max-width: 730px) {
-            display: none;
-        }
-    }
-
-    & span:last-of-type {
-        position: relative;
-        font-size: 12px;
-        font-weight: 600;
-        margin: auto 0 auto auto;
-        cursor: pointer;
-
-        &:hover {
-            --close-tooltipe-opa: 1;
+        &.--full-screen {
+            @media (max-width: 730px) {
+                display: none;
+            }
         }
     }
 
@@ -296,17 +269,4 @@ details[open] .content__example {
     align-items: center;
     justify-content: flex-end;
     gap: 12px;
-}
-
-.assistant-chat-end__btn {
-    padding: 6px 24px;
-    color: white;
-    border-radius: 8px;
-    background: black;
-
-    &.--white {
-        color: black;
-        background: white;
-        box-shadow: 0 0 0 1px black;
-    }
 }

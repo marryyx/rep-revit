@@ -85,16 +85,9 @@
         font-size: 20px;
         font-weight: 600;
     }
-}
 
-.basket-btn-close {
-    display: inline-flex;
-    align-items: center;
-    padding: 3px 3px 0 3px;
-
-    & span {
-        color: var(--color-black);
-        font-weight: bold;
+    & .button {
+        color: black;
     }
 }
 

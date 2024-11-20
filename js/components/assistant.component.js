@@ -1,35 +1,35 @@
 export const assistantComponent = () => {
 
     const btnAssistant = document.querySelector('.assistant-welcome__container')
-    const auAssi = document.querySelector('.assistant-welcome')
-    const autodeskWidget = document.querySelector('.assistant-chat')
-    const btnAssistantClose = document.querySelector('.assistant-chat__header .ari-close')
+    const assistantWelcome = document.querySelector('.assistant-welcome')
+    const assistantChat = document.querySelector('.assistant-chat')
+    const btnAssistantClose = assistantChat.querySelector('[data-chat-close-btn]')
 
     const messageAssistant = document.querySelector('.assistant-welcome__card')
-    const messageAssistantClose = document.querySelector('.assistant-welcome__top .assistant-welcome-close')
+    const messageAssistantClose = assistantWelcome.querySelector('[data-close-btn]')
 
-    const buttonFullScreen = document.querySelector('.assistant-chat__header .ari-fullscreen');
+    const buttonFullScreen = assistantChat.querySelector('[data-chat-fullscreen-btn]');
 
     const contentHeight = document.querySelector('.assistant-chat__content');
 
     const endChatWindow = document.querySelector('.assistant-chat-end');
-    const endChatYesButton = document.querySelector('.assistant-chat-end__btn.--black');
-    const endChatNoButton = document.querySelector('.assistant-chat-end__btn.--white');
+    const endChatYesButton = assistantChat.querySelector('[data-assistant-btn-yes]');
+    const endChatNoButton = assistantChat.querySelector('[data-assistant-btn-no]');
 
     let isOpen = false;
 
     const fullScreen = () => {
-        autodeskWidget.classList.toggle('--full');
+        assistantChat.classList.toggle('--full');
         contentHeight.classList.toggle('--full');
     };
 
     const openAssistantWindow = () => {
-        autodeskWidget.classList.remove('--hide');
+        assistantChat.classList.remove('--hide');
         isOpen = false;
     };
 
     const closeAssistantWindow = () => {
-        autodeskWidget.classList.add('--hide');
+        assistantChat.classList.add('--hide');
         endChatWindow.classList.add('--hide');
         isOpen = true;
     };
@@ -51,19 +51,17 @@ export const assistantComponent = () => {
     });
 
     btnAssistant.addEventListener('click', () => {
-        auAssi.classList.add('--hide');
+        assistantWelcome.classList.add('--hide');
         messageAssistant.classList.add('--close')
         openAssistantWindow()
     });
 
     btnAssistantClose.addEventListener('click', () => {
-        auAssi.classList.remove('--hide');
+        assistantWelcome.classList.remove('--hide');
         endChatWindow.classList.remove('--hide');
 
-        autodeskWidget.classList.remove('--full');
-        autodeskWidget.classList.remove('--full');
-        headerFullClass.classList.remove('--full');
-
+        assistantChat.classList.remove('--full');
+        assistantChat.classList.remove('--full');
     });
 
     endChatNoButton.addEventListener('click', () => {

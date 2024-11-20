@@ -1,5 +1,53 @@
 .button {
+    display: inline-flex;
+    align-items: center;
+
+    color: white;
+
     padding: 8px 16px;
+
+    text-align: center;
+
+    cursor: pointer;
+    font-family: 'markfont' !important;
+
+    &.--close {
+        position: relative;
+
+        &.--bold {
+            font-weight: bold;
+            color: var(--color-black);
+        }
+
+        &::before {
+            position: absolute;
+            content: '\e906';
+        }
+    }
+
+    &.--full-screen {
+        position: relative;
+
+        &::before {
+            position: absolute;
+            content: '\e923';
+        }
+    }
+
+    &.--minimize {
+        position: relative;
+
+        &::before {
+            position: absolute;
+            content: '\e921';
+        }
+    }
+
+    &.--white {
+        color: var(--color-black);
+        box-shadow: 0 0 1px 0.5px var(--color-black);
+        border: 1px solid var(--color-black);
+    }
 
     &.--download {
 
@@ -11,9 +59,18 @@
         border: 1px solid var(--color-black);
     }
 
-    &.--white {
-        color: var(--color-black);
-        box-shadow: 0 0 1px 0.5px var(--color-black);
-        border: 1px solid var(--color-black);
+    &.--light {
+        padding: 6px 24px;
+        color: black;
+        border-radius: 8px;
+        background: white;
+        box-shadow: 0 0 0 1px black;
+    }
+
+    &.--dark {
+        padding: 6px 24px;
+        color: white;
+        border-radius: 8px;
+        background: black;
     }
 }
