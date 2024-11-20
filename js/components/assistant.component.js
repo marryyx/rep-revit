@@ -1,27 +1,25 @@
 export const assistantComponent = () => {
 
-    const btnAssistant = document.querySelector('.au-assi__container')
-    const auAssi = document.querySelector('.au-assi')
-    const autodeskWidget = document.querySelector('.autodesk-widget')
-    const btnAssistantClose = document.querySelector('.autodesk-widget__header .ari-close')
+    const btnAssistant = document.querySelector('.assistant-welcome__container')
+    const auAssi = document.querySelector('.assistant-welcome')
+    const autodeskWidget = document.querySelector('.assistant-chat')
+    const btnAssistantClose = document.querySelector('.assistant-chat__header .ari-close')
 
-    const messageAssistant = document.querySelector('.au-assi__welcome')
-    const messageAssistantClose = document.querySelector('.au-assi__top .au-assi-close')
+    const messageAssistant = document.querySelector('.assistant-welcome__card')
+    const messageAssistantClose = document.querySelector('.assistant-welcome__top .assistant-welcome-close')
 
-    const buttonFullScreen = document.querySelector('.autodesk-widget__header .ari-fullscreen');
-    const headerFullClass = document.querySelector('.autodesk-widget__header .header-title');
+    const buttonFullScreen = document.querySelector('.assistant-chat__header .ari-fullscreen');
 
-    const contentHeight = document.querySelector('.autodesk-widget__content');
+    const contentHeight = document.querySelector('.assistant-chat__content');
 
-    const endChatWindow = document.querySelector('.autodesk-widget-end-chat');
-    const endChatYesButton = document.querySelector('.autodesk-widget-end-chat__btn.--black');
-    const endChatNoButton = document.querySelector('.autodesk-widget-end-chat__btn.--white');
+    const endChatWindow = document.querySelector('.assistant-chat-end');
+    const endChatYesButton = document.querySelector('.assistant-chat-end__btn.--black');
+    const endChatNoButton = document.querySelector('.assistant-chat-end__btn.--white');
 
     let isOpen = false;
 
     const fullScreen = () => {
         autodeskWidget.classList.toggle('--full');
-        headerFullClass.classList.toggle('--full');
         contentHeight.classList.toggle('--full');
     };
 
@@ -76,7 +74,7 @@ export const assistantComponent = () => {
         closeAssistantWindow()
     });
 
-    const inputContent = document.querySelector('.autodesk-widget__input');
+    const inputContent = document.querySelector('.assistant-chat__input');
     const sendInput = document.querySelector('.button-send')
     const contentCard = document.querySelector('.content__card-user')
 

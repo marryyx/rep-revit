@@ -48,16 +48,6 @@
     margin-bottom: 24px;
 
     & button {
-        padding: 8px 16px;
-
-        font-weight: 600;
-        line-height: 1.25;
-
-        color: rgba(0, 0, 0, 0.8);
-
-        border: 1px solid var(--color-black);
-        border-radius: 5px;
-
         & span {
             margin-right: 10px;
             font-weight: 600;

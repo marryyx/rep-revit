@@ -319,6 +319,12 @@
     align-items: center;
     gap: 24px;
 
+    & button {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+    }
+
     @media (max-width: 968px) {
         display: none;
     }
@@ -346,15 +352,4 @@
     &.--hover:hover {
         box-shadow: inset 0 0 0 2px var(--color-blue-violet);
     }
-}
-
-.subhead__button-download {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-
-    padding: 3px 10px;
-
-    border-radius: 5px;
-    border: 1px solid black;
 }

@@ -4,6 +4,9 @@
 @import url('./core/_icons.css');
 @import url('./core/_root.css');
 
+/* Ui */
+@import url('./ui/_buttons.css');
+
 /* components */
 @import url('./component/_buy-component.css');
 @import url('./component/_subhead.css');
@@ -19,6 +22,6 @@
 @import url('./component/_products.css');
 @import url('./component/_ar-imagine.css');
 @import url('./component/_autodesk.css');
-@import url('./component/_au-assi.css');
-@import url('./component/_autodesk-widget.css');
+@import url('./component/__assistant-welcome.css');
+@import url('./component/_assistant-chat.css');
 @import url('./component/_video-1.css');
