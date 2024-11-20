@@ -1,0 +1,22 @@
+.link-right {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    font-size: 16px;
+    font-weight: 700;
+
+    font-family: 'markfont' !important;
+
+    &::before {
+        content: '\e913';
+        font-size: 16px;
+        font-weight: 500;
+    }
+
+    &:hover {
+        text-decoration: underline var(--color-blue-violet) 1.5px;
+    }
+}
