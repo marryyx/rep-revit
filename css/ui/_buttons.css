@@ -73,4 +73,19 @@
         border-radius: 8px;
         background: black;
     }
+
+    &.--check-out {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        padding: 12px;
+
+        min-width: 100%;
+    
+        font-weight: 600;
+        color: var(--color-light);
+    
+        background-color: var(--color-black);
+    }
 }
