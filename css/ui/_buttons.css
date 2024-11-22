@@ -9,7 +9,7 @@
     text-align: center;
 
     cursor: pointer;
-    font-family: 'markfont' !important;
+    font-family: 'markfont', 'Artifakt Element' !important;
 
     &.--close {
         position: relative;
