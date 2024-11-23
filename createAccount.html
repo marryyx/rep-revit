@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <title>Autodesk - Create Account</title>
+    <link rel="stylesheet" href="css/style.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+
+<body>
+
+    <div class="create-account">
+        <div class="container">
+            <div class="create-account__top">
+                <p>Create account</p>
+                <div class="create-account__logo"></div>
+            </div>
+
+            <form class="create-account__full-name">
+                <label for="FirstName">First name</label>
+                <input id="usernameFirst" pattern=".*[^(\x00-\x1f|\x7f|\x20-\x40|\x5b-\x60|\x7b-\x7e)].*" name="FirstName" type="text">
+
+                <label for="LastName">Last name</label>
+                <input id="usernameLast" pattern=".*[^(\x00-\x1f|\x7f|\x20-\x40|\x5b-\x60|\x7b-\x7e)].*" name="LastName" type="text">
+            </form>
+
+            <form class="create-account__form --email">
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email">
+            </form>
+
+            <form class="create-account__form --confirm-email">
+                <label for="confirmEmail">Confirm email</label>
+                <input id="confirmEmail" name="confirmEmail" type="email">
+            </form>
+
+            <form class="create-account__form --password">
+                <label for="password">password</label>
+                <input id="password" name="password" type="password">
+            </form>
+
+            <form class="create-account__pravicy">
+                <input id="username" name="pravicy" type="checkbox">
+                <label for="pravicy">I agree to the <a href="#">Autodesk Terms of Use</a> and acknowledge the <a href="#">Privacy Statement.</a></label>
+            </form>
+
+            <div class="signinWrapper__button">
+                <button type="submit">Create account</button>
+            </div>
+
+            <div class="signinWrapper__bottom">
+                <p>New to autodesk?</p>
+                <a href="#">Create account</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-form">
+        <p>Your account for everything Autodesk</p>
+        <a class="sing-in__link" href="#">Learn more</a>
+    </div>
+
+    <script src="./js/index.js" type="module"></script>
+
+</body>
+
+</html>
