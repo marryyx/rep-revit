@@ -13,6 +13,7 @@ buttonSumbit.addEventListener('click', () => {
             emailInput.classList.remove('error'), 2000)
 
     } else {
-        localStorage.setItem('user', emailInput.value);
+        localStorage.setItem('email', emailInput.value);
+        window.location.href = 'index.html';
     }
 });
