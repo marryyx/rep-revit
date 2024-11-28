@@ -4,52 +4,51 @@ const inputs = wrapper.querySelectorAll('input');
 
 const buttonSumbit = wrapper.querySelector('.form-Wrapper__button .button-sumbit');
 
-const USERDATA = [
-    {
+// -----------------
+
+const USER_DATA_KEY = 'userData';
+const USER_DATA = [];
+
+// -----------------
+
+const setDataStore = (data) => {
+    localStorage.setItem(USER_DATA_KEY, JSON.stringify(data));
+};
+
+function getDataOfInputs() {
+    const user = {
         usernameFirst: '',
         usernameLast: '',
         email: '',
         confirmEmail: '',
         password: '',
         pravicy: '',
-    },
-];
+    };
 
-// -----------------
+    let isValid = true;
 
-const setDataStore = (data) => {
-    localStorage.setItem('userData', JSON.stringify(data));
-};
-
-const getDataStore = () => {
-    const data = localStorage.getItem('userData');
-    return JSON.parse(data);
-};
-
-const updateDateStore = () => {
-    const storeDate = getDataStore();
-
-    if (!storeDate) return
-    USERDATA.push(...storeDate);
-}
-
-buttonSumbit.addEventListener('click', () => {
-    const user = {};
-    
     inputs.forEach(item => {
         const value = item.value;
 
-        if (
-            (!value.trim()) ||
-            (item.id === 'email' && !value.includes('@gmail.com'))
-        ) {
+        if ((!value.trim()) || (item.id === 'email' && !value.includes('@gmail.com'))) {
             item.classList.add('error');
             setTimeout(() => item.classList.remove('error'), 2000);
         } else {
             user[item.id] = value;
-            setDataStore(USERDATA)
         }
     });
 
-    USERDATA.push(user);
+    return { user, isValid };
+}
+
+buttonSumbit.addEventListener('click', () => {
+    const { user, isValid } = getDataOfInputs();
+
+    if (!isValid) {
+        console.log('Форма невалидна');
+        return;
+    }
+
+    USER_DATA.push(user);
+    setDataStore(USER_DATA);
 });
