@@ -1,8 +1,10 @@
 const wrapperForm = document.querySelector('.form-Wrapper');
 
-const emailInput = wrapperForm.querySelector('.form-Wrapper__input');
+const emailInput = wrapperForm.querySelector('#email');
 
-const buttonSumbit = wrapperForm.querySelector('.form-Wrapper__button .button-sumbit')
+const buttonSumbit = wrapperForm.querySelector('.form-Wrapper__button .button-sumbit');
+
+// -----------------
 
 buttonSumbit.addEventListener('click', () => {
     const value = emailInput.value;
