@@ -1,8 +1,8 @@
-const wrapper = document.querySelector('.form-Wrapper');
+const wrapperAuth = document.querySelector('.auth');
 
-const inputs = wrapper.querySelectorAll('input');
+const inputs = wrapperAuth.querySelectorAll('input');
 
-const buttonSumbit = wrapper.querySelector('.form-Wrapper__button .button-sumbit');
+const buttonSumbit = wrapperAuth.querySelector('#sumbit');
 
 // -----------------
 
@@ -15,14 +15,17 @@ const setDataStore = (data) => {
     localStorage.setItem(USER_DATA_KEY, JSON.stringify(data));
 };
 
+const getDataStore = () => {
+    const dataUser = JSON.parse(localStorage.getItem(USER_DATA_KEY));
+    return dataUser
+};
+
 function getDataOfInputs() {
     const user = {
         usernameFirst: '',
         usernameLast: '',
         email: '',
-        confirmEmail: '',
         password: '',
-        pravicy: '',
     };
 
     let isValid = true;
@@ -30,9 +33,9 @@ function getDataOfInputs() {
     inputs.forEach(item => {
         const value = item.value;
 
-        if ((!value.trim()) || (item.id === 'email' && !value.includes('@gmail.com'))) {
-            item.classList.add('error');
-            setTimeout(() => item.classList.remove('error'), 2000);
+        if (!value.trim()) {
+            // item.classList.add('error');
+            // setTimeout(() => item.classList.remove('error'), 2000);
             isValid = false;
         } else {
             user[item.id] = value;
@@ -50,8 +53,12 @@ buttonSumbit.addEventListener('click', () => {
         return;
     }
 
-    window.location.href = 'signin.html';
-
     USER_DATA.push(user);
     setDataStore(USER_DATA);
+
+    window.location.href = 'signin.html';
+});
+
+document.addEventListener("DOMContentLoaded", (event) => {
+    getDataStore()
 });

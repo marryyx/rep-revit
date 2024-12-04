@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <title>Autodesk - Create Account</title>
+    <link rel="stylesheet" href="css/style.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+
+<body>
+
+    <div class="container">
+        <section class="auth">
+            <div class="auth__main">
+                <div class="auth__top">
+                    <p>Create account</p>
+                    <div class="auth__logo"></div>
+                </div>
+
+                <form action="">
+                    <div class="auth__full-name">
+                        <label class="auth__label" for="FirstName">First name</label>
+                        <label class="auth__label" for="LastName">Last name</label>
+
+                        <input class="auth__input --full-name" id="usernameFirst" name="FirstName" type="text" required>
+                        <input class="auth__input --full-name" id="usernameLast" name="LastName" type="text" required>
+                    </div>
+
+                    <div class="auth__form --email">
+                        <label class="auth__label" for="email">Email</label>
+                        <input class="auth__input --email" id="email" name="email" type="email" required>
+                    </div>
+
+                    <div class="auth__form --confirm-email">
+                        <label class="auth__label" for="confirmEmail">Confirm email</label>
+                        <input class="auth__input" id="confirmEmail" name="confirmEmail" type="email" required>
+                    </div>
+
+                    <div class="auth__form --password">
+                        <label class="auth__label" for="password">password</label>
+                        <input class="auth__input" id="password" name="password" type="password" required>
+                    </div>
+
+                    <div class="auth__pravicy">
+                        <input id="pravicy" name="pravicy" type="checkbox" required>
+                        <label for="pravicy">I agree to the <a class="form__link" href="#">Autodesk Terms of Use</a> and
+                            acknowledge the <a class="form__link" href="#">Privacy Statement.</a></label>
+                    </div>
+
+                    <div class="auth__button">
+                        <button id="sumbit" class="button --sumbit" type="submit">Create account</button>
+                    </div>
+
+                    <div class="auth__bottom">
+                        <p>Already have an account?</p>
+                        <a class="form__link" href="signin.html">Sign in</a>
+                    </div>
+                </form>
+            </div>
+
+            <footer class="auth__footer">
+                <p>Your account for everything Autodesk</p>
+                <a class="form__link" href="#">Learn more</a>
+            </footer>
+        </section>
+    </div>
+
+    <script src="./js/register.js" type="module"></script>
+
+</body>
+
+</html>

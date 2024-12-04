@@ -1,9 +1,11 @@
-.auth__main {
+.auth {
     display: flex;
-    flex-flow: column;
-    margin: auto;
+    flex-direction: column;
+    min-height: 100vh;
+}
 
-    transform: translate(0, 100%);
+.auth__main {
+    margin: auto;
 
     max-width: 386px;
     width: 100%;
@@ -14,11 +16,6 @@
         min-width: 100%;
         width: 100%;
     }
-}
-
-.auth {
-    width: 100%;
-    height: 100vh;
 }
 
 .auth__top {
@@ -186,14 +183,11 @@
 }
 
 .auth__footer {
-    position: absolute;
-
-    bottom: 10px;
-
     display: inline-flex;
     flex-flow: column;
 
-    margin: auto;
+    margin-top: auto;
+    padding: 0 0 20px 0;
 
     width: 100%;
 
