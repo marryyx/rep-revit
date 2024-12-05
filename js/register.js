@@ -2,7 +2,7 @@ const wrapperAuth = document.querySelector('.auth');
 
 const inputs = wrapperAuth.querySelectorAll('input');
 
-const buttonSumbit = wrapperAuth.querySelector('#sumbit');
+const buttonSumbit = wrapperAuth.querySelector('#submit');
 
 // -----------------
 
@@ -12,12 +12,14 @@ const USER_DATA = [];
 // -----------------
 
 const setDataStore = (data) => {
-    localStorage.setItem(USER_DATA_KEY, JSON.stringify(data));
+    USER_DATA.push(data)
+
+    localStorage.setItem(USER_DATA_KEY, JSON.stringify(USER_DATA));
 };
 
 const getDataStore = () => {
-    const dataUser = JSON.parse(localStorage.getItem(USER_DATA_KEY));
-    return dataUser
+    const data = JSON.parse(localStorage.getItem(USER_DATA_KEY));
+    USER_DATA.push(...data)
 };
 
 function getDataOfInputs() {
@@ -34,8 +36,6 @@ function getDataOfInputs() {
         const value = item.value;
 
         if (!value.trim()) {
-            // item.classList.add('error');
-            // setTimeout(() => item.classList.remove('error'), 2000);
             isValid = false;
         } else {
             user[item.id] = value;
@@ -53,12 +53,12 @@ buttonSumbit.addEventListener('click', () => {
         return;
     }
 
-    USER_DATA.push(user);
-    setDataStore(USER_DATA);
+    setDataStore(user);
 
+    console.log('111');
     window.location.href = 'signin.html';
 });
 
 document.addEventListener("DOMContentLoaded", (event) => {
-    getDataStore()
+    getDataStore();
 });
