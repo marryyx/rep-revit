@@ -1,8 +1,8 @@
+import { Routing } from './root/routing.js'
+
 const wrapperAuth = document.querySelector('.auth');
 
-const inputs = wrapperAuth.querySelectorAll('input');
-
-const buttonSumbit = wrapperAuth.querySelector('#submit');
+const form = wrapperAuth.querySelector('form');
 
 // -----------------
 
@@ -19,44 +19,47 @@ const setDataStore = (data) => {
 
 const getDataStore = () => {
     const data = JSON.parse(localStorage.getItem(USER_DATA_KEY));
+
+    if (!data) return
+
     USER_DATA.push(...data)
 };
 
-function getDataOfInputs() {
-    const user = {
-        usernameFirst: '',
-        usernameLast: '',
-        email: '',
-        password: '',
-    };
+const getUserData = () => {
+    const data = new FormData(form);
 
-    let isValid = true;
+    const email = data.get('Email');
+    const confirmEmail = data.get('ConfirmEmail');
 
-    inputs.forEach(item => {
-        const value = item.value;
-
-        if (!value.trim()) {
-            isValid = false;
-        } else {
-            user[item.id] = value;
-        }
-    });
-
-    return { user, isValid };
-}
-
-buttonSumbit.addEventListener('click', () => {
-    const { user, isValid } = getDataOfInputs();
-
-    if (!isValid) {
-        console.log('Форма невалидна');
-        return;
+    if (email != confirmEmail) {
+        return false
     }
 
-    setDataStore(user);
+    return {
+        usernameFirst: data.get('FirstName'),
+        usernameLast: data.get('LastName'),
+        email: data.get('Email'),
+        password: data.get('Password'),
+    };
+}
 
-    console.log('111');
-    window.location.href = 'signin.html';
+const sumbitHandler = () => {
+    const data = getUserData();
+
+    if (!data) {
+        console.log('form is not valid')
+        return
+    }
+
+    setDataStore(data);
+
+    Routing.goToSingIn();
+};
+
+form.addEventListener('submit', (event) => {
+    event.preventDefault();
+
+    sumbitHandler();
 });
 
 document.addEventListener("DOMContentLoaded", (event) => {

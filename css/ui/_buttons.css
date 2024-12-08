@@ -9,18 +9,14 @@
     text-align: center;
 
     cursor: pointer;
-    font-family: 'markfont', 'Artifakt Element' !important;
 
     &.--sumbit {
         justify-content: center;
 
         margin-top: 24px;
         padding: 8px 0;
-        
-        width: 100%;
 
-        text-align: center;
-        color: white;
+        width: 100%;
 
         border-radius: 8px;
         background: black;
@@ -37,6 +33,7 @@
         &::before {
             position: absolute;
             content: '\e906';
+            font-family: 'markfont' important;
         }
     }
 
@@ -46,6 +43,7 @@
         &::before {
             position: absolute;
             content: '\e923';
+            font-family: 'markfont' important;
         }
     }
 
@@ -55,6 +53,7 @@
         &::before {
             position: absolute;
             content: '\e921';
+            font-family: 'markfont' important;
         }
     }
 
@@ -65,7 +64,6 @@
     }
 
     &.--download {
-
         color: var(--color-black);
         line-height: 1.25;
         font-weight: 700;
