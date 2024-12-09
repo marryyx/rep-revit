@@ -11,6 +11,8 @@ const USER_DATA_KEY = 'userData';
 // const USER_DATA = [];
 const USER_DATA_RED = {};
 
+let accountReg = false;
+
 // -----------------
 
 const getDataUserOfStore = () => {
@@ -21,6 +23,14 @@ const getDataUserOfStore = () => {
     return JSON.parse(dataUser)
 };
 
+const passwordContainer = wrapperAuth.querySelector('.auth__input-container');
+const passwordInput = wrapperAuth.querySelector('#password');
+
+const inputPassword = () => {
+    const isHidden = getComputedStyle(passwordContainer).display === 'none';
+    return isHidden;
+}
+
 const getUserData = () => {
     const data = getDataUserOfStore();
 
@@ -29,6 +39,23 @@ const getUserData = () => {
     data.forEach(elm => {
         if (emailInput.value === elm.email) {
             emailFound = true;
+
+            const password = inputPassword();
+
+            if (password) {
+                passwordContainer.classList.add('--show')
+                passwordInput.setAttribute('required', 'required');
+            }
+
+            if (passwordInput.value != elm.password) {
+                console.log('the password is incorrect')
+            }
+
+            if (passwordInput.value === elm.password) {
+                accountReg = true;
+
+                Routing.goToHome();
+            }
         }
     });
 
@@ -42,8 +69,6 @@ form.addEventListener('submit', (event) => {
     event.preventDefault();
 
     getUserData();
-
-    Routing.goToHome();
 });
 
 // document.addEventListener("DOMContentLoaded", (event) => {

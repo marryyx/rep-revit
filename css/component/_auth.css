@@ -48,6 +48,14 @@
     }
 }
 
+.auth__input-container {
+    display: none;
+
+    &.--show {
+        display: block;
+    }
+}
+
 .auth__bottom {
     display: flex;
     align-items: center;
