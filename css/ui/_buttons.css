@@ -33,7 +33,7 @@
         &::before {
             position: absolute;
             content: '\e906';
-            font-family: 'markfont' important;
+            font-family: 'markfont' !important;
         }
     }
 
@@ -43,7 +43,7 @@
         &::before {
             position: absolute;
             content: '\e923';
-            font-family: 'markfont' important;
+            font-family: 'markfont' !important;
         }
     }
 
@@ -53,7 +53,7 @@
         &::before {
             position: absolute;
             content: '\e921';
-            font-family: 'markfont' important;
+            font-family: 'markfont' !important;
         }
     }
 
