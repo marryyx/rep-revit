@@ -11,21 +11,37 @@
 
 /* components */
 @import url('./component/_buy-component.css');
+
 @import url('./component/_subhead.css');
+
 @import url('./component/_loader.css');
+
 @import url('./component/_resources.css');
+
 @import url('./component/_select-term.css');
+
 @import url('./component/_header.css');
+
 @import url('./component/_footer.css');
+
 @import url('./component/_tooltipe.css');
+
 @import url('./component/_dialog.css');
+
 @import url('./component/_faq.css');
+
 @import url('./component/_collection.css');
+
 @import url('./component/_products.css');
+
 @import url('./component/_ar-imagine.css');
+
 @import url('./component/_autodesk.css');
+
 @import url('./component/_assistant-welcome.css');
+
 @import url('./component/_assistant-chat.css');
+
 @import url('./component/_video-1.css');
 
 @import url('./component/_language-change.css');

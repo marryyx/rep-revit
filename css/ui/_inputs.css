@@ -2,23 +2,7 @@
     display: flex;
     flex-flow: column;
 
-    margin-top: 16px;
-
-    &.--full-name {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 0 16px;
-
-        margin-top: 28px;
-    }
-
-    &.--signin {
-        position: relative;
-        display: flex;
-        flex-flow: column;
-
-        margin-top: 28px;
-    }
+    margin: var(--input-margin, 0);
 }
 
 .input input {
