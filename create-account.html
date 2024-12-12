@@ -51,17 +51,19 @@
                         <input id="password" type="password" minlength="8" name="Password" required>
                     </div>
 
-                    <div class="input__privacy">
-                        <input id="pravicy" type="checkbox">
-                        <label>I agree to the <a class="form__link" href="#">Autodesk Terms of Use</a> and
-                            acknowledge the <a class="form__link" href="#">Privacy Statement.</a></label>
+                    <div class="input --checkbox">
+                        <input id="check-pravicy" name="check-pravicy" type="checkbox">
+                        <label for="check-pravicy">
+                            I agree to the <a class="form__link" href="#">Autodesk Terms of Use</a>and
+                            acknowledge the <a class="form__link" href="#">Privacy Statement.</a>
+                        </label>
                     </div>
 
-                    <button id="submit" class="button --sumbit" type="sumbit">Next</button>
-
                     <div class="auth__bottom">
-                        <p>Already have an account?</p>
-                        <a class="form__link" href="signin.html">Sign in</a>
+                        <button id="submit" class="button --sumbit" type="sumbit">Next</button>
+                        <p>New to autodesk?
+                            <a class="form__link" href="create-account.html">Create account</a>
+                        </p>
                     </div>
                 </form>
             </div>

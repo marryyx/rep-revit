@@ -26,26 +26,25 @@
                         <label>Email</label>
                         <input id="email" placeholder="name@example.com" type="email" name="email" required>
 
-                        <div class="input__message">
-                            <p id="message-1">Please enter an email</p>
-                            <p id="message-2">This email or username is not recognized</p>
-                        </div>
+                        <span class="input__message">
+                            <p>This email or username is not recognized</p>
+                        </span>
                     </div>
 
-                    <div class="auth__input-container">
+                    <div class="gm-hide" data-target-password>
                         <div class="input">
                             <label>password</label>
                             <input id="password" type="password" minlength="8" name="Password">
                         </div>
                     </div>
 
-                    <button id="submit" class="button --sumbit" type="sumbit">Next</button>
+                    <div class="auth__bottom">
+                        <button id="submit" class="button --sumbit" type="sumbit">Next</button>
+                        <p>New to autodesk?
+                            <a class="form__link" href="create-account.html">Create account</a>
+                        </p>
+                    </div>
                 </form>
-
-                <div class="auth__bottom">
-                    <p>New to autodesk?</p>
-                    <a class="form__link" href="create-account.html">Create account</a>
-                </div>
             </div>
 
             <footer class="auth__footer">
