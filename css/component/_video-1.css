@@ -5,7 +5,7 @@
 }
 
 .video-first::backdrop, .video-second::backdrop {
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: var(--color-black-op-50);
 }
 
 .video-first[open], .video-second[open] {

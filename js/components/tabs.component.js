@@ -32,8 +32,8 @@ tabs.forEach(element => {
         element.classList.add('--is-active');
         const tabNane = element.dataset.tab;
 
-        selectTabContent(tabNane, tabContent, '--is-hide');
-        selectTabContent(tabNane, tabFooterContent, '--footer-hide');
+        selectTabContent(tabNane, tabContent, 'gm-hide');
+        selectTabContent(tabNane, tabFooterContent, 'gm-hide');
     });
 });
 

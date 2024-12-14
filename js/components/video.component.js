@@ -58,8 +58,8 @@ video.forEach(element => {
         element.classList.add('--select');
 
         const tabVideo = element.dataset.video;
-        selectVideoTab(tabVideo, videos, '--hide-video');
-        selectVideoTab(tabVideo, footerVideos, '--hide');
+        selectVideoTab(tabVideo, videos, 'gm-hide');
+        selectVideoTab(tabVideo, footerVideos, 'gm-hide');
     });
 });
 }

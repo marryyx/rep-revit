@@ -56,7 +56,7 @@
     margin-top: 3rem;
     padding: 32px 0;
 
-    border-top: 1px solid rgba(0, 0, 0, 0.15);
+    border-top: 1px solid #00000026;
 }
 
 .ar-imagine__see-link {
@@ -80,10 +80,6 @@
     margin-bottom: 10px;
     & video {
         width: 100%;
-    }
-    
-    &.--hide-video {
-        display: none;
     }
 }
 
@@ -109,8 +105,4 @@
 
 .ar-imagine__footer {
     opacity: 0.8;
-
-    &.--hide {
-        display: none;
-    }
 }

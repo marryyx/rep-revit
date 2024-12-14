@@ -2,7 +2,7 @@
     display: inline-flex;
     align-items: center;
 
-    color: white;
+    color: var(--color-light);
 
     padding: 8px 16px;
 
@@ -15,45 +15,39 @@
 
         padding: 8px 0;
 
-        width: 100%;
-
         border-radius: 8px;
-        background: black;
+        background: var(--color-black);
+    }
+
+    &.--close,
+    &.--full-screen,
+    &.--full-screen,
+    &.--minimize {
+        position: relative;
+
+        &::before {
+            position: absolute;
+            font-family: 'markfont' !important;
+        }
     }
 
     &.--close {
-        position: relative;
-
         &.--bold {
             font-weight: bold;
             color: var(--color-black);
         }
 
         &::before {
-            position: absolute;
             content: '\e906';
-            font-family: 'markfont' !important;
         }
     }
 
-    &.--full-screen {
-        position: relative;
-
-        &::before {
-            position: absolute;
-            content: '\e923';
-            font-family: 'markfont' !important;
-        }
+    &.--full-screen::before {
+        content: '\e923';
     }
 
-    &.--minimize {
-        position: relative;
-
-        &::before {
-            position: absolute;
-            content: '\e921';
-            font-family: 'markfont' !important;
-        }
+    &.--minimize&::before {
+        content: '\e921';
     }
 
     &.--white {
@@ -73,17 +67,17 @@
 
     &.--light {
         padding: 6px 24px;
-        color: black;
+        color: var(--color-black);
         border-radius: 8px;
-        background: white;
-        box-shadow: 0 0 0 1px black;
+        background: var(--color-light);
+        box-shadow: 0 0 0 1px var(--color-black);
     }
 
     &.--dark {
         padding: 6px 24px;
-        color: white;
+        color: var(--color-light);
         border-radius: 8px;
-        background: black;
+        background: var(--color-black);
     }
 
     &.--check-out {

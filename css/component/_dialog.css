@@ -23,7 +23,7 @@
 }
 
 .basket::backdrop {
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: var(--color-black-op-60);
 }
 
 .basket__wrap {
@@ -87,7 +87,7 @@
     }
 
     & .button {
-        color: black;
+        color: var(--color-black);
     }
 }
 

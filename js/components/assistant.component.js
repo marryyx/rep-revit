@@ -19,18 +19,18 @@ export const assistantComponent = () => {
     let isOpen = false;
 
     const fullScreen = () => {
-        assistantChat.classList.toggle('--full');
+        assistantChat.classList.toggle('gm-hide');
         contentHeight.classList.toggle('--full');
     };
 
     const openAssistantWindow = () => {
-        assistantChat.classList.remove('--hide');
+        assistantChat.classList.remove('gm-hide');
         isOpen = false;
     };
 
     const closeAssistantWindow = () => {
-        assistantChat.classList.add('--hide');
-        endChatWindow.classList.add('--hide');
+        assistantChat.classList.add('gm-hide');
+        endChatWindow.classList.add('gm-hide');
         isOpen = true;
     };
 
@@ -38,7 +38,7 @@ export const assistantComponent = () => {
         const windowWidth = window.innerWidth;
         
         if (windowWidth <= 430) {
-            messageAssistant.classList.add('--close');
+            messageAssistant.classList.add('gm-hide');
         }
     }
 
@@ -56,7 +56,7 @@ export const assistantComponent = () => {
     // };
 
     messageAssistantClose.addEventListener('click', () => {
-        messageAssistant.classList.add('--close')
+        messageAssistant.classList.add('gm-hide')
     });
 
     buttonFullScreen.addEventListener('click', () => {
@@ -64,21 +64,21 @@ export const assistantComponent = () => {
     });
 
     btnAssistant.addEventListener('click', () => {
-        assistantWelcome.classList.add('--hide');
-        messageAssistant.classList.add('--close')
+        assistantWelcome.classList.add('gm-hide');
+        messageAssistant.classList.add('gm-hide')
         openAssistantWindow()
     });
 
     btnAssistantClose.addEventListener('click', () => {
-        assistantWelcome.classList.remove('--hide');
-        endChatWindow.classList.remove('--hide');
+        assistantWelcome.classList.remove('gm-hide');
+        endChatWindow.classList.remove('gm-hide');
 
         assistantChat.classList.remove('--full');
         assistantChat.classList.remove('--full');
     });
 
     endChatNoButton.addEventListener('click', () => {
-        endChatWindow.classList.add('--hide');
+        endChatWindow.classList.add('gm-hide');
     });
 
     endChatYesButton.addEventListener('click', () => {
