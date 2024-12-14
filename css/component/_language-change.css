@@ -1,33 +1,32 @@
 .language-change {
     position: absolute;
-    display: none;
-    z-index: 3000;
-
     bottom: -45vh;
     left: -186px;
+    z-index: 3000;
 
-    padding: 16px 0;
+    display: none;
 
     width: 224px;
 
+    padding: 16px 0;
+
     background: var(--color-light);
-    border: 1px solid rgb(0, 0, 0);
+    border: 1px solid var(--color-black);
     border-radius: 6px;
 
     &::after {
-        content: "";
         position: absolute;
-
         right: 5px;
         top: -3px;
-        
-        transform: translateY(-50%);
+
+        content: "";
 
         border-radius: 10px 10px 0 0;
-
         border-bottom: 8px solid var(--color-light);
         border-left: 9px solid transparent;
         border-right: 8px solid transparent;
+
+        transform: translateY(-50%);
     }
 
     &.--open {
@@ -47,7 +46,7 @@
 }
 
 .language-change__items::-webkit-scrollbar-thumb {
-    background-color: rgb(214, 214, 214);
+    background-color: var(--color-light-silver);
     border-radius: 50px;
 }
 
@@ -72,7 +71,7 @@
         } */
 
         &:hover {
-            background: rgb(240, 240, 240);
+            background: var(--color-pale-gray);
         }
     }
 }

@@ -5,10 +5,10 @@
 }
 
 .auth__main {
-    margin: auto;
-
     max-width: 386px;
     width: 100%;
+    
+    margin: auto;
 
     @media (max-width: 370px) {
         min-width: 100%;

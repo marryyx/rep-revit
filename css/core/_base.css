@@ -6,10 +6,13 @@
 
 button {
     padding: 0;
-    border: none;
+
     font: inherit;
     color: inherit;
+
+    border: none;
     background-color: transparent;
+    
     cursor: pointer;
 }
 

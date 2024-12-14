@@ -1,4 +1,3 @@
 [data-tooltipe]::before {
-
     content:attr(data-tooltipe);
 }
