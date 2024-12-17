@@ -2,11 +2,13 @@ const headerAccount = document.querySelector('.header__account');
 const menuUser = headerAccount.querySelector('.user-account__menu')
 
 const headerSignIn = document.querySelector('.header__sign-up');
-const accountUser = headerAccount.querySelector('.user-account');
-const btnSignOut = headerAccount.querySelector('.user-account-top__sign-out');
+const accountUser = headerAccount.querySelector('[data-user-button]');
+const btnSignOut = headerAccount.querySelector('.user-account__btn-sign-out');
 
-const emailUser = headerAccount.querySelector('.user-account-top__email');
-const firstName = headerAccount.querySelector('.user-account-top__fullname');
+const emailUser = headerAccount.querySelector('.user-account__email');
+const firstName = headerAccount.querySelector('.user-account__fullname');
+
+const userProfile = headerAccount.querySelector('[data-user-profole]');
 
 // ----------------------------------------
 const USER_AUTH_KEY = 'userAuthData';
@@ -47,5 +49,9 @@ export const accountComponent = () => {
 
     btnSignOut.addEventListener('click', () => {
         localStorage.removeItem(USER_AUTH_KEY);
+    });
+
+    userProfile.addEventListener('click', () => {
+        window.location.href = 'profile.html';
     });
 }
