@@ -49,17 +49,164 @@
             border-left: 2px solid var(--color-blue-violet);
         }
     }
-} 
+}
 
 .profile-main {
+    position: relative;
+
     display: flex;
+    flex-flow: column;
 
     width: 100%;
 
-    padding: 32px 5%;
+    padding: 32px 5% 0;
     margin: 0 auto;
 
     border-left: 1px solid var(--color-soft-gray);
     background: var(--color-frosted-white-op-100);
     overflow-y: auto;
+}
+
+.profile-main__banner {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+
+    width: 100%;
+    height: 126px;
+
+    padding: 48px 32px;
+    margin-bottom: 48px;
+
+    border-radius: 4px;
+    box-shadow: 0px 0px 0px 1px rgba(204, 204, 204, .5) inset, 0px -1px 0px 0px #666 inset;
+    background: var(--color-light) no-repeat right / auto;
+    background-image: url(../../image/profile.autodesk.png);
+
+    @media (min-width: 993px) {
+        gap: 18px;
+        background-image: url(../../image/profile.autodesk-2.png);
+    }
+
+    @media (min-width: 574px) {
+        gap: 16px;
+        height: 146px;
+        background-image: url(../../image/profile.autodesk-3.png);
+    }
+}
+
+.profile-main__image-user {
+    width: 48px;
+    aspect-ratio: 1;
+
+    font-size: clamp(1.125rem, 1.06rem + 0.278vw, 1.3125rem);
+
+    border-radius: 50%;
+    background-color: var(--color-blue-violet);
+}
+
+.profile-main__welcome {
+    font-size: clamp(1.125rem, 1.06rem + 0.278vw, 1.3125rem);
+    font-weight: 700;
+    line-height: 24px;
+
+    @media (min-width: 574px) {
+        width: 40%;
+    }
+}
+
+.profile-main__cards {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    margin: 2rem 0;
+}
+
+.profile-main__card {
+    display: flex;
+
+    width: 100%;
+    height: auto;
+
+    margin-bottom: 32px;
+
+    box-shadow: 0px 0px 0px 1px rgba(204, 204, 204, .5) inset, 0px -1px 0px 0px #666 inset;
+    border-radius: 6px;
+    background: var(--color-light);
+
+    @media (min-width: 990px) {
+        width: calc(50% - 16px);
+    }
+}
+
+.profile-main__first {
+    padding: 24px 20px;
+    font-size: 24px;
+
+    @media (min-width: 574px) {
+        padding: 32px 33px;
+        font-size: 48px;
+    }
+}
+
+.profile-main__content {
+    display: flex;
+    align-items: flex-start;
+    flex-flow: column;
+
+    padding: 24px 24px 24px 0px;
+
+    @media (min-width: 574px) {
+        padding: 32px 32px 28px 0px;
+    }
+}
+
+.profile-main__top {
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: var(--color-dark-grey);
+
+    opacity: 0.7;
+}
+
+.profile-main__title {
+    padding-top: 26px;
+    font-size: clamp(1.125rem, 1.06rem + 0.278vw, 1.3125rem);
+    line-height: 1.25;
+    color: var(--color-black);
+}
+
+.profile-main__subtitle {
+    padding: 16px 0 32px;
+
+    color: var(--color-dark-grey);
+    font-size: 1rem;
+    line-height: 1.5;
+    opacity: 0.7;
+}
+
+.profile-main__btn {
+    padding: 8px 20px;
+
+    border-radius: 4px;
+    border: 1px solid var(--color-black);
+
+    &:hover {
+        border: 1px solid var(--color-blue-violet);
+    }
+}
+
+.profile-footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    margin: 0 -5%;
+    padding: 24px 0;
+
+    font-size: 12px;
+
+    background: var(--color-soft-gray);
 }
