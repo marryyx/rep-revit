@@ -13,6 +13,7 @@
     <header class="header">
         <div class="container --small">
             <div class="header__left">
+                <div class="header__burger"></div>
                 <div class="header__logo-company">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1619.27 166.13">
                         <path fill="#FFF"
@@ -59,7 +60,7 @@
     </header>
 
     <div class="profile-container">
-        <div class="profile-aside gm-hide">
+        <div class="profile-aside">
             <div class="profile-aside__items">
                 <a class="profile-aside__item" href="#"><span class="ari-user"></span>Personal information</a>
                 <a class="profile-aside__item" href="#"><span class="ari-password"></span>Security</a>
@@ -67,60 +68,71 @@
             </div>
         </div>
         <section class="profile-main">
-            <div class="profile-main__banner">
-                <div class="profile-main__image-user"></div>
-                <div class="profile-main__welcome">Welcome, <span class="profile-main__user-name"></span></div>
+            <div class="profile-main__top-card">
+                <div class="avatar"></div>
+                <div class="profile-main__welcome">Welcome, <span></span></div>
             </div>
 
-            <div class="profile-main__cards">
-                <a class="profile-main__card" role="button">
-                    <div class="profile-main__first"><span class="ari-password-profile"></span></div>
-                    <div class="profile-main__content">
-                        <div class="profile-main__top">SECURITY</div>
-                        <div class="profile-main__title">Password</div>
-                        <div class="profile-main__subtitle">
+            <div class="profile-main__content">
+                <article class="profile-card">
+                    <div class="profile-card__first"><span class="ari-password-profile"></span></div>
+                    <div class="profile-card__second">
+                        <div class="profile-card__top">SECURITY</div>
+                        <div class="profile-card__title">Password</div>
+                        <div class="profile-card__subtitle">
                             Change the password you use to access your account and
                             Autodesk secured sites.
                         </div>
-                        <button class="profile-main__btn">Change</button>
+                        <button class="profile-card__btn">Change</button>
                     </div>
-                </a>
-                <a class="profile-main__card" role="button">
-                    <div class="profile-main__first"><span class="ari-profile"></span></div>
-                    <div class="profile-main__content">
-                        <div class="profile-main__top">SECURITY</div>
-                        <div class="profile-main__title">Username</div>
-                        <div class="profile-main__subtitle">
+                </article>
+                <article class="profile-card">
+                    <div class="profile-card__first"><span class="ari-profile"></span></div>
+                    <div class="profile-card__second">
+                        <div class="profile-card__top">SECURITY</div>
+                        <div class="profile-card__title">Username</div>
+                        <div class="profile-card__subtitle">
                             Change the name that identifies you in products and discussion groups.
                         </div>
-                        <button class="profile-main__btn">Change</button>
+                        <button class="profile-card__btn">Change</button>
                     </div>
-                </a>
-                <a class="profile-main__card" role="button">
-                    <div class="profile-main__first"><span class="ari-communications"></span></div>
-                    <div class="profile-main__content">
-                        <div class="profile-main__top">SETTINGS</div>
-                        <div class="profile-main__title">Communications</div>
-                        <div class="profile-main__subtitle">
+                </article>
+                <article class="profile-card">
+                    <div class="profile-card__first"><span class="ari-communications"></span></div>
+                    <div class="profile-card__second">
+                        <div class="profile-card__top">SETTINGS</div>
+                        <div class="profile-card__title">Communications</div>
+                        <div class="profile-card__subtitle">
                             Select how you want to receive information and notifications from Autodesk.
                         </div>
-                        <button class="profile-main__btn">Change</button>
+                        <button class="profile-card__btn">Change</button>
                     </div>
-                </a>
-                <a class="profile-main__card" role="button">
-                    <div class="profile-main__first"><span class="ari-personal"></span></div>
-                    <div class="profile-main__content">
-                        <div class="profile-main__top">PERSONAL INFORMATION</div>
-                        <div class="profile-main__title">Professional info</div>
-                        <div class="profile-main__subtitle">
+                </article>
+                <article class="profile-card">
+                    <div class="profile-card__first"><span class="ari-personal"></span></div>
+                    <div class="profile-card__second">
+                        <div class="profile-card__top">PERSONAL INFORMATION</div>
+                        <div class="profile-card__title">Professional info</div>
+                        <div class="profile-card__subtitle">
                             Update your job title, company, and industry.
                         </div>
-                        <button class="profile-main__btn">Change</button>
+                        <button class="profile-card__btn">Change</button>
                     </div>
-                </a>
+                </article>
             </div>
 
-            <footer class="profile-footer">123</footer>
+            <footer class="profile-footer --offset">
+                <div class="profile-footer__items">
+                    <a href="#" class="profile-footer__item">Privacy</a>
+                    <a href="#" class="profile-footer__item">Do not sell or share my personal information</a>
+                    <a href="#" class="profile-footer__item">Cookie preferences</a>
+                    <a href="#" class="profile-footer__item">Report noncompliance</a>
+                    <a href="#" class="profile-footer__item">Terms of use</a>
+                    <a href="#" class="profile-footer__item">Legal</a>
+
+                    <p class="profile-footer__opyright">© 2024 Autodesk Inc. All rights reserved</p>
+                </div>
+            </footer>
         </section>
     </div>
 

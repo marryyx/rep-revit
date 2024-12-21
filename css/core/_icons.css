@@ -25,6 +25,9 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.ari-burger:before {
+  content: "\e92d";
+}
 .ari-personal:before {
   content: "\e929";
 }

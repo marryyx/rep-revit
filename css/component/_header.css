@@ -33,6 +33,40 @@
     }
 }
 
+.header__burger {
+    position: relative;
+
+    margin-right: 24px;
+
+    font-size: 20px;
+    color: var(--color-light);
+
+    cursor: pointer;
+
+    &::before {
+        font-family: 'markfont' !important;
+        content: var(--header-burger-icon, '\e92d');
+    }
+
+    &::after {
+        position: absolute;
+        top: 50%;
+        right: -12px;
+
+        width: 2px;
+        height: 20px;
+
+        content: '';
+
+        background: var(--color-light-op-40);
+        transform: translate(0, -50%);
+    }
+
+    &.--active {
+        --header-burger-icon: '\e906';
+    }
+}
+
 .header__right {
     display: flex;
     align-items: center;
