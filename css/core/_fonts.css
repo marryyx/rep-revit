@@ -1,2 +1,29 @@
 /* @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap'); */
-@import url("https://db.onlinewebfonts.com/c/bf1ead8093f8b529c7581c1cefa75273?family=Artifakt+Element");
+/* @import url("https://db.onlinewebfonts.com/a/aes9i1aI9WFhh0F7uwSYX2yU"); */
+
+@font-face {
+    font-display: block;
+    font-family: "Artifakt Element";
+    font-style: normal;
+    font-weight: 400;
+    src: url('../../fonts/artifakt-element/ArtifaktElement-Regular.woff') format('woff'), 
+    url('../../fonts/artifakt-element/ArtifaktElement-Regular.woff2') format('woff2');
+}
+
+@font-face {
+    font-display: block;
+    font-family: "Artifakt Element";
+    font-style: normal;
+    font-weight: 500;
+    src: url('../../fonts/artifakt-element/Artifakt-Element-Medium.woff') format('woff'),  
+         url('../../fonts/artifakt-element/Artifakt-Element-Medium.woff2') format('woff2');
+}
+
+@font-face {
+    font-display: block;
+    font-family: "Artifakt Element";
+    font-style: normal;
+    font-weight: bold;
+    src: url('../../fonts/artifakt-element/Artifakt Element.woff') format('woff'), 
+         url('../../fonts/artifakt-element/Artifakt-Element.woff2') format('woff2');
+}
