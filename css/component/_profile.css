@@ -126,6 +126,10 @@
     flex-wrap: wrap;
 
     margin: 2rem 0;
+
+    &.--personal {
+        gap: 24px;
+    }
 }
 
 .profile-card {

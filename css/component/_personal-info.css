@@ -1,0 +1,99 @@
+.card-personal {
+    display: flex;
+    flex-flow: column;
+
+    width: 100%;
+    height: auto;
+
+    padding: 24px 24px 0 24px;
+
+    box-shadow: 0px 0px 0px 1px rgba(204, 204, 204, .5) inset, 0px -1px 0px 0px #666 inset;
+    border-radius: 6px;
+    background: var(--color-light);
+}
+
+.card-personal__title {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    font-size: clamp(1.3125rem, 1.21rem + 0.463vw, 1.625rem);
+    font-weight: bold;
+
+    /* &::after {
+        content: '\e90b';
+
+        font-weight: 400;
+        opacity: 0.8;
+        font-family: 'markfont' !important;
+    } */
+}
+
+.card-personal__description {
+    padding: 16px 0 24px;
+
+    color: var(--color-dark-grey);
+    font-size: 1rem;
+    line-height: 1.5;
+    font-weight: 400;
+}
+
+.card-personal__divider {
+    height: 1px;
+
+    background: var(--color-black-op-50);
+}
+
+.card-personal__item {
+    position: relative;
+    display: flex;
+    flex-flow: column;
+    flex-wrap: wrap;
+
+    min-height: 80px;
+    padding: 0 24px;
+    margin: 0 -24px;
+
+    cursor: pointer;
+
+    &:hover {
+        background: linear-gradient(60deg, rgba(95, 96, 255, 0.2), rgba(95, 96, 255, 0.1));
+    }
+
+    @media (min-width: 730px) {
+        align-items: center;
+        flex-flow: row;
+    }
+
+    &.--img {
+        min-height: 105px;
+    }
+}
+
+.card-personal__label {
+    min-height: 45px;
+
+    padding: 12px 0 0 0;
+
+    font-weight: 500;
+
+    & span {
+        font-weight: 400;
+        opacity: 0.8;
+    }
+
+    @media (min-width: 730px) {
+        width: 25%;
+        border-right: 1px solid var(--color-black-op-50);
+    }
+}
+
+.card-personal__value {
+
+    @media (min-width: 730px) {
+        width: 50%;
+        margin-left: 12px;
+    }
+}

@@ -67,58 +67,48 @@
                 <a class="profile-aside__item" href="#"><span class="ari-settings"></span>Settings</a>
             </div>
         </div>
-        <section class="profile-main">
-            <div class="profile-main__top-card">
-                <div class="avatar"></div>
-                <div class="profile-main__welcome">Welcome, <span></span></div>
-            </div>
 
-            <div class="profile-main__content">
-                <article class="profile-card">
-                    <div class="profile-card__first"><span class="ari-password-profile"></span></div>
-                    <div class="profile-card__second">
-                        <div class="profile-card__top">SECURITY</div>
-                        <div class="profile-card__title">Password</div>
-                        <div class="profile-card__subtitle">
-                            Change the password you use to access your account and
-                            Autodesk secured sites.
-                        </div>
-                        <button class="profile-card__btn">Change</button>
+        <section class="profile-main">
+            <div class="profile-main__content --personal">
+                <article class="card-personal">
+                    <div class="card-personal__title">The basics</div>
+                    <div class="card-personal__description">
+                        Your name, photo, and details you share about yourself
+                        appear in project directories and Autodesk community sites.
                     </div>
-                </article>
-                <article class="profile-card">
-                    <div class="profile-card__first"><span class="ari-profile"></span></div>
-                    <div class="profile-card__second">
-                        <div class="profile-card__top">SECURITY</div>
-                        <div class="profile-card__title">Username</div>
-                        <div class="profile-card__subtitle">
-                            Change the name that identifies you in products and discussion groups.
-                        </div>
-                        <button class="profile-card__btn">Change</button>
+
+                    <hr class="card-personal__divider">
+
+                    <div class="card-personal__item">
+                        <div class="card-personal__label">Name <span>(required)</span></div>
+                        <div class="card-personal__value"><span data-full-name></span></div>
                     </div>
-                </article>
-                <article class="profile-card">
-                    <div class="profile-card__first"><span class="ari-communications"></span></div>
-                    <div class="profile-card__second">
-                        <div class="profile-card__top">SETTINGS</div>
-                        <div class="profile-card__title">Communications</div>
-                        <div class="profile-card__subtitle">
-                            Select how you want to receive information and notifications from Autodesk.
+
+                    <hr class="card-personal__divider">
+
+                    <div class="card-personal__item --img">
+                        <div class="card-personal__label">Photo</div>
+                        <div class="card-personal__value">
+                            <div class="avatar"></div>
                         </div>
-                        <button class="profile-card__btn">Change</button>
                     </div>
+
+                    <hr class="card-personal__divider">
+
+
                 </article>
-                <article class="profile-card">
-                    <div class="profile-card__first"><span class="ari-personal"></span></div>
-                    <div class="profile-card__second">
-                        <div class="profile-card__top">PERSONAL INFORMATION</div>
-                        <div class="profile-card__title">Professional info</div>
-                        <div class="profile-card__subtitle">
-                            Update your job title, company, and industry.
-                        </div>
-                        <button class="profile-card__btn">Change</button>
-                    </div>
+
+                <!-- <article class="card-personal">
+                    <div class="card-personal__title">The basics</div>
                 </article>
+
+                <article class="card-personal">
+                    <div class="card-personal__title">The basics</div>
+                </article>
+
+                <article class="card-personal">
+                    <div class="card-personal__title">The basics</div>
+                </article> -->
             </div>
 
             <footer class="profile-footer --offset">
@@ -136,6 +126,7 @@
         </section>
     </div>
 
+    <script src="./js/personal.js" type="module"></script>
     <script src="./js/profile-user.js" type="module"></script>
     <script src="./js/profile.js" type="module"></script>
 
