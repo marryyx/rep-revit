@@ -15,40 +15,6 @@ const getUserAuthData = () => {
     return JSON.parse(data);
 };
 
-function updateSize() {
-    const width = window.innerWidth;
-
-    if (width < 574) {
-        headerSearch.classList.add('gm-hide');
-    } else {
-        headerSearch.classList.remove('gm-hide');
-    }
-
-    if (width < 990) {
-        headerBurgerBtn.classList.remove('gm-hide');
-        profileAside.classList.add('gm-hide');
-    } else {
-        headerBurgerBtn.classList.add('gm-hide');
-        profileAside.classList.remove('gm-hide');
-
-        profileAside.classList.remove('--is-open')
-    }
-}
-
-updateSize();
-window.addEventListener("resize", updateSize);
-
-headerBurgerBtn.addEventListener('click', () => {
-    headerBurgerBtn.classList.toggle('--active');
-
-    if (headerBurgerBtn.classList.contains('--active')) {
-        profileAside.classList.remove('gm-hide');
-        profileAside.classList.add('--is-open')
-    } else {
-        profileAside.classList.add('gm-hide')
-    }
-});
-
 window.addEventListener('DOMContentLoaded', () => {
     const dataUser = getUserAuthData();
 
