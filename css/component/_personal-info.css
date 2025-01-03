@@ -52,12 +52,6 @@
     }
 }
 
-.card-personal__divider {
-    height: 1px;
-    background: var(--color-black-op-100);
-    opacity: 0.3;
-}
-
 .card-personal__item {
     position: relative;
     display: flex;
@@ -66,16 +60,20 @@
 
     min-height: 80px;
 
-    padding: 0 24px;
-    margin: 0 -24px;
-
+    box-shadow: 0 -1px 0 0 var(--color-black-op-10);
     cursor: pointer;
 
     &:hover {
         --opacity-text-value: 1;
         --card-person-visibly-text: visible;
 
-        background: #e6e6ff;
+        z-index: 1;
+
+        padding: 0 24px;
+        margin: 0 -24px;
+
+        box-shadow: 0 -1px 0 0 var(--color-black-op-10), 0 1px 0 0 var(--color-black-op-10);
+        background: linear-gradient(90deg, #e6e6ff 2.87%, #f9f9ff 98.39%);
     }
 
     @media (min-width: 730px) {
@@ -88,21 +86,14 @@
     }
 
     &.--active {
+        z-index: 1;
+
+        padding: 0 24px;
+        margin: 0 -24px;
+
         background: #e6e6ff;
         border: 1px solid #ccf;
         outline: none;
-
-        &::before {
-            position: absolute;
-            right: -11px;
-            top: calc(50% - 14px);
-
-            border-left: 11px solid #ccf;
-            border-bottom: 14px solid rgba(0, 0, 0, 0);
-            border-top: 14px solid rgba(0, 0, 0, 0);
-
-            content: '';
-        }
 
         &::after {
             position: absolute;
@@ -180,32 +171,6 @@
 
     @media (max-width: 730px) {
         padding-bottom: 10px;
-    }
-}
-
-.card-personal__button {
-    position: relative;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    width: 20px;
-    height: 20px;
-
-    color: var(--color-light);
-
-    border-radius: 4px;
-    background: var(--color-black);
-
-    &::before {
-        position: absolute;
-
-        font-family: 'markfont' !important;
-        font-size: 8px;
-        font-weight: 400;
-
-        content: '\e901';
     }
 }
 

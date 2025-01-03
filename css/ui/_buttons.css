@@ -1,6 +1,8 @@
 .button {
     display: inline-flex;
     align-items: center;
+    justify-content: center;
+    /* gap: 8px; */
 
     color: var(--color-light);
 
@@ -19,27 +21,34 @@
         background: var(--color-black);
     }
 
+    &.--flow {
+        position: absolute;
+        inset: var(--button-inset, auto);
+    }
+
+    &.--bold {
+        font-weight: bold;
+        color: var(--color-black);
+    }
+
+    &.--close::before,
+    &.--full-screen::before,
+    &.--full-screen::before,
+    &.--minimize::before,
+    &.--arrow::before,
+    &.--add::before {
+        font-family: 'markfont' !important;
+    }
+
     &.--close,
     &.--full-screen,
     &.--full-screen,
     &.--minimize {
-        position: relative;
-
-        &::before {
-            position: absolute;
-            font-family: 'markfont' !important;
-        }
+        padding: var(--button-padding, 4px);
     }
 
-    &.--close {
-        &.--bold {
-            font-weight: bold;
-            color: var(--color-black);
-        }
-
-        &::before {
-            content: '\e906';
-        }
+    &.--close::before {
+        content: '\e906';
     }
 
     &.--full-screen::before {
@@ -93,5 +102,40 @@
         color: var(--color-light);
 
         background-color: var(--color-black);
+    }
+
+    &.--icon-small {
+        position: relative;
+        padding: 0;
+
+        width: 16px;
+        aspect-ratio: 1;
+
+        color: var(--color-light);
+        border-radius: 4px;
+        background: var(--color-black);
+    }
+
+    &.--arrow::before {
+        position: absolute;
+
+        font-size: 8px;
+        font-weight: 400;
+
+        content: '\e901';
+    }
+
+    &.--add {
+
+        box-shadow: 0 0 0 5px var(--color-light);
+
+        &::before {
+            position: absolute;
+
+            font-size: 12px;
+            font-weight: 400;
+
+            content: '+';
+        }
     }
 }

@@ -6,6 +6,10 @@
     overflow: hidden !important;
 }
 
+.gm-not-event {
+    pointer-events: none !important;
+}
+
 /* .gm-hidden {
     visibility: hidden !important;
 } */

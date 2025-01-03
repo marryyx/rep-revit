@@ -39,10 +39,12 @@
 
 @keyframes personalFormPupUp {
     0% {
-        flex: 0 0 0;
+        opacity: 0;
+        flex: 0;
     }
 
     100% {
+        opacity: 1;
         flex: 0 0 40%;
     }
 }

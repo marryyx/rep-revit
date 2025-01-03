@@ -138,7 +138,7 @@
     flex-wrap: wrap;
     flex: 1;
 
-    margin: 2rem 0;
+    margin: auto 0 2rem;
 
     &.--personal {
         gap: 24px;
