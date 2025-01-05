@@ -1,11 +1,12 @@
 # Build output
 /dist
+/tmp
+/out-tsc
 
-# Node modules
+# dependencies
 /mode_modules
-
 .package-lock.json
-.parcel-cache
 
 # Parcel cache
 .cache
+.parcel-cache
