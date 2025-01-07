@@ -2,13 +2,16 @@
 
 <html>
 
-<include src="core/heading.html" 
-locals='{"titlePage": {{titlePage}}}'>
+<include src="core/heading.html" locals='{"titlePage": {{titlePage}}}'>
 </include>
 
 <body>
 
-    <include src="components/header.html"></include>
+    <include src="components/header.html" local='
+    "headerBasket": true,
+    "headerLang": true,
+    "headerBurger": false'>
+    </include>
     <include src="components/subhead.html"></include>
     <include src="components/autodesk.html"></include>
     <include src="components/ar-imagine.html"></include>
@@ -23,7 +26,7 @@ locals='{"titlePage": {{titlePage}}}'>
     <include src="components/dialogs/video-first.html"></include>
     <include src="components/dialogs/video-second.html"></include>
 
-    <script src="../../../js/index.js" type="module"></script>
+    <script src="../../js/index.js" type="module"></script>
 
 </body>
 

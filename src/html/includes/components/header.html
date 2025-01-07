@@ -1,13 +1,11 @@
 <header class="header">
     <div class="container">
         <div class="header__left">
-            <if condition="pagePersonalInfo">
-                <if condition="pageProfile === 'personal-info.html'">
-                    <div class="header__burger"></div>
-                </if>
+            <if condition="headerBurger">
+                <div class="header__burger"></div>
             </if>
             <else>
-                <div class="header__burger" style="display: none;"></div>
+                <div class="header__burger" style="display: none !important"></div>
             </else>
 
             <div class="header__logo-company">
@@ -19,45 +17,55 @@
             </div>
 
             <div class="header__right">
-                <div class="header__baket">
-                    <button class="header__btn-basket" data-basket-counter="0">
-                        <span class="ari-basket"></span>
-                    </button>
+                <if condition="headerBasket">
+                    <div class="header__baket">
+                        <button class="header__btn-basket" data-basket-counter="0">
+                            <span class="ari-basket"></span>
+                        </button>
+                    </div>
+                </if>
+                <else>
+                    <div class="header__baket" style="display: none !important"></div>
+                </else>
 
+                <if condition="headerLang">
                     <div class="header__lang">
                         <button class="header__btn-lang">
                             <span class="ari-lang"></span>
                             <h2>US</h2>
                         </button>
-
-                        <div class="language-change">
-                            <ul class="language-change__items">
-                                <li class="language-change__item"><a class="link-lang" href="#">ASEAN (English)</a>
-                                </li>
-                                <li class="language-change__item"><a class="link-lang" href="#">Australia</a></li>
-                                <li class="language-change__item"><a class="link-lang" href="#">België</a></li>
-                                <li class="language-change__item"><a class="link-lang" href="#">Belgique</a></li>
-                                <li class="language-change__item"><a class="link-lang" href="#">Brasil</a></li>
-                                <li class="language-change__item"><a class="link-lang" href="#">Canada (English)</a>
-                                </li>
-                                <li class="language-change__item"><a class="link-lang" href="#">Canada
-                                        (Français)</a></li>
-                                <li class="language-change__item"><a class="link-lang" href="#">Česko</a></li>
-                                <li class="language-change__item"><a class="link-lang" href="#">Danmark</a></li>
-                                <li class="language-change__item"><a class="link-lang" href="#">Deutschland</a></li>
-                                <li class="language-change__item"><a class="link-lang" href="#">España</a></li>
-                                <li class="language-change__item"><a class="link-lang" href="#">Europe (English)</a>
-                                </li>
-                                <li class="language-change__item"><a class="link-lang" href="#">France</a></li>
-                                <li class="language-change__item"><a class="link-lang" href="#">Hong Kong
-                                        (English)</a></li>
-                                <li class="language-change__item"><a class="link-lang" href="#">India (English)</a>
-                                </li>
-                                <li class="language-change__item"><a class="link-lang select" href="#">United
-                                        States</a></li>
-                            </ul>
-                        </div>
                     </div>
+                </if>
+                <else>
+                    <div class="header__lang" style="display: none !important"></div>
+                </else>
+
+                <div class="language-change">
+                    <ul class="language-change__items">
+                        <li class="language-change__item"><a class="link-lang" href="#">ASEAN (English)</a>
+                        </li>
+                        <li class="language-change__item"><a class="link-lang" href="#">Australia</a></li>
+                        <li class="language-change__item"><a class="link-lang" href="#">België</a></li>
+                        <li class="language-change__item"><a class="link-lang" href="#">Belgique</a></li>
+                        <li class="language-change__item"><a class="link-lang" href="#">Brasil</a></li>
+                        <li class="language-change__item"><a class="link-lang" href="#">Canada (English)</a>
+                        </li>
+                        <li class="language-change__item"><a class="link-lang" href="#">Canada
+                                (Français)</a></li>
+                        <li class="language-change__item"><a class="link-lang" href="#">Česko</a></li>
+                        <li class="language-change__item"><a class="link-lang" href="#">Danmark</a></li>
+                        <li class="language-change__item"><a class="link-lang" href="#">Deutschland</a></li>
+                        <li class="language-change__item"><a class="link-lang" href="#">España</a></li>
+                        <li class="language-change__item"><a class="link-lang" href="#">Europe (English)</a>
+                        </li>
+                        <li class="language-change__item"><a class="link-lang" href="#">France</a></li>
+                        <li class="language-change__item"><a class="link-lang" href="#">Hong Kong
+                                (English)</a></li>
+                        <li class="language-change__item"><a class="link-lang" href="#">India (English)</a>
+                        </li>
+                        <li class="language-change__item"><a class="link-lang select" href="#">United
+                                States</a></li>
+                    </ul>
                 </div>
 
                 <div class="header__search">
@@ -85,10 +93,11 @@
                         <!-- Раздел для второго меню -->
                         <div class="user-account-section">
                             <div class="user-account-section__top">
-                                <a href="../pages/profile.html" class="user-account-section__title" data-user-profole><span
-                                        class="ari-people"></span>My profile
-                                    and settings</div>
-                                </a>
+                                <a href="../pages/profile.html" class="user-account-section__title"
+                                    data-user-profole><span class="ari-people"></span>My profile
+                                    and settings
+                            </div>
+                            </a>
                             <div class="user-account-section__links">
                                 <li class="user-account-section__item"><a href="#">Password and security</a></li>
                                 <li class="user-account-section__item"><a href="#">Language</a></li>
@@ -99,6 +108,4 @@
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
 </header>
