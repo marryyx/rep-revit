@@ -6,15 +6,18 @@
     "author": "Marik",
     "license": "",
     "scripts": {
-        "start": "parcel src/index.html",
-        "build": "parcel build src/index.html"
+        "start": "parcel src/html/includes/pages/index.html",
+        "build": "parcel build src/html/includes/pages/index.html"
     },
     "devDependencies": {
+        "@parcel/transformer-posthtml": "^2.13.3",
         "autoprefixer": "^10.4.20",
         "cssnano": "^7.0.6",
         "parcel": "^2.13.3",
+        "parcel-resolver-ignore": "^2.2.0",
         "postcss": "^8.4.49",
         "posthtml-expressions": "^1.11.4",
-        "posthtml-include": "^2.0.1"
+        "posthtml-include": "^2.0.1",
+        "posthtml-modules": "^0.9.1"
     }
 }

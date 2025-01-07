@@ -1,0 +1,26 @@
+@font-face {
+    font-display: block;
+    font-family: "Artifakt Element";
+    font-style: normal;
+    font-weight: 400;
+    src: url('../../assets/fonts/artifakt-element/ArtifaktElement-Regular.woff') format('woff'), 
+    url('../../assets/fonts/artifakt-element/ArtifaktElement-Regular.woff2') format('woff2');
+}
+
+@font-face {
+    font-display: block;
+    font-family: "Artifakt Element";
+    font-style: normal;
+    font-weight: 500;
+    src: url('../../assets/fonts/artifakt-element/Artifakt-Element-Medium.woff') format('woff'),  
+         url('../../assets/fonts/artifakt-element/Artifakt-Element-Medium.woff2') format('woff2');
+}
+
+@font-face {
+    font-display: block;
+    font-family: "Artifakt Element";
+    font-style: normal;
+    font-weight: bold;
+    src: url('../../assets/fonts/artifakt-element/Artifakt-Element.woff') format('woff'), 
+         url('../../assets/fonts/artifakt-element/Artifakt-Element.woff2') format('woff2');
+}
