@@ -1,7 +1,15 @@
 <header class="header">
     <div class="container">
         <div class="header__left">
-            <div class="header__burger"></div>
+            <if condition="pagePersonalInfo">
+                <if condition="pageProfile === 'personal-info.html'">
+                    <div class="header__burger"></div>
+                </if>
+            </if>
+            <else>
+                <div class="header__burger" style="display: none;"></div>
+            </else>
+
             <div class="header__logo-company">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1619.27 166.13">
                     <path fill="#FFF"
@@ -59,7 +67,7 @@
                     </button>
                 </div>
 
-                <a class="header__sign-up" href="signin.html">
+                <a class="header__sign-up" href="../pages/signin.html">
                     <button class="header__btn-sign-up">
                         <span class="ari-people"></span>
                         <h2>Sign Up</h2>
@@ -77,9 +85,10 @@
                         <!-- Раздел для второго меню -->
                         <div class="user-account-section">
                             <div class="user-account-section__top">
-                                <div class="user-account-section__title" data-user-profole><span class="ari-people"></span>My profile
+                                <a href="../pages/profile.html" class="user-account-section__title" data-user-profole><span
+                                        class="ari-people"></span>My profile
                                     and settings</div>
-                            </div>
+                                </a>
                             <div class="user-account-section__links">
                                 <li class="user-account-section__item"><a href="#">Password and security</a></li>
                                 <li class="user-account-section__item"><a href="#">Language</a></li>
