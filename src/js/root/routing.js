@@ -6,6 +6,8 @@ const ROUTES = {
     signIn: 'signin.html',
     signUp: 'create-account.html',
     home: 'index.html',
+    profileUser: 'profile.html',
+    personalInfo: 'personal-info.html',
 }
 
 const ROUTING_DELAY = 1000;
