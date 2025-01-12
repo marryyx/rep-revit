@@ -6,7 +6,7 @@ const ROUTES = {
     signIn: 'signin.html',
     signUp: 'create-account.html',
     home: 'index.html',
-    profileUser: 'profile.html',
+    profile: 'profile.html',
     personalInfo: 'personal-info.html',
 }
 
@@ -34,5 +34,11 @@ export const Routing = {
     },
     goToHome() {
         this.goTo('home');
+    },
+    goToProfile() {
+        this.goTo('profile');
+    },
+    goToPersonal() {
+        this.goTo('personalInfo');
     }
 } 

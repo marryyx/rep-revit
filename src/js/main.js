@@ -1,4 +1,4 @@
-// import { Routing } from '../root/routing.js';
+import { Routing } from './root/routing.js';
 
 import { personalComponent } from './components/personal.component.js';
 import { profileUserComponent } from './components/profile-user.component.js';
@@ -6,6 +6,7 @@ import { profileComponent } from './components/profile.component.js';
 import { asideProfileComponent } from './components/aside-profile.component.js';
 
 import { registerComponent } from './components/register.component.js';
+import { signinComponent } from './components/signin.component.js';
 
 import { tabsComponent } from './components/tabs.component.js';
 import { basketComponent } from './components/basket.component.js';
@@ -22,8 +23,10 @@ const pathname = (parm) => {
     return urlPath.includes(parm.toString().split('.html')[0])
 };
 
+const route = Routing.getRutes();
+
 document.addEventListener("DOMContentLoaded", (event) => {
-    const pageHome = window.location.pathname === '/' || pathname('index.html');
+    const pageHome = window.location.pathname === '/' || pathname(route.home);
 
     if (pageHome) {
         tabsComponent();
@@ -35,19 +38,23 @@ document.addEventListener("DOMContentLoaded", (event) => {
         assistantComponent();
         faq();
         footerComponent();
-        console.log("Page loaded✅")
     }
-    if (pathname('profile')) {
+    if (pathname(route.profile)) {
         profileUserComponent();
         asideProfileComponent();
         profileComponent();
     }
-    if (pathname('personal-info.html')) {
+    if (pathname(route.personalInfo)) {
         personalComponent();
         asideProfileComponent();
         profileComponent();
     }
-    if (pathname('create-account.html')) {
+    if (pathname(route.signUp)) {
         registerComponent();
     }
+    if (pathname(route.signIn)) {
+        signinComponent();
+    }
+
+    console.log("Page loaded ✅")
 });

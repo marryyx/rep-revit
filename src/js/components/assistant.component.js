@@ -34,7 +34,7 @@ export const assistantComponent = () => {
         isOpen = true;
     };
 
-    function reportWindowSize() {
+    const reportWindowSize = () => {
         const windowWidth = window.innerWidth;
         
         if (windowWidth <= 430) {

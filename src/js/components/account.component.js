@@ -1,17 +1,8 @@
-const headerAccount = document.querySelector('.header__account');
-const menuUser = headerAccount.querySelector('.user-account__menu')
-
-const headerSignIn = document.querySelector('.header__sign-up');
-const accountUser = headerAccount.querySelector('[data-user-button]');
-const btnSignOut = headerAccount.querySelector('.user-account__btn-sign-out');
-
-const emailUser = headerAccount.querySelector('.user-account__email');
-const firstName = headerAccount.querySelector('.user-account__fullname');
-
-const userProfile = headerAccount.querySelector('[data-user-profole]');
+import { Routing } from '../root/routing.js';
+import { CLIENT_STORAGE_KEYS } from '../store/globals-params-store.js';
 
 // ----------------------------------------
-const USER_AUTH_KEY = 'userAuthData';
+const USER_AUTH_KEY = CLIENT_STORAGE_KEYS.userAuthData;
 // ----------------------------------------
 
 const getAuthData = () => {
@@ -19,27 +10,38 @@ const getAuthData = () => {
     return JSON.parse(data);
 };
 
-function recheckAccountUser() {
-    const dataUser = getAuthData();
+const accountComponentInit = (host) => {
+    const menuUser = host.querySelector('.user-account__menu')
 
-    if (!dataUser) {
-        headerAccount.classList.add('gm-hide');
-        headerSignIn.classList.remove('gm-hide');
-    } else {
-        headerSignIn.classList.add('gm-hide');
-        headerAccount.classList.remove('gm-hide');
+    const headerSignIn = document.querySelector('.header__sign-up');
+    const accountUser = host.querySelector('[data-user-button]');
+    const btnSignOut = host.querySelector('.user-account__btn-sign-out');
 
-        dataUser.forEach(item => {
-            emailUser.innerHTML = item.email;
-            firstName.textContent = `${item.usernameFirst} ${item.usernameLast}`;
-        });
-    }
-};
+    const emailUser = host.querySelector('.user-account__email');
+    const firstName = host.querySelector('.user-account__fullname');
 
-export const accountComponent = () => { 
+    const userProfile = host.querySelector('[data-user-profole]');
+
+    const recheckAccountUser = () => {
+        const dataUser = getAuthData();
+
+        if (!dataUser) {
+            headerAccount.classList.add('gm-hide');
+            headerSignIn.classList.remove('gm-hide');
+        } else {
+            headerSignIn.classList.add('gm-hide');
+            headerAccount.classList.remove('gm-hide');
+
+            dataUser.forEach(item => {
+                emailUser.innerHTML = item.email;
+                firstName.textContent = `${item.usernameFirst} ${item.usernameLast}`;
+            });
+        }
+    };
+
     const authData = getAuthData();
 
-    if(authData) {
+    if (authData) {
         recheckAccountUser();
     }
 
@@ -52,6 +54,19 @@ export const accountComponent = () => {
     });
 
     userProfile.addEventListener('click', () => {
-        window.location.href = 'profile.html';
+        Routing.goToProfile();
     });
+
 }
+
+const accountComponent = () => {
+    const host = document.querySelector('.header__account');
+
+    if (!host) {
+        return
+    }
+
+    accountComponentInit(host)
+}
+
+export { accountComponent }

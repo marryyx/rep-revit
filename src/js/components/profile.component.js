@@ -1,13 +1,16 @@
+import { CLIENT_STORAGE_KEYS } from '../store/globals-params-store.js';
+
 const menuUser = document.querySelector('.user-account__menu')
 
 const accountUser = document.querySelector('[data-user-button]');
+
 const btnSignOut = document.querySelector('.user-account__btn-sign-out');
 
 const emailUser = document.querySelector('.user-account__email');
 const firstName = document.querySelector('.user-account__fullname');
 
 // ----------------------------------------
-const USER_AUTH_KEY = 'userAuthData';
+const USER_AUTH_KEY = CLIENT_STORAGE_KEYS.userAuthData;
 // ----------------------------------------
 
 const profileComponent = () => {
@@ -16,7 +19,7 @@ const profileComponent = () => {
         return JSON.parse(data);
     };
     
-    function recheckAccountUser() {
+    const recheckAccountUser = () => {
         const dataUser = getAuthData();
     
     

@@ -1,7 +1,10 @@
+import { CLIENT_STORAGE_KEYS } from '../store/globals-params-store.js';
+// import { Routing } from '../root/routing.js'
+
 const profileMain = document.querySelector('.profile-main');
 
 // ----------------------------------------
-const USER_AUTH_KEY = 'userAuthData';
+const USER_AUTH_KEY = CLIENT_STORAGE_KEYS.userAuthData;
 // ----------------------------------------
 
 const profileUserComponent = () => {
