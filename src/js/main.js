@@ -6,6 +6,8 @@ import { profileUserComponent } from './components/profile-user.component.js';
 import { profileComponent } from './components/profile.component.js';
 import { asideProfileComponent } from './components/aside-profile.component.js';
 
+import { avatarComponent } from './components/avatar.component.js';
+
 import { registerComponent } from './components/register.component.js';
 import { signinComponent } from './components/signin.component.js';
 
@@ -29,6 +31,7 @@ const route = Routing.getRutes();
 document.addEventListener("DOMContentLoaded", (event) => {
     const pageHome = window.location.pathname === '/' || pathname(route.home);
     const userAuthData = localStorage.getItem(CLIENT_STORAGE_KEYS.userAuthData);
+    avatarComponent();
 
     if (pageHome) {
         tabsComponent();
@@ -44,7 +47,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
     if (pathname(route.profile)) {
         if (!userAuthData) {
-            Routing.goToHome();
+            Routing.goToHome(0)
             return
         }
         
@@ -56,7 +59,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
     if (pathname(route.personalInfo)) {
         if (!userAuthData) {
-            Routing.goToHome();
+            Routing.goToHome(0)
             return
         }
         

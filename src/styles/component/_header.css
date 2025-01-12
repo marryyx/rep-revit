@@ -281,6 +281,7 @@
 
 .header__account {
     position: relative;
+    cursor: pointer;
 }
 
 .user-account {

@@ -13,11 +13,11 @@ const ROUTES = {
 const ROUTING_DELAY = 1000;
 
 export const Routing = {
-    goTo(name) {
-        if (ROUTING_DELAY > 0) {
+    goTo(name, delay = ROUTING_DELAY) {
+        if (delay > 0) {
             setTimeout(() => {
                 window.location.href = ROUTES[name];
-            }, ROUTING_DELAY)
+            }, delay)
         }
         else {
             window.location.href = ROUTES[name];
@@ -26,19 +26,19 @@ export const Routing = {
     getRutes() {
         return ROUTES
     },
-    goToSingIn() {
-        this.goTo('signIn');
+    goToSingIn(delay = ROUTING_DELAY) {
+        this.goTo('signIn', delay);
     },
-    goToSingUp() {
-        this.goTo('signUp');
+    goToSingUp(delay = ROUTING_DELAY) {
+        this.goTo('signUp', delay);
     },
-    goToHome() {
-        this.goTo('home');
+    goToHome(delay = ROUTING_DELAY) {
+        this.goTo('home', delay);
     },
-    goToProfile() {
-        this.goTo('profile');
+    goToProfile(delay = ROUTING_DELAY) {
+        this.goTo('profile', delay);
     },
-    goToPersonal() {
-        this.goTo('personalInfo');
+    goToPersonal(delay = ROUTING_DELAY) {
+        this.goTo('personalInfo', delay);
     }
 } 
