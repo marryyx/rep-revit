@@ -1,3 +1,4 @@
+import { CLIENT_STORAGE_KEYS } from './store/globals-params-store.js';
 import { Routing } from './root/routing.js';
 
 import { personalComponent } from './components/personal.component.js';
@@ -27,6 +28,7 @@ const route = Routing.getRutes();
 
 document.addEventListener("DOMContentLoaded", (event) => {
     const pageHome = window.location.pathname === '/' || pathname(route.home);
+    const userAuthData = localStorage.getItem(CLIENT_STORAGE_KEYS.userAuthData);
 
     if (pageHome) {
         tabsComponent();
@@ -39,14 +41,28 @@ document.addEventListener("DOMContentLoaded", (event) => {
         faq();
         footerComponent();
     }
+
     if (pathname(route.profile)) {
+        if (!userAuthData) {
+            Routing.goToHome();
+            return
+        }
+        
         profileUserComponent();
         asideProfileComponent();
+        accountComponent();
         profileComponent();
     }
+
     if (pathname(route.personalInfo)) {
+        if (!userAuthData) {
+            Routing.goToHome();
+            return
+        }
+        
         personalComponent();
         asideProfileComponent();
+        accountComponent();
         profileComponent();
     }
     if (pathname(route.signUp)) {

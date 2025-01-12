@@ -18,7 +18,7 @@ export const Routing = {
             setTimeout(() => {
                 window.location.href = ROUTES[name];
             }, ROUTING_DELAY)
-        } 
+        }
         else {
             window.location.href = ROUTES[name];
         }
