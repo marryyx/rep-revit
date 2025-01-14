@@ -8,7 +8,7 @@
     aspect-ratio: 1;
 
     color: var(--color-light);
-    font-size: 48px;
+    font-size: var(--size-text, 48px);
 
     border-radius: 50%;
     background-color: var(--color-blue-violet);
@@ -31,6 +31,11 @@
     & figcaption {
         z-index: 1;
         font-size: 0.38em;
+    }
+
+    &.--30 {
+        --avata-size: 30px;
+        --size-text: 30px;
     }
 
     &.--96 {
