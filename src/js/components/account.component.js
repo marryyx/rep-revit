@@ -1,62 +1,65 @@
 import { Routing } from '../root/routing.js';
-import { CLIENT_STORAGE_KEYS } from '../store/globals-params-store.js';
-
-// ----------------------------------------
-const USER_AUTH_KEY = CLIENT_STORAGE_KEYS.userAuthData;
-// ----------------------------------------
-
-const getAuthData = () => {
-    const data = localStorage.getItem(USER_AUTH_KEY)
-    return JSON.parse(data);
-};
+import { AuthService } from '../services/auth.service.js';
 
 export class AccountComponent {
-    host = document.querySelector('.header__account');
-    headerSignIn = document.querySelector('.header__sign-up');
-
     constructor() {
-        if (!this.host) return;
+        this.auth = new AuthService();
 
-        this.menuUser = this.host.querySelector('.user-account__menu')
-        this.accountUser = this.host.querySelector('[data-user-button]');
-        this.btnSignOut = this.host.querySelector('.user-account__btn-sign-out');
-
-        this.emailUser = this.host.querySelector('.user-account__email');
-        this.firstName = this.host.querySelector('.user-account__fullna');
-        this.userProfile = this.host.querySelector('[data-user-profole]');
-
-        this.accountUser.addEventListener('click', () => {
-            this.menuUser.classList.toggle('gm-hide');
-        });
-
-        this.btnSignOut.addEventListener('click', () => {
-            localStorage.removeItem(USER_AUTH_KEY);
-        });
-
-        this.userProfile.addEventListener('click', () => {
-            Routing.goToProfile();
-        });
+        this.host = document.querySelector('.header__account');
+        this.authData = this.auth.getAuthData();
     }
 
-    recheckAccountUser = () => {
-        const dataUser = getAuthData();
+    show() {
+        this.host.classList.add('gm-hide');
+    }
 
-        if (!dataUser) {
-            this.host.classList.add('gm-hide');
-            this.headerSignIn.classList.remove('gm-hide');
+    hide() {
+        this.host.classList.remove('gm-hide');
+    }
+
+    updateUserContent = () => {
+        const signIn = document.querySelector('.header__sign-up');
+
+        const fullname = this.host.querySelector('.user-account__fullname');
+        const emailUser = this.host.querySelector('.user-account__email');
+
+        if (!this.authData) {
+            this.show()
+            signIn.classList.remove('gm-hide');
         } else {
-            this.headerSignIn.classList.add('gm-hide');
-            this.host.classList.remove('gm-hide');
+            emailUser.innerHTML = this.auth.getUserEmail();
+            fullname.textContent = this.auth.getFullName();
 
-            dataUser.forEach((item) => {
-                this.emailUser.innerHTML = item.email
-                this.firstName.textContent = `${item.usernameFirst} ${item.usernameLast}`
-            });
+            this.hide();
+            
+            signIn.classList.add('gm-hide');
         }
     };
 
-    authData = getAuthData();
-    if(authData) {
-        recheckAccountUser()
+    menuUserToggleHendler() {
+        const menu = this.host.querySelector('.user-account__menu');
+        if (menu) menu.classList.toggle('gm-hide');
+    }
+
+    init() {
+        if (!this.host) return;
+
+        const userBTN = this.host.querySelector('[data-user-button]');
+        const btnSignOut = this.host.querySelector('.user-account__btn-sign-out');
+        const userProfile = this.host.querySelector('[data-user-profole]');
+
+        this.updateUserContent()
+
+        userBTN.addEventListener('click', () => {
+            this.menuUserToggleHendler();
+        });
+
+        btnSignOut.addEventListener('click', () => {
+            this.auth.signOut();
+        });
+
+        userProfile.addEventListener('click', () => {
+            Routing.goToProfile();
+        });
     }
 }
