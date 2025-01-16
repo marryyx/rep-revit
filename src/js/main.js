@@ -1,5 +1,5 @@
-import { CLIENT_STORAGE_KEYS } from './store/globals-params-store.js';
 import { Routing } from './root/routing.js';
+import { AuthService } from './services/auth.service.js';
 
 import { personalComponent } from './components/personal.component.js';
 import { profileComponent } from './components/profile.component.js';
@@ -30,9 +30,11 @@ const pathname = (parm) => {
 const route = Routing.getRutes();
 
 document.addEventListener("DOMContentLoaded", (event) => {
+    const auth = new AuthService();
+
     const pageHome = window.location.pathname === '/' || pathname(route.home);
-    const userAuthData = localStorage.getItem(CLIENT_STORAGE_KEYS.userAuthData);
-    const accountComponent = new AccountComponent().init();
+    const userAuthData = auth.getAuthData();
+    const accountComponent = new AccountComponent();
     avatarComponent();
 
     if (pageHome) {
@@ -40,7 +42,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
         basketComponent();
         langChangeComponent();
         subheadComponent();
-        // new AccountComponent().init();
+        accountComponent.init();
         videoComponent();
         assistantComponent();
         faq();
