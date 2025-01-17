@@ -57,7 +57,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
         
         profileComponent();
         asideProfileComponent();
-        // new AccountComponent();
+        accountComponent.init();
         profileModalComponent();
     }
 
@@ -69,7 +69,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
         
         personalComponent();
         asideProfileComponent();
-        // new AccountComponent();
+        accountComponent.init();
         profileModalComponent();
     }
     if (pathname(route.signUp)) {

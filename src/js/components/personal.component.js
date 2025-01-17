@@ -1,3 +1,4 @@
+import { AuthService } from '../services/auth.service.js';
 import { CLIENT_STORAGE_KEYS } from '../store/globals-params-store.js';
 
 const USER_AUTH_KEY = CLIENT_STORAGE_KEYS.userAuthData;
@@ -10,6 +11,7 @@ const textareaSymbols = document.querySelector('.profile-form__about-panel texta
 const spanCounterSymbols = document.querySelector('.profile-form__counter-symbol span');
 
 const personalComponent = () => {
+    const auth = new AuthService;
     const getUserAuthData = () => {
         const data = localStorage.getItem(USER_AUTH_KEY)
         return JSON.parse(data);
@@ -78,16 +80,16 @@ const personalComponent = () => {
     
         blockEventOnContent(false);
     });
-    
-    window.addEventListener('DOMContentLoaded', () => {
+
+    const updateUserBlock = () => {
         const dataUser = getUserAuthData();
     
         if (dataUser) {
-            dataUser.forEach(item => {
-                blockNameUser.textContent = `${item.usernameFirst} ${item.usernameLast}`;
-            });
+            blockNameUser.textContent = auth.getFullName();
         }
-    });
+    }
+
+    updateUserBlock();
 }
 
 export { personalComponent }
