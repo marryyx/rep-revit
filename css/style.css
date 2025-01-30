@@ -73,10 +73,16 @@ body {
     cursor: pointer;
 }
 
-.favourites__label {
-    position: relative;
-    display: flex;
-    align-items: center;
+.favourites__label::after {
+    position: absolute;
+
+    width: 16px;
+    height: 16px;
+
+    fill: white;
+
+    opacity: var(--opacity-svg, 0);
+    transition: opacity 0.2s ease-in-out;
 }
 
 .favourites__checkbox:has(.favourites__input:checked) {
