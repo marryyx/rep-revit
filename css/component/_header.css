@@ -120,10 +120,14 @@
         & .header__btn-lang {
             display: inline-flex;
             align-items: center;
-            gap: 5px;
+            gap: 8px;
 
             & h2 {
-                font-size: 0.7rem;
+                font-size: 1rem;
+            }
+
+            & span {
+                font-size: 1.7rem;
             }
         }
 
@@ -151,11 +155,16 @@
 
         & .header__btn-sign-up {
             display: flex;
-            gap: 5px;
+            align-items: center;
+            gap: 8px;
             color: white;
 
             & h2 {
                 font-size: 1rem;
+            }
+
+            & span {
+                font-size: 1.7rem;
             }
         }
 
