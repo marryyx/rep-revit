@@ -38,16 +38,6 @@
     }
 }
 
-.ari-more {
-    display: var(--icon-more, none);
-
-    & {
-        @media (max-width: 1440px) {
-            --icon-more: flex;
-        }
-    }
-}
-
 .subhead__item {
     display: inline-flex;
     align-items: center;
@@ -85,6 +75,22 @@
 
     @media (max-width: 1440px) {
         gap: 5px;
+    }
+}
+
+.subhead__burger {
+    position: relative;
+
+    &.--open {
+        position: absolute;
+    }
+}
+
+.ari-more {
+    display: none;
+
+    @media (max-width: 1440px) {
+        display: flex;
     }
 }
 
