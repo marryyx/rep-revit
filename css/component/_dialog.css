@@ -33,6 +33,12 @@
     z-index: 1;
     bottom: 0;
     background-color: var(--color-light);
+
+    &.--loading {
+        position: relative;
+        filter: blur(2px);
+        z-index: 100;
+    }
 }
 
 .basket__top-cart {

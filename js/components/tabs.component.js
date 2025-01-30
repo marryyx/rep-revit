@@ -1,3 +1,5 @@
+import { PLAN_PRICE } from '../store/pricing.js'
+
 export const tabsComponent = () => {
 
 const cardAll = document.querySelectorAll('.select-term__card');
@@ -9,33 +11,6 @@ const deskBlock = document.querySelector('.desk-text-buy');
 
 const priceCard = document.querySelector('#price-buy-2');
 const btnInfo = document.querySelector('.buttons-buy-tokens')
-
-const PLAN_PRICE = {
-    first: {
-        price: '$8,730',
-        description: '/3 years for 1 user (pay annually)',
-    },
-    second: {
-        price: '$2,910',
-        description: '/year for 1 user',
-    },
-    third: {
-        price: '$365',
-        description: '/month for 1 user',
-    },
-    firstFlex: {
-        price: '$300',
-        description: 'Buy tokens'
-    },
-    secondFlex: {
-        price: '$1,500',
-        description: 'Buy tokens'
-    },
-    thirdFlex: {
-        price: 'Varies',
-        description: 'Estimate tokens needed'
-    }
-};
 
 const clearTabAndCard = (element, newClass) => {
     element.forEach(item => {

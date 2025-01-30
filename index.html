@@ -129,7 +129,7 @@
                                     class="price-text-buy">$8,730</span><span class="desk-text-buy">/3 years for 1 user
                                     (pay
                                     annually)</span></div>
-                            <button class="select-term__button-add">
+                            <button class="select-term__button-add" data-action-add-cart>
                                 <h2>ADD TO CART</h2>
                                 <span class="ari-arrow"></span>
                             </button>
@@ -184,7 +184,7 @@
                             <div class="select-term__top --selected" data-term="first"><span class="price-text-buy"
                                     id="price-buy-2">$8,730</span></div>
                             <div class="select-term__buttons-buy">
-                                <button class="buttons-buy-tokens --btn-buy">Buy tokens</button>
+                                <button class="buttons-buy-tokens --btn-buy" data-action-add-cart>Buy tokens</button>
                                 <button class="buttons-buy-flex --btn-buy">Learn how Flex works</button>
                             </div>
                             <div class="select-term__bottom">
@@ -757,7 +757,8 @@
     </div>
 
     <dialog class="basket">
-        <div class="basket__wrap">
+        <div class="loader"></div>
+        <div class="basket__wrap --loading">
             <div class="basket__top-cart">
                 <p>Cart</p>
                 <button class="basket-btn-close" closeBasket>
@@ -773,7 +774,7 @@
                 <div class="basket__footer">
                     <div class="basket__footer-top">
                         <p>Subtotal</p>
-                        <h3>$0,000.00</h3>
+                        <h3 class="basket__total">$0,000.00</h3>
                     </div>
 
                     <div class="basket__footer-desk">Tax is calculated at checkout</div>
