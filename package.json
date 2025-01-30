@@ -1,0 +1,15 @@
+{
+    "name": "marchik",
+    "description": "",
+    "version": "1.0.0",
+    "keyboards": [],
+    "author": "Marik",
+    "license": "",
+    "scripts": {
+        "start": "parcel src/index.html",
+        "build": "parcel build"
+    },
+    "devDependencies": {
+        "parcel": "^2.13.3"
+    }
+}

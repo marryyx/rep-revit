@@ -8,7 +8,7 @@
     aspect-ratio: 1;
 
     color: var(--color-light);
-    font-size: var(--avata-font-size, 48px);
+    font-size: 48px;
 
     border-radius: 50%;
     background-color: var(--color-blue-violet);

@@ -8,6 +8,9 @@ const closeBtnDialog = document.querySelector('[data-close-modal-window]');
 
 const cardItems = document.querySelectorAll('.card-personal__item');
 
+const textareaSymbols = document.querySelector('.profile-form__about-panel textarea');
+const spanCounterSymbols = document.querySelector('.profile-form__counter-symbol span');
+
 // ----------------------------------------
 const USER_AUTH_KEY = 'userAuthData';
 // ----------------------------------------
@@ -16,6 +19,14 @@ const getUserAuthData = () => {
     const data = localStorage.getItem(USER_AUTH_KEY)
     return JSON.parse(data);
 };
+
+const counterSymbolsInput = () => {
+    spanCounterSymbols.textContent = textareaSymbols.value.length;
+};
+
+textareaSymbols.addEventListener('input', () => {
+    counterSymbolsInput();
+});
 
 const blockEventOnContent = (parm = false) => {
     const main = document.querySelector('.profile-main');

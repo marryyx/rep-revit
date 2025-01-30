@@ -1,0 +1,11 @@
+# Build output
+/dist
+
+# Node modules
+/mode_modules
+
+.package-lock.json
+.parcel-cache
+
+# Parcel cache
+.cache
