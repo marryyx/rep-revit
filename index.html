@@ -3,60 +3,40 @@
 <html>
 
 <head>
+
+    <title>Marky | Login</title>
     <link rel="stylesheet" href="css/style.css">
-    <title>Marky | FutFusion</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
 </head>
 
 <body>
-    <header class="header">
-        <div class="container">
-            <div class="logo">
-                <span>Fit</span>
-                <span>Fusion</span>
+
+    <div class="wrapper">
+        <form action="">
+            <h1>Login</h1>
+            <div class="input-box">
+                <input type="text" placeholder="Username" required>
+                <i class='bx bxs-user'></i>
+            </div>
+            <div class="input-box">
+                <input type="password" placeholder="password" required>
+                <i class='bx bxs-lock-alt'></i>
             </div>
 
-            <nav class="header__menu">
-                <a href="">Home</a>
-                <a href="">Workouts</a>
-                <a href="">Diets</a>
-                <a href="">FAQ</a>
-            </nav>
-
-
-            <div class="header_right">
-                <button class="button --light singin">Sing in</button>
-                <button class="button --line reg">Register</button>
-            </div>
-        </div>
-
-    </header>
-
-    <main class="main">
-        <div class="container">
-            <div class="main__left">
-                <h3 class="title">A New Era of
-                    <br />
-                    Fitness Standards
-                </h3>
-
-                <p class="text">
-                    Conventional diets don’t work. Discover
-                    <br />
-                    the FitFusion methodology to fat loss.
-                </p>
-
-                <div class="buttons">
-                    <button class="button losefat">Lose Fat</button>
-                    <button class="button --line howit">How it works</button>
-                </div>
+            <div class="remember-forgot">
+                <label><input type="checkbox">Remember me</label>
+                <a href="#">Forgot password?</a>
             </div>
 
-            <aside class="aside">
-                <img src="images/futfusion.png">
-            </aside>
-        </div>
+            <button type="submit" class="btn">Login</button>
 
-    </main>
+            <div class="register-link">
+                <p>Don`t have an account? <a href="#">Register</a></p>
+            </div>
+        </form>
+    </div>
+
 </body>
 
 </html>
