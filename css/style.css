@@ -1,35 +1,50 @@
-@import url('https://fonts.googleapis.com/css2?family=Protest+Strike&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    
+}
 
 body {
- background: #222;
- color: white;
- font-size: 20px;
- font-family: '';
+    background: #222;
+    height: 500px;
 }
 
-.text {
-    columns: 2 200px;
-    column-gap: 50px;
-    column-rule: 7px dashed purple;
-
-    /*column-count: 3;
-    column-fill: balance;
-    column-width: 200px;
-    columns: 2 200px;*/ 
+.nav-list {
+    display: flex;
+    align-items: center;
 }
 
-.text h2 {
-    background-color: purple;
-    padding: 15px;
-    color: aliceblue;
-    margin: 0 20px;
-    column-span: all;
+.nav-list li {
+    padding: 0 10px;
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+    list-style-type: none;
 }
 
-span {
-    color: red;
+a {
+    color: white;
+    text-decoration: none;
+    padding: 0 10px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    list-style-type: none;
+    position: relative;
 }
 
-p {
-    break-inside: avoid;
+.nav-list-link::after {
+    content: "";
+    background: plum;
+    height: 2px;
+    width: 100%;
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    transition: all .25s ease;
+}
+
+a:hover {
+    color: rgb(122, 122, 122);
+    cursor: pointer;
 }
