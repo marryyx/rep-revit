@@ -108,6 +108,7 @@
 
     @media (max-width: 600px) {
         display: var(--footer-links-display, none) !important;
+        padding: 0 0 32px 0;
     }
 }
 
@@ -115,6 +116,10 @@
     padding: 24px 0;
     width: 100%;
     background-color: #dedede;
+
+    @media (max-width: 916px) {
+        display: none;
+    }
 }
 
 .footer-bottom__items {
