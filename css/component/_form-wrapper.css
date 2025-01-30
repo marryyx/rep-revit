@@ -33,6 +33,17 @@
     flex-flow: column;
 
     margin-top: 28px;
+
+    /* & .form-Wrapper__warning {
+        position: absolute;
+
+        width: 100%;
+        height: 100%;
+
+        top: 50px;
+
+        background: red;
+    } */
 }
 
 .form-Wrapper__full-name {
