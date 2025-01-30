@@ -1,7 +1,7 @@
 .products {
     display: flex;
     min-width: 100%;
-    margin-bottom: 3rem;
+    margin-bottom: 5rem;
 }
 
 .products__top {

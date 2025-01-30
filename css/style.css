@@ -7,6 +7,7 @@
 @import url('./component/_ari-faq.css');
 @import url('./component/_collection.css');
 @import url('./component/_products.css');
+@import url('./component/_ar-imagine.css');
 @import url('./fonts.css');
 @import url('./component/_video-1.css');
 
@@ -48,10 +49,6 @@ body {
     min-width: 1440px;
     margin: 0 auto;
     padding: 0 24px;
-
-    &.--buy-component {
-        margin: 0 auto;
-    }
 
     &.--faq {
         max-width: 1200px;
