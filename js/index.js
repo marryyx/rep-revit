@@ -9,32 +9,34 @@ const priceCard = document.querySelector('#price-buy-2');
 const btnInfo = document.querySelector('.buttons-buy-tokens')
 
 const PLAN_PRICE = {
-    first: {
-        price: '$8,730',
-        description: '/3 years for 1 user (pay annually)',
+    full: {
+        first: {
+            price: '$8,730',
+            description: '/3 years for 1 user (pay annually)',
+        },
+        second: {
+            price: '$2,910',
+            description: '/year for 1 user',
+        },
+        third: {
+            price: '$365',
+            description: '/month for 1 user',
+        }
     },
-    second: {
-        price: '$2,910',
-        description: '/year for 1 user',
-    },
-    third: {
-        price: '$365',
-        description: '/month for 1 user',
-    }
-};
 
-const PLAN_PRICE_TWO = {
-    first: {
-        price: '$300',
-        btn: 'Buy tokens'
-    },
-    second: {
-        price: '$1,500',
-        btn: 'Buy tokens'
-    },
-    third: {
-        price: 'Varies',
-        btn: 'Estimate tokens needed'
+    flex: {
+        first: {
+            price: '$300',
+            description: 'Buy tokens'
+        },
+        second: {
+            price: '$1,500',
+            description: 'Buy tokens'
+        },
+        third: {
+            price: 'Varies',
+            description: 'Estimate tokens needed'
+        }
     }
 };
 
@@ -64,11 +66,11 @@ tabs.forEach(element => {
 });
 
 const updatePrice = (key) => {
-    const price = PLAN_PRICE[key].price;
-    const description = PLAN_PRICE[key].description;
+    const price = PLAN_PRICE.full[key].price;
+    const description = PLAN_PRICE.full[key].description;
 
-    const priceTwo = PLAN_PRICE_TWO[key].price;
-    const btnDesk = PLAN_PRICE_TWO[key].btn;
+    const priceTwo = PLAN_PRICE.flex[key].price;
+    const btnDesk = PLAN_PRICE.flex[key].description;
 
     btnInfo.innerHTML = btnDesk;
     priceCard.innerHTML = priceTwo;
@@ -80,7 +82,7 @@ const updateContentOfPlan = (elm) => {
     const pricePlans = elm.querySelector('p');
     const key = elm.dataset.select;
 
-    pricePlans.innerHTML = PLAN_PRICE[key].price;
+    pricePlans.textContent = PLAN_PRICE.full[key].price;
 };
 
 cardAll.forEach(element => {

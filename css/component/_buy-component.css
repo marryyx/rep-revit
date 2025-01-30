@@ -1,0 +1,110 @@
+.buy-component {
+    padding: 24px;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    border-radius: .5rem;
+    background-color: rgba(33, 33, 33, .9);
+
+    & .buy-component__top {
+        color: white;
+        font-weight: 700;
+    }
+}
+
+.buy-component__tabs {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    margin: 1rem 0 1.5rem 0;
+    width: 100%;
+    border-bottom: .7px solid rgba(255, 255, 255, 0.5);
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.buy-component__tab {
+    padding-bottom: .75rem;
+
+
+    &.--is-active {
+        border-bottom: 2px solid white;
+    }
+
+    &[data-sticker]::after {
+        content: attr(data-sticker);
+        display: var(--tab-sticker-show, inline-flex);
+        padding: 6px 8px;
+        margin: auto auto auto 5px;
+        font-size: 0.625rem;
+        background-color: #00A85D;
+        border-radius: 10px;
+        color: black;
+    }
+}
+
+.buy-component__tabs-content {
+    display: flex;
+    margin-bottom: 48px;
+
+    &.--is-hide {
+        display: none;
+    }
+}
+
+.buy-component__footer {
+    display: inline-flex;
+    min-width: 100%;
+    padding: 24px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+
+    &.--footer-hide {
+        display: none;
+    }
+}
+
+.buy-component__nav {
+    display: inline-flex;
+    align-items: center;
+    gap: 2rem;
+
+    @media (max-width: 1100px) {
+        flex-flow: column;
+        justify-content: start;
+        align-items: start;
+    }
+}
+
+.buy-component__link {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+
+    color: #fff;
+    font-size: 0.875rem;
+    line-height: 1.5;
+
+    cursor: pointer;
+
+    & svg {
+        width: clamp(0.875rem, 0.385vw + 0.654rem, 1rem);
+        fill: white;
+    }
+
+    &:hover {
+        text-decoration: underline 2px rgb(139, 85, 152);
+    }
+
+    @media (min-width: 1100px) {
+        &:not(:first-of-type) {
+            &::before {
+                position: absolute;
+                transform: translateX(-16px);
+                content: '';
+                width: 1px;
+                height: 1rem;
+                background-color: rgba(255, 255, 255, 0.5);
+            }
+        }
+    }
+}
