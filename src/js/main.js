@@ -2,8 +2,8 @@ import { CLIENT_STORAGE_KEYS } from './store/globals-params-store.js';
 import { Routing } from './root/routing.js';
 
 import { personalComponent } from './components/personal.component.js';
-import { profileUserComponent } from './components/profile-user.component.js';
 import { profileComponent } from './components/profile.component.js';
+import { profileModalComponent } from './components/profile-modal.component.js';
 import { asideProfileComponent } from './components/aside-profile.component.js';
 
 import { avatarComponent } from './components/avatar.component.js';
@@ -15,11 +15,12 @@ import { tabsComponent } from './components/tabs.component.js';
 import { basketComponent } from './components/basket.component.js';
 import { subheadComponent } from './components/subhead.component.js';
 import { langChangeComponent } from './components/lang.component.js';
-import { accountComponent } from './components/account.component.js';
 import { videoComponent } from './components/video.component.js';
 import { assistantComponent } from './components/assistant.component.js';
 import { faq } from './components/faq.component.js';
 import { footerComponent } from './components/footer.component.js';
+
+import { AccountComponent } from './components/account.component.js';
 
 const pathname = (parm) => {
     const urlPath = window.location.pathname;
@@ -38,7 +39,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
         basketComponent();
         langChangeComponent();
         subheadComponent();
-        accountComponent();
+        new AccountComponent();
         videoComponent();
         assistantComponent();
         faq();
@@ -51,10 +52,10 @@ document.addEventListener("DOMContentLoaded", (event) => {
             return
         }
         
-        profileUserComponent();
-        asideProfileComponent();
-        accountComponent();
         profileComponent();
+        asideProfileComponent();
+        new AccountComponent();
+        profileModalComponent();
     }
 
     if (pathname(route.personalInfo)) {
@@ -65,8 +66,8 @@ document.addEventListener("DOMContentLoaded", (event) => {
         
         personalComponent();
         asideProfileComponent();
-        accountComponent();
-        profileComponent();
+        new AccountComponent();
+        profileModalComponent();
     }
     if (pathname(route.signUp)) {
         registerComponent();
