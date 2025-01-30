@@ -13,14 +13,54 @@
 
 <body>
 
-    <div class="form-Wrapper">
+    <div class="container">
+        <section class="auth">
+            <div class="auth__main">
+                <div class="auth__top">
+                    <p>Sign in</p>
+                    <div class="auth__logo"></div>
+                </div>
+
+                <form action="">
+                    <div class="input__signin">
+                        <label class="auth__label" for="email">Email</label>
+                        <input class="auth__input --email" id="email" name="email"
+                            placeholder="name@example.com" type="email" required>
+
+                        <div class="auth__not-email">
+                            <p>Please enter an email</p>
+                        </div>
+                        <div class="auth__message">
+                            <p>This email or username is not recognized</p>
+                        </div>
+                    </div>
+
+                    <div class="auth__button">
+                        <button class="button --sumbit" type="sumbit" name="email">Next</button>
+                    </div>
+                </form>
+
+                <div class="auth__bottom">
+                    <p>New to autodesk?</p>
+                    <a class="form__link" href="createAccount.html">Create account</a>
+                </div>
+            </div>
+
+            <footer class="auth__footer">
+                <p>Your account for everything Autodesk</p>
+                <a class="form__link" href="#">Learn more</a>
+            </footer>
+        </section>
+    </div>
+
+    <!-- <div class="form-Wrapper">
         <div class="container">
             <div class="form-Wrapper__top">
                 <p>Sign in</p>
                 <div class="form-Wrapper__logo"></div>
             </div>
 
-            <form class="form-Wrapper__signin">
+            <div class="form-Wrapper__signin">
                 <label class="form-Wrapper__label" for="email">Email</label>
                 <input class="form-Wrapper__input --email" id="email" name="email" placeholder="name@example.com"
                     type="email" required>
@@ -31,7 +71,7 @@
                 <div class="form-Wrapper__message">
                     <p>This email or username is not recognized</p>
                 </div>
-            </form>
+            </div>
 
             <div class="form-Wrapper__button">
                 <button class="button-sumbit" type="sumbit" name="email">Next</button>
@@ -47,7 +87,7 @@
     <div class="footer-form">
         <p>Your account for everything Autodesk</p>
         <a class="form__link" href="#">Learn more</a>
-    </div>
+    </div> -->
 
     <script src="./js/signin.js" type="module"></script>
 
