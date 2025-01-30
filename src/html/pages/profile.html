@@ -1,18 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link rel="icon" href="https://damassets.autodesk.net/content/dam/autodesk/logos/favicon.png">
-    <link rel="stylesheet" href="../../../styles/style.css">
-    <title>My profile</title>
-</head>
+<include src="core/heading.html" locals='{"titlePage": My profil}'>
+</include>
 
 <body>
 
-    <include src="components/header.html"></include>
+    
+    <include src="components/header.html" local='
+    "headerBasket": false,
+    "headerLang": false,
+    "headerBurger": true'>
+    </include>
 
     <div class="profile-container">
         <include src="components/profile-aside.html"></include>
@@ -33,9 +32,9 @@
         </section>
     </div>
 
-    <script src="../../../js/profile-user.js" type="module"></script>
-    <script src="../../../js/aside-profile.js" type="module"></script>
-    <script src="../../../js/profile.js" type="module"></script>
+    <script src="../../js/profile-user.js" type="module"></script>
+    <script src="../../js/aside-profile.js" type="module"></script>
+    <script src="../../js/profile.js" type="module"></script>
 
 </body>
 

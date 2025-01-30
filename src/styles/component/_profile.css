@@ -20,6 +20,7 @@
         z-index: 110;
 
         border-right: 1px solid black;
+        box-shadow: 100vh 0 0 95vh var(--color-black-op-50);
 
         width: 0;
         animation: asidePupUpWindow 0.3s ease-in-out;

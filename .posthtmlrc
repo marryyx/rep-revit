@@ -10,8 +10,9 @@
         "posthtml-expressions": {
             "locals": {
                 "titlePage": "Autodesk Revit",
-                "pagePersonalInfo": "personal-onfo.html",
-                "pageProfile": "profile.html"
+                "headerBurger": "true",
+                "headerLang": "true",
+                "headerBasket": "true"
             }
         }
     }
