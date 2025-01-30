@@ -7,9 +7,14 @@
     "license": "",
     "scripts": {
         "start": "parcel src/index.html",
-        "build": "parcel build"
+        "build": "parcel build src/index.html"
     },
     "devDependencies": {
-        "parcel": "^2.13.3"
+        "autoprefixer": "^10.4.20",
+        "cssnano": "^7.0.6",
+        "parcel": "^2.13.3",
+        "postcss": "^8.4.49",
+        "posthtml-expressions": "^1.11.4",
+        "posthtml-include": "^2.0.1"
     }
 }
