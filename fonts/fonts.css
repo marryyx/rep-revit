@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'markfont';
-  src:  url('../fonts/markfont.eot?r7byym');
-  src:  url('../fonts/markfont.eot?r7byym#iefix') format('embedded-opentype'),
-    url('../fonts/markfont.ttf?r7byym') format('truetype'),
-    url('../fonts/markfont.woff?r7byym') format('woff'),
-    url('../fonts/markfont.svg?r7byym#markfont') format('svg');
+  src:  url('fonts/markfont.eot?r7byym');
+  src:  url('fonts/markfont.eot?r7byym#iefix') format('embedded-opentype'),
+    url('fonts/markfont.ttf?r7byym') format('truetype'),
+    url('fonts/markfont.woff?r7byym') format('woff'),
+    url('fonts/markfont.svg?r7byym#markfont') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;

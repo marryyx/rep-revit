@@ -49,15 +49,66 @@
     border-radius: 8px 8px 0 0;
 
     & span:first-child {
-        font-size: 18px;
+        width: 85%;
+    }
+
+    & span:nth-child(2) {
+        flex-grow: 1;
+        font-size: 12px;
         font-weight: 600;
+        cursor: pointer;
+
+        &[data-tooltipe]::after {
+            position: absolute;
+            content: attr(data-tooltipe);
+            transform: translate(-26px, 20px);
+            padding: 8px;
+
+            font-size: 12px;
+            font-weight: 400;
+            color: rgb(255, 255, 255);
+
+            opacity: var(--close-tooltipe-opa, 0);
+            transition: opacity .15s ease-in-out;
+
+            background-color: rgb(102, 102, 102);
+            border-radius: 5px;
+            z-index: 100;
+        }
+
+        &:hover {
+            --close-tooltipe-opa: 1;
+        }
     }
 
     & span:last-of-type {
+        position: relative;
         font-size: 12px;
         font-weight: 600;
         margin: auto 0 auto auto;
         cursor: pointer;
+
+        &[data-tooltipe]::after {
+            position: absolute;
+            content: attr(data-tooltipe);
+            transform: translate(-26px, 20px);
+            padding: 8px;
+
+            font-size: 12px;
+            font-weight: 400;
+            color: rgb(255, 255, 255);
+
+            opacity: var(--close-tooltipe-opa, 0);
+            transition: opacity .15s ease-in-out;
+
+            background-color: rgb(102, 102, 102);
+            border-radius: 5px;
+            z-index: 100;
+        }
+
+        &:hover {
+            --close-tooltipe-opa: 1;
+        }
     }
 
     @media (max-width: 730px) {
@@ -67,7 +118,7 @@
 }
 
 .autodesk-widget__content {
-    position: relative;
+    position: relative; 
     display: flex;
     flex-direction: column;
     padding: 20px;
@@ -105,17 +156,14 @@
 }
 
 .message-user {
+    hyphens: manual !important;
     display: inline-flex;
     flex-wrap: wrap;
     max-width: 300px;
     padding: 20px;
     margin: auto 0 16px auto;
 
-    hyphens: manual;
-
-
     font-size: 14px;
-    hyphens: manual;
     line-height: 1.5;
     color: rgb(255, 255, 255);
 
