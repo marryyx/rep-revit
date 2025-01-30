@@ -112,7 +112,6 @@
 .profile-main__welcome {
     font-size: clamp(1.125rem, 1.06rem + 0.278vw, 1.3125rem);
     font-weight: 700;
-    line-height: 24px;
 
     @media (min-width: 574px) {
         width: 40%;
@@ -122,10 +121,12 @@
 .profile-main__content {
     display: flex;
     justify-content: space-between;
-    flex: 1;
     flex-wrap: wrap;
+    flex: 1;
 
-    margin: 2rem 0;
+    max-width: 1140px;
+
+    margin: 2rem auto;
 
     &.--personal {
         gap: 24px;
