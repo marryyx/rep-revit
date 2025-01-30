@@ -740,10 +740,11 @@
     <section class="assistant">
         <div class="assistant-chat --hide">
             <div class="assistant-chat__header">
-                <span class="header-title">Autodesk Assistant</span>
-                <span class="ari-block"></span>
-                <span class="ari-fullscreen"></span>
-                <span class="ari-close"></span>
+                <h4>Autodesk Assistant</h4>
+
+                <button class="button --minimize" data-chat-minimize-btn></button>
+                <button class="button --full-screen" data-chat-fullscreen-btn></button>
+                <button class="button --close" data-chat-close-btn></button>
             </div>
             <div class="assistant-chat__content">
                 <div class="content__card">Hi, I’m Autodesk Assistant. I can help with product selection, purchasing,
@@ -783,8 +784,8 @@
                     sure you want to end this chat session?
                 </div>
                 <div class="assistant-chat-end__btns">
-                    <button class="assistant-chat-end__btn --white">No</button>
-                    <button class="assistant-chat-end__btn --black">Yes</button>
+                    <button class="button --light" data-assistant-btn-no>No</button>
+                    <button class="button --dark" data-assistant-btn-yes>Yes</button>
                 </div>
             </div>
         </div>
@@ -793,7 +794,7 @@
             <div class="assistant-welcome__card">
                 <div class="assistant-welcome__top">
                     👋Hi, i'm Autodesk Assistant!
-                    <button class="assistant-welcome-close"><span class="ari-close"></span></button>
+                    <button class="button --close" data-close-btn></button>
                 </div>
                 <div class="assistant-welcome__bottom">
                     I can help with product selection, support <br> questions, or connect you at an agent.
@@ -851,9 +852,7 @@
         <div class="basket__wrap --loading">
             <div class="basket__top-cart">
                 <p>Cart</p>
-                <button class="basket-btn-close" closeBasket>
-                    <span class="ari-close"></span>
-                </button>
+                <button class="button --close --bold" closeBasket></button>
             </div>
             <div class="basket__new-sub">New subscriptions</div>
 
