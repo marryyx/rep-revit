@@ -18,12 +18,16 @@
 
         <main class="main">
             <div class="main__username">
-                <label class="main__label" for="username">Введите имя: </label>
-                <input class="main__input" type="text" id="username" required minlength="4" maxlength="10">
-                <label class="main__label --2" for="symbol">введите символ <br>(который заменет все числа в имени):</label>
-                <input class="main__input --2" type="text" id="symbol" value="$" required minlength="1" maxlength="3">
+                <label class="main__label">Введите имя: </label>
+                <input class="main__input" type="text" id="username">
+
+                <label class="main__label --2" for="symbol">введите символ <br>(который заменет все числа в
+                    имени):</label>
+                <input class="main__input --2" type="text" id="symbol" value="$">
 
                 <button class="button">Send</button>
+
+                <div class="results"></div>
             </div>
         </main>
 

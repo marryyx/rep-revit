@@ -1,27 +1,32 @@
-
-
-// const someString = document.querySelector('.bottom__string');
-
-// function replaceNumbers(str) {
-//     const regex = /\d+/g; 
-//     return str.replace(regex, '&');
-// };
-
-// let str = "У меня есть 10 грн и 70 коп.";
-// let replaceStr = replaceNumbers(str);
-
-// someString.innerHTML = replaceStr;
-
-const inputFirst = document.querySelector('.main__input');
-const inputSecond = document.querySelector('.main__input__second');
+const inputFirst = document.querySelector('#username');
+const inputSecond = document.querySelector('#symbol');
 const btn = document.querySelector('.button');
 
-function replaceNum() {
+const results = document.querySelector('.results')
+
+function replaceNum(text, tmp) {
     const regex = /\d+/g;
-    let replaceText = inputFirst.value.replace(regex, inputSecond.value);
-    inputFirst.value = replaceText;
+    const replaceText = text.replace(regex, tmp);
+
+    if (text === '') {
+        alert('Ошибка. Поле пустое!');
+
+        location.reload()
+    }
+
+    if (regex.test(tmp)) {
+        alert('есть числа во втором инпуте!'); 
+
+        return text;
+    }
+
+    return replaceText;
 }
 
-btn.addEventListener('click', function() {
-    replaceNum();
+btn.addEventListener('click', function () {
+    const inputFirstResult = inputFirst.value;
+    const inputSecondResult = inputSecond.value;
+    const res = replaceNum(inputFirstResult, inputSecondResult);
+
+    results.innerHTML = res;
 });

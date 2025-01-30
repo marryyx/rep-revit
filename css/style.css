@@ -31,6 +31,7 @@ body {
 .main {
     display: flex;
     align-items: center;
+    flex-flow: column;
     font-family: 'Rubik';
     color: white;
 }
@@ -60,10 +61,6 @@ body {
     border-radius: 5px;
     outline: none;
     border: none;
-
-    & .main__input__second {
-        text-align: center;
-    }
 }
 
 .button {
