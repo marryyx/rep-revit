@@ -1,19 +1,13 @@
-const html = document.querySelector('html');
+import { CLIENT_STORAGE_KEYS } from '../store/globals-params-store.js';
+
+const USER_AUTH_KEY = CLIENT_STORAGE_KEYS.userAuthData;
 
 const blockNameUser = document.querySelector('.card-personal__value [data-full-name]');
-
 const dialogPersonal = document.querySelector('.profile-form');
-
 const closeBtnDialog = document.querySelector('[data-close-modal-window]');
-
 const cardItems = document.querySelectorAll('.card-personal__item');
-
 const textareaSymbols = document.querySelector('.profile-form__about-panel textarea');
 const spanCounterSymbols = document.querySelector('.profile-form__counter-symbol span');
-
-// ----------------------------------------
-const USER_AUTH_KEY = 'userAuthData';
-// ----------------------------------------
 
 const personalComponent = () => {
     const getUserAuthData = () => {

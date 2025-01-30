@@ -1,5 +1,5 @@
 export const footerComponent = () => {
-    function reportWindowSize() {
+    const reportWindowSize = () => {
         const widthWindow = window.innerWidth;
 
         const titleTopAll = document.querySelectorAll('.footer__top');

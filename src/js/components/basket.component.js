@@ -1,14 +1,15 @@
 import { PLAN_PRICE } from '../store/pricing.js'
+import { CLIENT_STORAGE_KEYS } from '../store/globals-params-store.js';
 
 const CARD_DATA_TEMP = [];
-const CARD_STORE_KEY = 'basketItem';
+const CARD_STORE_KEY = CLIENT_STORAGE_KEYS.basketData;
 
 const btnBasket = document.querySelector('.header__btn-basket');
 const dialogBasket = document.querySelector('.basket');
 
 const html = document.querySelector("html");
 
-const basketOpen = () => {
+const basketOpen = () => { 
     html.classList.add('--add-scroll');
 
     dialogBasket.showModal();
