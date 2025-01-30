@@ -63,3 +63,33 @@ body {
    }
    }
 }
+
+@media (max-width: 480px) {
+    .one {
+        background-color: #ff7979;
+    }
+
+    .two {
+        background-color: rgb(211, 255, 99);
+    }
+
+    .three {
+        background-color: rgb(174, 127, 255);
+    }
+
+    .four {
+        background-color: rgb(80, 150, 57);
+    }
+
+    .five {
+        background: rgb(52, 75, 35);
+    }
+
+    .six {
+        background-color: rgb(112, 74, 74);
+    }
+
+    .seven {
+        background-color: rgb(105, 125, 146);
+    }
+}
