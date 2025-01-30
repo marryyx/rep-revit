@@ -26,11 +26,11 @@ const accountComponentInit = (host) => {
         const dataUser = getAuthData();
 
         if (!dataUser) {
-            headerAccount.classList.add('gm-hide');
+            host.classList.add('gm-hide');
             headerSignIn.classList.remove('gm-hide');
         } else {
             headerSignIn.classList.add('gm-hide');
-            headerAccount.classList.remove('gm-hide');
+            host.classList.remove('gm-hide');
 
             dataUser.forEach(item => {
                 emailUser.innerHTML = item.email;
