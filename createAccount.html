@@ -13,55 +13,56 @@
 
 <body>
 
-    <div class="create-account">
+    <div class="form-Wrapper">
         <div class="container">
-            <div class="create-account__top">
+            <div class="form-Wrapper__top">
                 <p>Create account</p>
-                <div class="create-account__logo"></div>
+                <div class="form-Wrapper__logo"></div>
             </div>
 
-            <form class="create-account__full-name">
-                <label for="FirstName">First name</label>
-                <input id="usernameFirst" pattern=".*[^(\x00-\x1f|\x7f|\x20-\x40|\x5b-\x60|\x7b-\x7e)].*" name="FirstName" type="text">
+            <form class="form-Wrapper__full-name">
+                <label class="form-Wrapper__label" for="FirstName">First name</label>
+                <label class="form-Wrapper__label" for="LastName">Last name</label>
 
-                <label for="LastName">Last name</label>
-                <input id="usernameLast" pattern=".*[^(\x00-\x1f|\x7f|\x20-\x40|\x5b-\x60|\x7b-\x7e)].*" name="LastName" type="text">
+                <input class="form-Wrapper__input --full-name" id="usernameFirst" name="FirstName" type="text" required>
+                <input class="form-Wrapper__input --full-name" id="usernameLast" name="LastName" type="text" required>
             </form>
 
-            <form class="create-account__form --email">
-                <label for="email">Email</label>
-                <input id="email" name="email" type="email">
+            <form class="form-Wrapper__form --email">
+                <label class="form-Wrapper__label" for="email">Email</label>
+                <input class="form-Wrapper__input" id="email" name="email" type="email" required>
             </form>
 
-            <form class="create-account__form --confirm-email">
-                <label for="confirmEmail">Confirm email</label>
-                <input id="confirmEmail" name="confirmEmail" type="email">
+            <form class="form-Wrapper__form --confirm-email">
+                <label class="form-Wrapper__label" for="confirmEmail">Confirm email</label>
+                <input class="form-Wrapper__input" id="confirmEmail" name="confirmEmail" type="email" required>
             </form>
 
-            <form class="create-account__form --password">
-                <label for="password">password</label>
-                <input id="password" name="password" type="password">
+            <form class="form-Wrapper__form --password">
+                <label class="form-Wrapper__label" for="password">password</label>
+                <input class="form-Wrapper__input" id="password" name="password" type="password" required>
             </form>
 
-            <form class="create-account__pravicy">
-                <input id="username" name="pravicy" type="checkbox">
-                <label for="pravicy">I agree to the <a href="#">Autodesk Terms of Use</a> and acknowledge the <a href="#">Privacy Statement.</a></label>
+            <form class="form-Wrapper__pravicy">
+                <input id="username" name="pravicy" type="checkbox" required>
+                <label for="pravicy">I agree to the <a class="form__link" href="#">Autodesk Terms of Use</a> and
+                    acknowledge the <a class="form__link" href="#">Privacy Statement.</a></label>
             </form>
 
-            <div class="signinWrapper__button">
+            <div class="form-Wrapper__button">
                 <button type="submit">Create account</button>
             </div>
 
-            <div class="signinWrapper__bottom">
-                <p>New to autodesk?</p>
-                <a href="#">Create account</a>
+            <div class="form-Wrapper__bottom">
+                <p>Already have an account?</p>
+                <a class="form__link" href="signin.html">Sign in</a>
             </div>
         </div>
     </div>
 
     <div class="footer-form">
         <p>Your account for everything Autodesk</p>
-        <a class="sing-in__link" href="#">Learn more</a>
+        <a class="form__link" href="#">Learn more</a>
     </div>
 
     <script src="./js/index.js" type="module"></script>
