@@ -54,10 +54,14 @@ body {
     }
 
     @media (max-width: 920px) {
-        min-width: 600px;
+        min-width: 780px;
     }
 
-    @media (max-width: 600px) {
-        min-width: 320px;
+    @media (max-width: 780px) {
+        min-width: 620px;
+    }
+    
+    @media (max-width: 620px) {
+        min-width: 420px;
     }
 }

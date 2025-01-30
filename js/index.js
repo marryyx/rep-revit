@@ -111,3 +111,11 @@ btnBasket.addEventListener('click', () => {
 btnClose.addEventListener('click', () => {
     dialogBasket.close();
 });
+
+const addBasket = document.querySelector('.select-term__button-add');
+const basket = document.querySelector('.header__btn-basket');
+
+addBasket.addEventListener('click', () => {
+    const basketValue = parseInt(basket.dataset.basket);
+    basket.dataset.basket = basketValue + 1;
+});
