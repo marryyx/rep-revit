@@ -1,58 +1,23 @@
-.link {
-    color: red;
-    text-decoration: none;
+body {
+    /*background-image: url('https://lh3.googleusercontent.com/proxy/6zaJ4LXiaF85yLxgHOKnvXN495fUlejyE1zs9BSn7uvZhDT2-aWkgAnNqVaFLRaEnTOO80MKKGqgDZloYnhWgxQFK9LKRSj5yADMdCt0cJ0AZcmljm23jXZTrLU');   
+    background-repeat: no-repeat;
+    background-position: center;*/
+    background: #222;
+    height: 2000px;
+}
+#block {
+    background-color: rgba(255, 255, 255, 0.5);
+    width: 50px;
+    height: 50px;
 }
 
-.link:hover {
-    text-decoration: underline;
-    color: rgb(148, 0, 0);
-    cursor: pointer;
-}
-
-.link:active {
-    text-decoration-color: rgb(0, 0, 0);
-    color: black;
-}
-
-.link:visited {
-    color: rgb(255, 0, 0);
-}
-
-input:enabled {
-    width: 100px;
-}
-
-input:focus {
-    width: 200px;
-}
-
-input:disabled {
-    width: 250px;
-}
-
-div:not(:empty) {
-    color:rgb(0, 0, 0)
-}
-
-p.main-text:not(:empty)::before {
-    content: '228';
-    color: aqua;
-    text-decoration: underline;
-    cursor: pointer;
-}
-
-p.main-text:empty::after {
-    content: attr(tiltle);
-    color: rgb(255, 0, 0);
-    text-decoration: underline;
-    cursor: pointer;
-}
-
-p.main-text:not(:empty)::first-letter {
-    color: rgb(0, 72, 105);
-    font-size: 25px;
-}
-
-p:first-of-type {
-    font-size: 30px;
+#block2 {
+    background-color: rgba(255, 255, 255, 0.5);
+    width: 50px;
+    height: 50px;
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100%;
+    height: 500px;
+    background-image: url('https://lh3.googleusercontent.com/proxy/6zaJ4LXiaF85yLxgHOKnvXN495fUlejyE1zs9BSn7uvZhDT2-aWkgAnNqVaFLRaEnTOO80MKKGqgDZloYnhWgxQFK9LKRSj5yADMdCt0cJ0AZcmljm23jXZTrLU');
 }
