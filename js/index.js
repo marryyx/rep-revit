@@ -1,7 +1,7 @@
 const cardAll = document.querySelectorAll('.select-term__card');
-const priceCard = document.querySelector('.price-text-buy');
-const deskCard = document.querySelector('.desk-text-buy')
 const tabs = document.querySelectorAll('.buy-component__tab');
+const priceBlock = document.querySelector('.price-text-buy');
+const deskBlock = document.querySelector('.desk-text-buy');
 
 const INFORMATION = {
     first: '/3 years for 1 user (pay annually)',
@@ -9,11 +9,11 @@ const INFORMATION = {
     third: '/month for 1 user'
 };
 
-const PRICE = {
-    first: '$8,730',
-    second: '$2,910',
-    third: '$365'
-};
+// const PRICE = {
+//     first: '$8,730',
+//     second: '$2,910',
+//     third: '$365'
+// };
 
 const clearSelectTab = () => {
     tabs.forEach(element => {
@@ -34,9 +34,28 @@ const clearSelectCard = () => {
     });
 };
 
+const updatePrice = (key, price) => {
+    const priceBlock = document.querySelector('.price-text-buy');
+    const deskBlock = document.querySelector('.desk-text-buy');
+
+    priceBlock.innerHTML = price;
+    deskBlock.textContent = INFORMATION[key];
+};
+
 cardAll.forEach(element => {
     element.addEventListener("click", () => {
         clearSelectCard();
+
+        const price = element.querySelector('p').textContent;
+        const data = element.dataset.select;
+
+        updatePrice(data, price);
+
+        priceBlock.innerHTML = price;
+
         element.classList.add('--is-select');
     });
 });
+
+updatePrice('first', cardAll[0].querySelector('p').textContent);
+cardAll[0].classList.add('--is-select');
