@@ -1,23 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Protest+Riot&display=swap');
+
 body {
-    /*background-image: url('https://lh3.googleusercontent.com/proxy/6zaJ4LXiaF85yLxgHOKnvXN495fUlejyE1zs9BSn7uvZhDT2-aWkgAnNqVaFLRaEnTOO80MKKGqgDZloYnhWgxQFK9LKRSj5yADMdCt0cJ0AZcmljm23jXZTrLU');   
-    background-repeat: no-repeat;
-    background-position: center;*/
     background: #222;
-    height: 2000px;
-}
-#block {
-    background-color: rgba(255, 255, 255, 0.5);
-    width: 50px;
-    height: 50px;
+    color: white;
 }
 
-#block2 {
-    background-color: rgba(255, 255, 255, 0.5);
-    width: 50px;
-    height: 50px;
-    background-size: cover;
-    background-attachment: fixed;
-    width: 100%;
-    height: 500px;
-    background-image: url('https://lh3.googleusercontent.com/proxy/6zaJ4LXiaF85yLxgHOKnvXN495fUlejyE1zs9BSn7uvZhDT2-aWkgAnNqVaFLRaEnTOO80MKKGqgDZloYnhWgxQFK9LKRSj5yADMdCt0cJ0AZcmljm23jXZTrLU');
+p.main-text {
+    color: wheat;
+    text-align: center;
+    font-size: 27px;
+    font-style: italic;
+    font-weight: bold;
+    text-transform: capitalize;
+    line-height: 60px;
+    word-spacing: 4px;
+    letter-spacing: 2px;
+    font-family: 'Protest Riot';
+}
+
+p.main-text>b {
+    font-style: normal;
+    font-weight: lighter;
+    text-decoration: underline;
+    text-decoration-color: red;
+    color: red;
+    cursor: pointer;
 }
