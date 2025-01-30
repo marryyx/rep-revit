@@ -1,7 +1,8 @@
 .video-first, .video-second {
-    display: none;
     position: fixed;
     z-index: 1;
+    
+    display: none;
 }
 
 .video-first::backdrop, .video-second::backdrop {

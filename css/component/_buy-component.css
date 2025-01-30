@@ -1,10 +1,11 @@
 .buy-component {
     padding: 24px;
     margin-bottom: 2rem;
+
     font-family: Arial, Helvetica, sans-serif;
 
     border-radius: .5rem;
-    background-color: rgb(45, 45, 45, 1);
+    background-color: var(--color-charcoal);
 
     & .buy-component__top {
         color: var(--color-light);
@@ -16,10 +17,14 @@
     display: flex;
     align-items: center;
     gap: 24px;
-    margin: 1rem 0 1.5rem 0;
+
     width: 100%;
+
+    margin: 1rem 0 1.5rem 0;
+
+    color: var(--color-light-op-80);
+
     border-bottom: .7px solid var(--color-light-op-50);
-    color: rgba(255, 255, 255, 0.8);
 }
 
 .buy-component__tab {
@@ -32,13 +37,17 @@
 
     &[data-sticker]::after {
         content: attr(data-sticker);
+
         display: var(--tab-sticker-show, inline-flex);
+
         padding: 6px 8px;
         margin: auto auto auto 5px;
+
+        color: var(--color-black);
         font-size: 0.625rem;
+
         background-color: var(--color-see-green);
         border-radius: 10px;
-        color: var(--color-black);
     }
 }
 
@@ -86,10 +95,14 @@
         &:not(:first-of-type) {
             &::before {
                 position: absolute;
+
                 transform: translateX(-16px);
-                content: '';
+
                 width: 1px;
                 height: 1rem;
+
+                content: '';
+
                 background-color: var(--color-light-op-50);
             }
         }

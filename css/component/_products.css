@@ -1,7 +1,9 @@
 .products {
     display: flex;
     flex-flow: column;
+
     min-width: 100%;
+
     margin-bottom:  5rem;
 }
 
@@ -44,6 +46,7 @@
 .products__circle {
     width: 18px;
     aspect-ratio: 1;
+    
     border-radius: 50%;
 
     &.--black {
