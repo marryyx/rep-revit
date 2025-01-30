@@ -256,17 +256,26 @@ video.forEach(element => {
     
 // };
 
-const btnAssistant = document.querySelector('.au-assi')
+const btnAssistant = document.querySelector('.au-assi__container')
+const auAssi = document.querySelector('.au-assi')
 const autodeskWidgetLayot = document.querySelector('.autodesk-widget__layout')
 const btnAssistantClose = document.querySelector('.autodesk-widget__header .ari-close')
 
+const messageAssistant = document.querySelector('.au-assi__welcome')
+const messageAssistantClose = document.querySelector('.au-assi__top .au-assi-close')
+
+messageAssistantClose.addEventListener('click', () => {
+    messageAssistant.classList.add('--close')
+});
+
 btnAssistant.addEventListener('click', () => {
-    btnAssistant.classList.add('--hide');
+    auAssi.classList.add('--hide');
+    messageAssistant.classList.add('--close')
     autodeskWidgetLayot.classList.remove('--hide');
 });
 
 btnAssistantClose.addEventListener('click', () => {
-    btnAssistant.classList.remove('--hide');
+    auAssi.classList.remove('--hide');
     autodeskWidgetLayot.classList.add('--hide');
 });
 

@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'markfont';
-  src:  url('../fonts/markfont.eot?hrjebx');
-  src:  url('../fonts/markfont.eot?hrjebx#iefix') format('embedded-opentype'),
-    url('../fonts/markfont.ttf?hrjebx') format('truetype'),
-    url('../fonts/markfont.woff?hrjebx') format('woff'),
-    url('../fonts/markfont.svg?hrjebx#markfont') format('svg');
+  src:  url('../fonts/markfont.eot?ftf9uw');
+  src:  url('../fonts/markfont.eot?ftf9uw#iefix') format('embedded-opentype'),
+    url('../fonts/markfont.ttf?ftf9uw') format('truetype'),
+    url('../fonts/markfont.woff?ftf9uw') format('woff'),
+    url('../fonts/markfont.svg?ftf9uw#markfont') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -25,6 +25,9 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.ari-iconchat:before {
+  content: "\e91d";
+}
 .ari-send:before {
   content: "\e91c";
 }
