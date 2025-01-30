@@ -6,13 +6,14 @@
     box-sizing: border-box;
 }
 
-/* button {
+button {
     padding: 0;
     border: none;
     font: inherit;
     color: inherit;
     background-color: transparent;
-} */
+    cursor: pointer;
+}
 
 body {
     display: flex;
@@ -20,37 +21,216 @@ body {
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    background-color: rgb(85, 85, 85);
-    color: white;
+    background-color: rgb(255, 255, 255);
 }
 
-.box {
-    display: none;
-    background-color: red;
-    height: 100px;
-    width: 100px;
-    transition: transform 1s;
+.container {
+    min-width: 1440px;
 }
 
-.box.show {
-    display: block;
-    translate: 0;
-    
-    @starting-style {
-        translate: 20px;
+.buy-component {
+    min-width: 100%;
+    height: 19rem;
+    padding: 0 24px;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    border-radius: .5rem;
+    background-color: rgba(33, 33, 33, .9);
+
+    & .buy-component__top {
+        padding: 1.5rem 0 0 0;
+        color: white;
+        font-weight: 700;
     }
 }
 
-/* .title {
-    font-size: 1.5rem;
+.buy-component__tabs {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    margin: 1rem 0 1.5rem 0;
+    width: 100%;
+    border-bottom: .7px solid rgba(255, 255, 255, 0.5);
+    color: rgba(255, 255, 255, 0.8);
 }
 
-.main {
-    height: 0;
-    transition: height 0.5s;
-    overflow: hidden;
+.buy-component__tab {
+    padding-bottom: .75rem;
+
+    &.--1 {
+        border-bottom: 2px solid white;
+    }
+
+    &.--2 {
+
+        & span {
+            padding: 6px;
+            font-size: 0.625rem;
+            background-color: #00A85D;
+            border-radius: 10px;
+            color: black;
+        }
+    }
 }
 
-.main.show {
-    height: 40px;
-} */
+.select-term {
+    display: flex;
+    min-width: 100%;
+    padding-bottom: 1rem;
+    color: white;
+}
+
+.select-term__first {
+    display: flex;
+    flex-flow: column;
+    min-width: 40%;
+
+    & .select-term__title {
+        margin-bottom: .5rem;
+        font-size: 1rem;
+        font-weight: 700;
+        letter-spacing: 0;
+        line-height: 1.5;
+        text-transform: uppercase;
+    }
+
+    & .select-term__subtitle {
+        display: inline-flex;
+        align-items: center;
+        gap: 5px;
+
+        margin-bottom: 10px;
+
+        font-weight: 400;
+        font-size: .875rem;
+        letter-spacing: 0;
+        line-height: 1.5;
+
+        & svg {
+            width: 1rem;
+            height: 1rem;
+        }
+    }
+}
+
+.select-term__cards {
+    display: flex;
+    gap: 16px;
+}
+
+.select-term__card {
+    display: flex;
+    flex-flow: column;
+    flex: 1;
+
+    padding: 10px;
+    min-height: 6.25rem;
+
+    border: 2px solid white;
+    border-radius: 2px;
+    background-color: #000;
+    cursor: pointer;
+
+    & p {
+        font-size: 1.4rem;
+        font-weight: 600;
+    }
+
+    & span {
+        display: flex;
+        align-items: flex-end;
+
+        opacity: 0.5;
+        font-size: 0.725rem;
+        padding: 7px 0;
+
+        width: 100%;
+
+        & svg {
+            margin-left: 3rem;
+            width: 1rem;
+            height: 1rem;
+        }
+    }
+}
+
+.select-term__card:hover {
+    border: 2px solid rgb(139, 85, 152);
+}
+
+.select-term__second {
+    display: flex;
+    flex-flow: column;
+    margin: 2rem 0 0 2rem;
+    min-width: 40%;
+}
+
+.select-term__top {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 0;
+    line-height: 1.5;
+
+    margin-bottom: 1rem;
+
+    & span {
+        font-size: 1rem;
+        opacity: .7;
+    }
+}
+
+.select-term__button-add {
+    display: flex;
+    align-items: center;
+    color: #000;
+
+    & .add-cart {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        opacity: 1;
+        box-shadow: none;
+        padding-left: 1.25rem;
+        padding-right: 1.25rem;
+        padding-bottom: 9px;
+        padding-top: 9px;
+        border: 1px solid white;
+        background-color: white;
+        user-select: none;
+
+        & h2 {
+            display: flex;
+            width: 100%;
+            font-size: 1rem;
+            font-weight: 600;
+            line-height: 1.25;
+        }
+
+        & svg {
+            width: 1.5rem;
+        }
+    }
+}
+
+.add-cart:hover {
+    border: 1px solid rgb(139, 85, 152);
+}
+
+.select-term__bottom {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-weight: 400;
+    font-size: .75rem;
+    letter-spacing: 0;
+    line-height: 1.5;
+    opacity: .7;
+
+    margin-top: .75rem;
+
+    & svg {
+        width: .75rem;
+        fill: white;
+    }
+}
