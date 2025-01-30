@@ -1,7 +1,10 @@
 .switcher {
-    position: absolute;
-    left: 260px;
-    bottom: 35px;
+    display: inline-flex;
+    align-items: center;
+}
+
+.switcher.--arg {
+    margin: auto 0 auto auto;
 }
 
 input[type="checkbox"].switcher__input {
@@ -42,10 +45,10 @@ input[type="checkbox"].switcher__input+.switcher__label::after {
     left: .1em;
 
     content: '';
-    font-size: .5em;
+    font-size: .35em;
 
     height: .9em;
-    left: .2em;
+    left: .5em;
 
     width: 1.8em;
     height: 1.8em;
@@ -69,7 +72,7 @@ input[type="checkbox"].switcher__input:checked+.switcher__label::before {
 
 input[type="checkbox"].switcher__input:checked + .switcher__label::after {
     /* content: '\2713'; */
-    transform: translate(100%);
+    transform: translate(29px);
 
     background-color: hsla(0, 0%, 50%, 1);
 
