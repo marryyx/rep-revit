@@ -92,7 +92,7 @@
 
         &[data-tooltipe]::after {
             position: absolute;
-            content: attr(data-tooltipe);
+            content: close;
             transform: translate(-26px, 20px);
             padding: 8px;
 

@@ -48,13 +48,17 @@ const messageAssistantClose = document.querySelector('.au-assi__top .au-assi-clo
 const buttonFullScreen = document.querySelector('.autodesk-widget__header .ari-fullscreen')
 const HeaderFullClass = document.querySelector('.autodesk-widget__header .header-title')
 
+const fullScreen = () => {
+    autodeskWidget.classList.toggle('--full');
+    HeaderFullClass.classList.toggle('--full');
+};
+
 messageAssistantClose.addEventListener('click', () => {
     messageAssistant.classList.add('--close')
 });
 
 buttonFullScreen.addEventListener('click', () => {
-    autodeskWidget.classList.add('--full');
-    HeaderFullClass.classList.add('--full');
+    fullScreen();
 });
 
 btnAssistant.addEventListener('click', () => {
@@ -66,6 +70,7 @@ btnAssistant.addEventListener('click', () => {
 btnAssistantClose.addEventListener('click', () => {
     auAssi.classList.remove('--hide');
     autodeskWidget.classList.add('--hide');
+
     autodeskWidget.classList.remove('--full');
     HeaderFullClass.classList.remove('--full');
 });
@@ -75,11 +80,13 @@ const sendInput = document.querySelector('.button-send')
 const contentCard = document.querySelector('.content__card-user')
 
 const inputContentCard = (content) => {
+    if (!content) return
     const userMessage = `<div class="message-user">${content}</div>`;
     contentCard.insertAdjacentHTML("beforeend", userMessage);
 }
 
 sendInput.addEventListener('click', () => {
     inputContentCard(inputContent.value);
+    inputContent.value = '';
 });
 }
