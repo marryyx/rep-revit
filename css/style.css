@@ -32,10 +32,23 @@ body {
 .container {
     position: relative;
     min-width: 1440px;
-    padding: 0 48px;
+    margin: 0 auto;
+    padding: 0 24px;
 
-    @media (max-width: 1500px) {
+    @media (max-width: 1440px) {
         min-width: 1200px;
+    }
+
+    @media (max-width: 1200px) {
+        min-width: 920px;
+    }
+
+    @media (max-width: 920px) {
+        min-width: 600px;
+    }
+
+    @media (max-width: 600px) {
+        min-width: 320px;
     }
 }
 
@@ -93,6 +106,10 @@ body {
     min-width: 100%;
     padding-bottom: 1rem;
     color: white;
+
+    @media (max-width: 720px) {
+        flex-flow: column;
+    }
 }
 
 .select-term__first {
@@ -102,7 +119,7 @@ body {
 
     & .select-term__title {
         margin-bottom: .5rem;
-        font-size: 1rem;
+        font-size: clamp(0.75rem, 0.769vw + 0.308rem, 1rem);
         font-weight: 700;
         letter-spacing: 0;
         line-height: 1.5;
@@ -117,12 +134,12 @@ body {
         margin-bottom: 10px;
 
         font-weight: 400;
-        font-size: .875rem;
+        font-size: clamp(0.625rem, 0.769vw + 0.183rem, 0.875rem);
         letter-spacing: 0;
         line-height: 1.5;
 
         & svg {
-            width: 1rem;
+            width: clamp(0.625rem, 1.154vw - 0.038rem, 1rem);
             height: 1rem;
         }
     }
@@ -131,6 +148,10 @@ body {
 .select-term__cards {
     display: flex;
     gap: 16px;
+
+    @media (max-width: 1100px) {
+        flex-flow: column;
+    }
 }
 
 .select-term__card {
@@ -139,7 +160,6 @@ body {
     flex: 1;
 
     padding: 10px;
-    min-height: 6.25rem;
 
     border: 2px solid rgba(255, 255, 255, 0.7);
     border-radius: 2px;
@@ -147,7 +167,7 @@ body {
     cursor: pointer;
 
     & p {
-        font-size: 1.4rem;
+        font-size: clamp(1.125rem, 0.769vw + 0.683rem, 1.375rem);
         font-weight: 600;
     }
 
@@ -156,7 +176,7 @@ body {
         align-items: flex-end;
 
         opacity: 0.5;
-        font-size: 0.725rem;
+        font-size: clamp(0.625rem, 0.385vw + 0.404rem, 0.75rem);
         padding: 7px 0;
 
         width: 100%;
@@ -182,12 +202,16 @@ body {
     flex-flow: column;
     margin: 2rem 0 0 2rem;
     min-width: 40%;
+
+    @media (max-width: 720px) {
+        margin: 2rem 0 0;
+    }
 }
 
 .select-term__top {
 
     & .price-text-buy {
-        font-size: 2rem;
+        font-size: clamp(1.75rem, 0.769vw + 1.308rem, 2rem);
         font-weight: 700;
         letter-spacing: 0;
         line-height: 1.5;
@@ -196,7 +220,7 @@ body {
     }
 
     & .desk-text-buy {
-        font-size: 1rem;
+        font-size: clamp(0.75rem, 0.769vw + 0.308rem, 1rem);
         opacity: .7;
     }
 }
@@ -219,13 +243,13 @@ body {
     & h2 {
         display: flex;
         width: 100%;
-        font-size: 1rem;
+        font-size: clamp(0.875rem, 0.385vw + 0.654rem, 1rem);
         font-weight: 600;
         line-height: 1.25;
     }
 
     & svg {
-        width: 1.5rem;
+        width: clamp(1.375rem, 0.385vw + 1.154rem, 1.5rem);
     }
 
     &:hover {
@@ -238,7 +262,7 @@ body {
     align-items: center;
     gap: 5px;
     font-weight: 400;
-    font-size: .75rem;
+    font-size: 0.75rem;
     letter-spacing: 0;
     line-height: 1.5;
     opacity: .7;
@@ -246,7 +270,7 @@ body {
     margin-top: .75rem;
 
     & svg {
-        width: .75rem;
+        width: 0.75rem;
         fill: white;
     }
 }
@@ -263,12 +287,11 @@ body {
     align-items: center;
     gap: 2rem;
 
-    /* &::before {
-        content: '';
-        height: 10px;
-        width: 2px;
-        background-color: white;
-    } */
+    @media (max-width: 1100px) {
+        flex-flow: column;
+        justify-content: start;
+        align-items: start;
+    }
 }
 
 .buy-component__link {
@@ -278,13 +301,13 @@ body {
     gap: 7px;
 
     color: #fff;
-    font-size: .875rem;
+    font-size: 0.875rem;
     line-height: 1.5;
 
     cursor: pointer;
 
     & svg {
-        width: 1rem;
+        width: clamp(0.875rem, 0.385vw + 0.654rem, 1rem);
         fill: white;
     }
 
@@ -292,14 +315,16 @@ body {
         text-decoration: underline 2px rgb(139, 85, 152);
     }
 
-    &:not(:first-of-type) {
-        &::before {
-            position: absolute;
-            transform: translateX(-16px);
-            content: '';
-            width: 1px;
-            height: 1rem;
-            background-color: rgba(255, 255, 255, 0.5);
+    @media (min-width: 1100px) {
+        &:not(:first-of-type) {
+            &::before {
+                position: absolute;
+                transform: translateX(-16px);
+                content: '';
+                width: 1px;
+                height: 1rem;
+                background-color: rgba(255, 255, 255, 0.5);
+            }
         }
     }
 }
