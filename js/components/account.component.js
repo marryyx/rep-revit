@@ -9,6 +9,10 @@ const emailUser = headerAccount.querySelector('.user-account-top__email');
 
 const btnSignOut = headerAccount.querySelector('.user-account-top__sign-out')
 
+// ----------------------------------------
+accountReg
+// ----------------------------------------
+
 function recheckAccountUser() {
     const email = localStorage.getItem('email');
     emailUser.innerHTML = email;
