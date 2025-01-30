@@ -9,34 +9,29 @@ const priceCard = document.querySelector('#price-buy-2');
 const btnInfo = document.querySelector('.buttons-buy-tokens')
 
 const PLAN_PRICE = {
-    full: {
-        first: {
-            price: '$8,730',
-            description: '/3 years for 1 user (pay annually)',
-        },
-        second: {
-            price: '$2,910',
-            description: '/year for 1 user',
-        },
-        third: {
-            price: '$365',
-            description: '/month for 1 user',
-        }
+    first: {
+        price: '$8,730',
+        description: '/3 years for 1 user (pay annually)',
     },
-
-    flex: {
-        first: {
-            price: '$300',
-            description: 'Buy tokens'
-        },
-        second: {
-            price: '$1,500',
-            description: 'Buy tokens'
-        },
-        third: {
-            price: 'Varies',
-            description: 'Estimate tokens needed'
-        }
+    second: {
+        price: '$2,910',
+        description: '/year for 1 user',
+    },
+    third: {
+        price: '$365',
+        description: '/month for 1 user',
+    },
+    firstFlex: {
+        price: '$300',
+        description: 'Buy tokens'
+    },
+    secondFlex: {
+        price: '$1,500',
+        description: 'Buy tokens'
+    },
+    thirdFlex: {
+        price: 'Varies',
+        description: 'Estimate tokens needed'
     }
 };
 
@@ -66,14 +61,12 @@ tabs.forEach(element => {
 });
 
 const updatePrice = (key) => {
-    const price = PLAN_PRICE.full[key].price;
-    const description = PLAN_PRICE.full[key].description;
+    const price = PLAN_PRICE[key].price;
+    const description = PLAN_PRICE[key].description;
 
-    const priceTwo = PLAN_PRICE.flex[key].price;
-    const btnDesk = PLAN_PRICE.flex[key].description;
+    const btnDesk = PLAN_PRICE[key].description;
 
     btnInfo.innerHTML = btnDesk;
-    priceCard.innerHTML = priceTwo;
     priceBlock.innerHTML = price;
     deskBlock.textContent = description;
 };
@@ -82,7 +75,7 @@ const updateContentOfPlan = (elm) => {
     const pricePlans = elm.querySelector('p');
     const key = elm.dataset.select;
 
-    pricePlans.textContent = PLAN_PRICE.full[key].price;
+    pricePlans.textContent = PLAN_PRICE[key].price;
 };
 
 cardAll.forEach(element => {
@@ -117,9 +110,15 @@ btnClose.forEach(element => {
 const addBasket = document.querySelector('.select-term__button-add');
 const basket = document.querySelector('.header__btn-basket');
 
+const getBasketCounter = () => {
+    return parseInt(btnBasket.dataset.basketCounter);
+};
+
+const setBasketCounter = (count) => {
+    btnBasket.dataset.basketCounter = count;
+};
+
 addBasket.addEventListener('click', () => {
-    const basketValue = parseInt(basket.dataset.basket);
-    basket.dataset.basket = basketValue + 1;
     addToBasket('Flex', '1 year', 100, 300);
 });
 
@@ -128,8 +127,8 @@ const addToBasket = (type, term, quanity, price) => {
     const typeImage = type ? 'coins.png' : 'revit.png';
     const typeCaption = type ? 'Flex' : 'Revit';
 
-    const basket = 
-                `<div class="basket__content-card">
+    const basket =
+        `<div class="basket__content-card">
                     <div class="basket__content-top">
                         <p><img src="./image/${typeImage}" alt="#">${typeCaption}</p>
                         <h3 class="total">$${price}</h3>
@@ -148,6 +147,10 @@ const addToBasket = (type, term, quanity, price) => {
                     <div class="basket__content-btn-remove">
                         <button class="btn-remove">Remove</button>
                     </div>
-                </div>`
-    basketContent.innerHTML = basket;
-} 
+                </div>`;
+
+    basketContent.insertAdjacentHTML("beforeend", basket);
+
+    const itemsLenght = basketContent.querySelectorAll('.basket__content-card').length;
+    setBasketCounter(itemsLenght);
+}

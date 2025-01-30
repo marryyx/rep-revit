@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'markfont';
-  src:  url('../fonts/markfont.eot?tea0pa');
-  src:  url('../fonts/markfont.eot?tea0pa#iefix') format('embedded-opentype'),
-    url('../fonts/markfont.ttf?tea0pa') format('truetype'),
-    url('../fonts/markfont.woff?tea0pa') format('woff'),
-    url('../fonts/markfont.svg?tea0pa#markfont') format('svg');
+  src:  url('../fonts/markfont.eot?qv4ha8');
+  src:  url('../fonts/markfont.eot?qv4ha8#iefix') format('embedded-opentype'),
+    url('../fonts/markfont.ttf?qv4ha8') format('truetype'),
+    url('../fonts/markfont.woff?qv4ha8') format('woff'),
+    url('../fonts/markfont.svg?qv4ha8#markfont') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -25,48 +25,51 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.ari-close:before {
-  content: "\e90e";
-}
-.ari-people:before {
-  content: "\e90d";
-}
-.ari-lang:before {
-  content: "\e90c";
-}
-.ari-basket:before {
-  content: "\e90b";
-}
-.ari-arrow:before {
-  content: "\e90a";
+.ari-searh:before {
+  content: "\e90f";
 }
 .ari-Access:before {
   content: "\e900";
 }
-.ari-usage:before {
-  content: "\e905";
-}
-.ari-star:before {
-  content: "\e907";
-}
-.ari-buy:before {
-  content: "\e909";
-}
-.ari-see-more:before {
+.ari-arrow:before {
   content: "\e901";
 }
-.ari-revit-cost:before {
+.ari-basket:before {
   content: "\e902";
 }
-.ari-pay-flex:before {
+.ari-buy:before {
   content: "\e903";
 }
-.ari-lock-your-price:before {
+.ari-buy-component-footer-first:before {
   content: "\e904";
 }
 .ari-buy-with-flex:before {
+  content: "\e905";
+}
+.ari-close:before {
   content: "\e906";
 }
-.ari-buy-component-footer-first:before {
+.ari-lang:before {
+  content: "\e907";
+}
+.ari-lock-your-price:before {
   content: "\e908";
+}
+.ari-pay-flex:before {
+  content: "\e909";
+}
+.ari-people:before {
+  content: "\e90a";
+}
+.ari-revit-cost:before {
+  content: "\e90b";
+}
+.ari-see-more:before {
+  content: "\e90c";
+}
+.ari-star:before {
+  content: "\e90d";
+}
+.ari-usage:before {
+  content: "\e90e";
 }
