@@ -1,18 +1,19 @@
 @font-face {
-  font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?h2trdr');
-  src:  url('fonts/icomoon.eot?h2trdr#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?h2trdr') format('truetype'),
-    url('fonts/icomoon.woff?h2trdr') format('woff'),
-    url('fonts/icomoon.svg?h2trdr#icomoon') format('svg');
+  font-family: 'markfont';
+  src: url('../fonts/markfont.eot?x4b6vy');
+  src: url('../fonts/markfont.eot?x4b6vy#iefix') format('embedded-opentype'),
+    url('../fonts/markfont.ttf?x4b6vy') format('truetype'),
+    url('../fonts/markfont.woff?x4b6vy') format('woff'),
+    url('../fonts/markfont.svg?x4b6vy#markfont') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
 }
 
-[class^="icon-"], [class*=" icon-"] {
+[class^="ari-"],
+[class*=" ari-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: 'icomoon' !important;
+  font-family: 'markfont' !important;
   speak: never;
   font-style: normal;
   font-weight: normal;
@@ -25,33 +26,42 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-select-term:before {
+.ari-Access:before {
   content: "\e900";
 }
-.icon-see-more:before {
-  content: "\e901";
-}
-.icon-revit-cost:before {
-  content: "\e902";
-}
-.icon-pay-flex:before {
-  content: "\e903";
-}
-.icon-lock-your-price:before {
-  content: "\e904";
-}
-.icon-estimate-usage:before {
+
+.ari-usage:before {
   content: "\e905";
 }
-.icon-buy-with-flex:before {
-  content: "\e906";
-}
-.icon-buy-more:before {
+
+.ari-star:before {
   content: "\e907";
 }
-.icon-buy-component-footer-first:before {
-  content: "\e908";
-}
-.icon-access-more:before {
+
+.ari-buy:before {
   content: "\e909";
+}
+
+.ari-see-more:before {
+  content: "\e901";
+}
+
+.ari-revit-cost:before {
+  content: "\e902";
+}
+
+.ari-pay-flex:before {
+  content: "\e903";
+}
+
+.ari-lock-your-price:before {
+  content: "\e904";
+}
+
+.ari-buy-with-flex:before {
+  content: "\e906";
+}
+
+.ari-buy:before {
+  content: "\e908";
 }

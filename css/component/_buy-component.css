@@ -86,11 +86,6 @@
 
     cursor: pointer;
 
-    & svg {
-        width: clamp(0.875rem, 0.385vw + 0.654rem, 1rem);
-        fill: white;
-    }
-
     &:hover {
         text-decoration: underline 2px rgb(139, 85, 152);
     }
