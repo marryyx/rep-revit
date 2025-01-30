@@ -43,20 +43,20 @@ const updatePrice = (key) => {
 };
 
 const updateContentOfPlan = (elm) => {
-    pricePlans = element.querySelector('p');
-    console.log('price =', price);
-    pricePlans.innerHTML = PLAN_PRICE.price;
+    const pricePlans = elm.querySelector('p');
+    const key = elm.dataset.select;
+
+    // console.log('price =', pricePlans);
+    pricePlans.innerHTML = PLAN_PRICE[key].price;
 };
 
 cardAll.forEach(element => {
-    updateContentOfPlan();
+    updateContentOfPlan(element);
 
     element.addEventListener("click", () => {
         clearSelectCard();
-
-        const data = element.dataset.select;
-
-        updatePrice(data);
+        
+        updatePrice(element.dataset.select);
 
         priceBlock.innerHTML = price;
         deskBlock.textContent = description;
