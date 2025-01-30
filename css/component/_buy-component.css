@@ -4,7 +4,7 @@
     font-family: Arial, Helvetica, sans-serif;
 
     border-radius: .5rem;
-    background-color: rgba(33, 33, 33, .9);
+    background-color: rgb(45, 45, 45, 1);
 
     & .buy-component__top {
         color: white;

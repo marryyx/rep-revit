@@ -1,0 +1,89 @@
+.autodesk {
+    position: relative;
+    padding-top: 4rem;
+    min-width: 100%;
+    margin-bottom: 2rem;
+    &::before {
+        position: absolute;
+        content: '';
+        inset: 0;
+        width: 100%;
+        background-image: url(../../image/bg-revit.avif);
+        background-repeat: no-repeat;
+        background-position: top;
+        background-color: #f9f9f9;
+        z-index: -10;
+    }
+}
+
+.autodesk__title {
+    padding: 0 24px 0 0;
+    width: 50%;
+    margin-bottom: 24px;
+    font-weight: 800;
+    font-size: clamp(1.5rem, calc(1.29rem + 0.926vw), 2.125rem);
+    letter-spacing: 0;
+    line-height: 1.2;
+    color: black;
+}
+
+.autodesk__subtitle {
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 1.5;
+    opacity: 0.7;
+
+    & p:first-child {
+        font-size: 1rem;
+        margin-bottom: 10px;
+    }
+
+    & p:last-of-type {
+        font-size: 0.8rem;
+        margin-bottom: 24px;
+    }
+}
+
+.autodesk__download {
+    margin-bottom: 24px;
+
+    & button {
+        padding: 8px 16px;
+
+        font-weight: 600;
+        line-height: 1.25;
+
+        color: rgba(0, 0, 0, 0.8);
+
+        border: 1px solid black;
+        border-radius: 5px;
+
+        & span {
+            margin-right: 10px;
+            font-weight: 600;
+            line-height: 1.25;
+        }
+    }
+}
+
+.autodesk__info {
+    display: flex;
+    align-items: center;
+
+    gap: 24px;
+    margin-bottom: 1.5rem;
+
+    font-weight: 700;
+    line-height: 1.5;
+
+    & span {
+        font-size: 20px;
+        margin-right: 3px;
+        font-weight: 700;
+        line-height: 1.5;
+    }
+
+    & a:hover {
+        text-decoration: underline #5f60ff;
+    }
+}
