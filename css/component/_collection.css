@@ -1,11 +1,13 @@
 .collection {
     display: flex;
-    margin-bottom: 7rem;
+    width: 100%;
+    background-color: #f2f2f2;
+    padding: 3rem 0;
+    margin-bottom: 5rem;
 }
 
 .group-image {
     height: 3rem;
-
     
     @media (max-width: 500px) {
         height: 2.2rem;
@@ -15,7 +17,7 @@
 .collection__flex {
     display: flex;
     flex-direction: row;
-    width: 100%;
+    min-width: 100%;
 
     @media (max-width: 1000px) {
         flex-direction: column;
@@ -76,6 +78,10 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2.4rem;
+
+    @media (max-width: 750px) {
+        grid-template-columns: repeat(2, 1fr);
+    }
 
     @media (max-width: 900px) {
         gap: 1rem;
