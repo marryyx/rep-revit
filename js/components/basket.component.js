@@ -1,13 +1,10 @@
 import { PLAN_PRICE } from '../store/pricing.js'
 
-const btnBasket = document.querySelector('.header__btn-basket');
-const btnClose = document.querySelectorAll('[closeBasket]');
-const dialogBasket = document.querySelector('.basket');
 const CARD_DATA_TEMP = [];
+const CARD_STORE_KEY = 'basketItem';
 
-const addBasket = document.querySelectorAll('[data-action-add-cart]');
-const basket = document.querySelector('.header__btn-basket');
-const totalPrice = document.querySelector('.basket__total');
+const btnBasket = document.querySelector('.header__btn-basket');
+const dialogBasket = document.querySelector('.basket');
 
 const html = document.querySelector("html");
 
@@ -24,7 +21,8 @@ const basketClose = () => {
     dialogBasket.close();
 };
 
-const setBasketCounter = (count) => {
+const basketCounet = () => {
+    const count = CARD_DATA_TEMP.length;
     btnBasket.dataset.basketCounter = count;
 };
 
@@ -63,23 +61,10 @@ const addToBasket = (data) => {
     removeBtn.addEventListener("click", () => {
         removeCardItem(id);
         elm.remove();
-
-        const itemsLenght = basketContent.querySelectorAll('.basket__content-card').length;
-        setBasketCounter(itemsLenght);
     });
 
-    const itemsLenght = basketContent.querySelectorAll('.basket__content-card').length;
-    setBasketCounter(itemsLenght);
-
+    basketCounet();
     priceTotal();
-};
-
-const basketInit = () => {
-    const savedItem = getDataOfStore();
-
-    updateCartDateOfStore(savedItem);
-
-    showCartsItems();
 };
 
 const showCartsItems = () => {
@@ -106,8 +91,9 @@ const removeCardItem = (id) => {
     CARD_DATA_TEMP.length = 0;
     CARD_DATA_TEMP.push(...newData);
     
-    updateCartDateOfStore(CARD_DATA_TEMP)
-    console.log("CARD_DATA_TEMP =", updateCartDateOfStore(newData))
+    setDataToStore(CARD_DATA_TEMP);
+    priceTotal();
+    basketCounet();
 };
 
 const loadingMode = () => {
@@ -118,22 +104,26 @@ const loadingMode = () => {
     }, 1000);
 };
 
-const updateCartDateOfStore = (storeDate) => {
+const updateCartDateOfStore = () => {
+    const storeDate = getDataOfStore();
+
     if (!storeDate) return
     CARD_DATA_TEMP.push(...storeDate);
+
+    basketCounet();
 }
 
 const setDataToStore = (data) => {
-    localStorage.setItem('basketItem', JSON.stringify(data));
-    addToBasket(data);
+    localStorage.setItem(CARD_STORE_KEY, JSON.stringify(data));
 };
 
 const getDataOfStore = () => {
-    const data = localStorage.getItem('basketItem');
+    const data = localStorage.getItem(CARD_STORE_KEY);
     return JSON.parse(data);
 };
 
 const priceTotal = () => {
+    const totalPrice = document.querySelector('.basket__total');
     let total = 0;
 
     CARD_DATA_TEMP.forEach(elm => {
@@ -145,7 +135,12 @@ const priceTotal = () => {
     totalPrice.textContent = `$${total.toLocaleString('en-US')}`;
 };
 
-export const basketComponent = () => {
+const init = () => {
+    const btnAddToCart = document.querySelectorAll('[data-action-add-cart]');
+    const btnClose = document.querySelectorAll('[closeBasket]');
+
+    updateCartDateOfStore();
+
     btnBasket.addEventListener('click', () => {
         basketOpen();
     });
@@ -156,10 +151,9 @@ export const basketComponent = () => {
         });
     });
 
-    addBasket.forEach(btns => {
+    btnAddToCart.forEach(btns => {
         btns.addEventListener('click', (event) => {
             const allTabs = document.querySelectorAll(".select-term__card");
-            const data = CARD_DATA_TEMP;
 
             allTabs.forEach(elm => {
                 if (elm.classList.contains('--is-select')) {
@@ -168,11 +162,12 @@ export const basketComponent = () => {
                 }
             });
 
-            setDataToStore(data);
+            setDataToStore(CARD_DATA_TEMP);
             basketOpen();
-            dialogBasket.showModal();
         });
     });
+};
 
-    basketInit();
+export const basketComponent = () => {
+    init();
 }
