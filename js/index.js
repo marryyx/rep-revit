@@ -97,29 +97,17 @@ cardAll.forEach(element => {
     });
 });
 
-// const updatePriceTwo = (key) => {
-//     const price = PLAN_PRICE_TWO[key].price;
-//     priceCard.innerHTML = price;
-// };
-
-// const updateContentOfPlanTwo = (elm) => {
-//     const pricePlans = elm.querySelector('p');
-//     const key = elm.dataset.select;
-
-//     pricePlans.innerHTML = PLAN_PRICE_TWO[key].price;
-// };
-
-// cardAll.forEach(element => {
-//     updateContentOfPlanTwo(element);
-
-//     element.addEventListener("click", () => {
-//         clearSelectCard();
-
-//         updatePriceTwo(element.dataset.select);
-
-//         element.classList.add('--is-select');
-//     });
-// });
-
 updatePrice('first');
 cardAll[0].classList.add('--is-select');
+
+const btnBasket = document.querySelector('.header__btn-basket');
+const btnClose = document.querySelector('.basket-btn-close');
+const dialogBasket = document.querySelector('.basket');
+
+btnBasket.addEventListener('click', () => {
+    dialogBasket.showModal();
+});
+
+btnClose.addEventListener('click', () => {
+    dialogBasket.close();
+});
