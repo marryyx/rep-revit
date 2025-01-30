@@ -33,6 +33,7 @@ function getDataOfInputs() {
         if ((!value.trim()) || (item.id === 'email' && !value.includes('@gmail.com'))) {
             item.classList.add('error');
             setTimeout(() => item.classList.remove('error'), 2000);
+            isValid = false;
         } else {
             user[item.id] = value;
         }
@@ -48,6 +49,8 @@ buttonSumbit.addEventListener('click', () => {
         console.log('Форма невалидна');
         return;
     }
+
+    window.location.href = 'signin.html';
 
     USER_DATA.push(user);
     setDataStore(USER_DATA);
