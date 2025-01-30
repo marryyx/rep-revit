@@ -1,8 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 
 /* components  */
-@import url(./component/_new-version.css);
-@import url(./component/_button.css);
+@import url(./component/_adobe.css);
 
 * {
     margin: 0;
@@ -19,13 +18,12 @@ button {
 
 body {
     display: flex;
-    align-items: center;
     justify-content: center;
     height: 100vh;
-    background: linear-gradient(180deg, #FAFBFF 0%, #EFF1F9 101.29%);
+    background-color: black;
 }
 
 .container {
     position: relative;
-    max-width: 1100px;
+    max-width: 1200px;
 }
