@@ -1,87 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 
+/* base */
+@import url('./core/_base.css');
+
+/* components */
 @import url('./component/_buy-component.css');
 @import url('./component/_select-term.css');
 @import url('./component/_header.css');
 @import url('./component/_footer.css');
-@import url('./_tooltipe.css');
+@import url('./component/_tooltipe.css');
 @import url('./component/_dialog.css');
-@import url('./component/_ari-faq.css');
+@import url('./component/_faq.css');
 @import url('./component/_collection.css');
 @import url('./component/_products.css');
 @import url('./component/_ar-imagine.css');
 @import url('./component/_autodesk.css');
 @import url('./component/_au-assi.css');
 @import url('./component/_autodesk-widget.css');
-@import url('./fonts.css');
 @import url('./component/_video-1.css');
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-button {
-    padding: 0;
-    border: none;
-    font: inherit;
-    color: inherit;
-    background-color: transparent;
-    cursor: pointer;
-}
-
-a {
-    color: rgb(0, 0, 0);
-    text-decoration: none;
-}
-
-html {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 16px;
-}
-
-body {
-    display: flex;
-    flex-flow: column;
-    align-items: center;
-    justify-content: center;
-    background-color: rgb(255, 255, 255);
-}
-
-.container {
-    position: relative;
-
-    max-width: 1440px;
-    width: 100%;
-    /* width: min(var(--container-size, 1440px) 100%); */
-
-    margin: 0 auto;
-    padding: 0 24px;
-
-     @media (max-width: 1440px) {
-        max-width: 1200px;
-    }
-    /*
-
-    @media (max-width: 1200px) {
-        min-width: 920px;
-    }
-
-    @media (max-width: 920px) {
-        min-width: 780px;
-    }
-
-    @media (max-width: 780px) {
-        min-width: 620px;
-    }
-    
-    @media (max-width: 620px) {
-        min-width: 420px;
-    } */
-}
-
-.video {
-    display: flex;
-    align-items: center;
-}
+@import url('./component/_fonts.css');

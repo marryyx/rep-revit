@@ -1,18 +1,19 @@
-.ari-faq {
+.faq {
     display: flex;
     justify-content: center;
     align-items: center;
     min-width: 100%;
     margin-bottom: 5rem;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-.ari-faq__list {
+.faq__list {
     display: flex;
     justify-content: center;
     flex-flow: column;
 }
 
-.ari-faq__item {
+.faq__item {
     display: flex;
     padding: 1rem 0;
     border-bottom: 1px solid rgba(0, 0, 0, 1);
@@ -20,36 +21,35 @@
     &:first-of-type {
         border-top: 1px solid rgba(0, 0, 0, 1);
     }
+
+    &[open] {
+        --details-mode: '\e910'
+    }
 }
 
-.ari-faq__capt {
+.faq__capt {
     position: relative;
     display: flex;
-    font-family: 'markfont' !important;
     margin: auto 30px;
     font-size: 1.2rem;
-    font-weight: 600;
+
+    &::-webkit-details-marker {
+        display: none;
+    }
+
+    &:before {
+        position: absolute;
+        inset: 3px auto auto -30px;
+        font-family: 'markfont';
+    
+        font-size: 1rem;
+        color: rgba(0, 0, 0, 0.8);
+    
+        content: var(--details-mode, '\e911');
+    }
 }
 
-.ari-faq__capt::-webkit-details-marker {
-    display: none;
-}
-
-.ari-faq__capt:before {
-    position: absolute;
-    inset: 3px auto auto -30px;
-
-    font-size: 1rem;
-    color: rgba(0, 0, 0, 0.8);
-
-    content: var(--details-mode, '\e911');
-}
-
-details[open] .ari-faq__capt {
-    --details-mode: '\e910'
-}
-
-.ari-faq__desk {
+.faq__desk {
     color: rgba(0, 0, 0, 0.7);
     line-height: 1.25;
     max-width: 800px;
@@ -60,7 +60,7 @@ details[open] .ari-faq__capt {
     }
 }
 
-.ari-faq__link {
+.faq__link {
     color: rgba(0, 0, 0, 0.7);
     line-height: 1.25;
     text-decoration: underline;
