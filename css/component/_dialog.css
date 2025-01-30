@@ -27,17 +27,50 @@
 }
 
 .basket__wrap {
+    position: relative;
+    z-index: 1;
+    bottom: 0;
+
     display: flex;
     flex-flow: column;
     flex: 1 1;
-    z-index: 1;
-    bottom: 0;
+
+    overflow: hidden;
+
     background-color: var(--color-light);
 
     &.--loading {
-        position: relative;
-        filter: blur(2px);
-        z-index: 100;
+
+        &::before,
+        &::after {
+            position: absolute;
+            inset: 0;
+            z-index: 100;
+            content: '';
+            background: rgba(245, 245, 245, 0.6);
+        }
+
+        &::after {
+            z-index: 200;
+            margin: auto;
+
+            width: 80px;
+            height: 80px;
+
+            border: 5px solid rgba(119, 119, 119, 0.7);
+            border-radius: 50%;
+            border-left-color: rgb(92, 91, 91);
+            background: none;
+
+            animation: loader 1s linear infinite;
+
+        }
+    }
+}
+
+@keyframes loader {
+    100% {
+        rotate: 360deg;
     }
 }
 

@@ -7,10 +7,21 @@ const CARD_DATA_TEMP = [];
 
 const addBasket = document.querySelectorAll('[data-action-add-cart]');
 const basket = document.querySelector('.header__btn-basket');
-const totalPrice = document.querySelector('.basket__total')
+const totalPrice = document.querySelector('.basket__total');
 
-const getBasketCounter = () => {
-    return parseInt(btnBasket.dataset.basketCounter);
+const html = document.querySelector("html");
+
+const basketOpen = () => {
+    html.classList.add('--add-scroll');
+
+    dialogBasket.showModal();
+    loadingMode();
+    showCartsItems();
+};
+
+const basketClose = () => {
+    html.classList.remove('--add-scroll');
+    dialogBasket.close();
 };
 
 const setBasketCounter = (count) => {
@@ -19,7 +30,7 @@ const setBasketCounter = (count) => {
 
 const addToBasket = (data) => {
     const { type, term, quanity, price } = data;
-    const basketContent = document.querySelector('.basket__content')
+    const basketContent = document.querySelector('.basket__content');
     const typeImage = type ? 'coins.png' : 'revit.png';
     const typeCaption = type ? 'Flex' : 'Revit';
     let itemId = 1;
@@ -65,32 +76,44 @@ const addToBasket = (data) => {
 const basketInit = () => {
     const savedItem = getDataOfStore();
 
-    if (savedItem) {
-        savedItem.forEach(item => {
-            addToBasket(item);
-        });
-    }
+    updateCartDateOfStore(savedItem);
 
-    priceTotal();
+    showCartsItems();
 };
+
+const showCartsItems = () => {
+    const savedItem = getDataOfStore();
+
+    if (!savedItem) return
+
+    document.querySelector('.basket__content').innerHTML = '';
+
+    savedItem.forEach(item => {
+        addToBasket(item);
+    });
+}
 
 const setCartData = (typeParm, key) => {
     const newObg = { type: typeParm, ...PLAN_PRICE[key] }
     CARD_DATA_TEMP.push(newObg);
 };
 
+const loadingMode = () => {
+    const wrapBasketLoader = document.querySelector('.basket__wrap');
+
+    setTimeout(() => {
+        wrapBasketLoader.classList.remove('--loading');
+    }, 1000);
+};
+
+const updateCartDateOfStore = (storeDate) => {
+    if (!storeDate) return
+    CARD_DATA_TEMP.push(...storeDate);
+}
+
 const setDataToStore = (data) => {
     localStorage.setItem('basketItem', JSON.stringify(data));
     addToBasket(data);
-};
-
-const loader = document.querySelector('.loader')
-const wrapBasketLoader = document.querySelector('.basket__wrap');
-const loadingMode = () => {
-    setTimeout(() => {
-        wrapBasketLoader.classList.remove('--loading');
-        loader.remove()
-    }, "1000");
 };
 
 const getDataOfStore = () => {
@@ -100,34 +123,26 @@ const getDataOfStore = () => {
 
 const priceTotal = () => {
     let total = 0;
-    const data = CARD_DATA_TEMP;
 
-    data.forEach(elm => {
+    CARD_DATA_TEMP.forEach(elm => {
         const regex = /[^\d.]+/g;
         const allPrice = elm.price.replace(regex, '');
         total += parseInt(allPrice);
     });
 
     totalPrice.textContent = `$${total.toLocaleString('en-US')}`;
-    console.log('total', total)
 };
 
 export const basketComponent = () => {
     btnBasket.addEventListener('click', () => {
-        loadingMode();
-        dialogBasket.showModal();
+        basketOpen();
     });
 
     btnClose.forEach(element => {
         element.addEventListener('click', () => {
-            dialogBasket.close();
-            wrapBasketLoader.classList.add('--loading')
+            basketClose();
         });
     });
-
-    const getBasketCounter = () => {
-        return parseInt(btnBasket.dataset.basketCounter);
-    };
 
     addBasket.forEach(btns => {
         btns.addEventListener('click', (event) => {
@@ -142,7 +157,7 @@ export const basketComponent = () => {
             });
 
             setDataToStore(data);
-            loadingMode();
+            basketOpen();
             dialogBasket.showModal();
         });
     });
