@@ -1,4 +1,4 @@
-export const basketContent = () => {
+export const basketComponent = () => {
 
 const btnBasket = document.querySelector('.header__btn-basket');
 const btnClose = document.querySelectorAll('[closeBasket]');

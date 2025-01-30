@@ -1,4 +1,4 @@
-export const videoContent = () => {
+export const videoComponent = () => {
     
 const btnVideoFirst = document.querySelector('.collection-video-btn-1');
 const btnVideoSecond = document.querySelector('.collection-video-btn-2');

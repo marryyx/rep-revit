@@ -1,4 +1,4 @@
-export const tabsContent = () => {
+export const tabsComponent = () => {
 
 const cardAll = document.querySelectorAll('.select-term__card');
 const tabContent = document.querySelectorAll('.buy-component__tabs-content');

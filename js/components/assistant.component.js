@@ -1,4 +1,4 @@
-export const assistantContent = () => {
+export const assistantComponent = () => {
 
 // const openAssistant = () => {
 //     const autodeskWidget = document.querySelector('.autodesk-widget')
