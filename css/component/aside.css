@@ -1,0 +1,107 @@
+.aside {
+    display: flex;
+    flex-direction: column;
+    grid-area: sidebar;
+    /* background-color: red; */
+    /* border-right: 2px solid #999; */
+    position: relative;
+
+    font-family: 'Varela Round';
+
+    height: 100vh;
+    width: 20vw;
+}
+
+.aside::before {
+    content: "";
+    position: absolute;
+    inset: 55px 0 35px auto;
+    border-right: 2px solid #99999941
+}
+
+.aside__top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* border: 2px solid black; */
+
+    gap: 30px;
+
+    height: 10%;
+    width: 100%;
+}
+
+.company__logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: aqua;
+    width: 60px;
+    height: 60px;
+
+    font-size: 24px;
+    font-weight: 600;
+
+    border-radius: 50%;
+}
+
+.compamy__text {
+    font-size: 30px;
+}
+
+.aside__content {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+
+    gap: 65px;
+    /* border: 2px solid yellow; */
+}
+
+
+.aside__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+    text-decoration: none;
+    color: #999;
+    
+
+    font-size: 26px;
+    position: relative;
+}
+
+.aside__link i {
+    position: absolute;
+    width: 200px;
+}
+
+.aside__line {
+    border: 1px solid #999999ce;
+    width: 80%;
+}
+
+.--is-active {
+    color: #4170f4;
+    position: relative;
+}
+
+.--is-active::before {
+    content: "";
+    position: absolute;
+
+    aspect-ratio: 1;
+
+    width: 5px;
+    background-color: #4170f4;
+    border-radius: 50%;
+
+    inset: auto 50px auto 0;
+    transform: translate(-60px);
+}
