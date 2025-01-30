@@ -1,0 +1,120 @@
+.resources {
+    position: relative;
+    min-width: 100%;
+    margin-bottom: 2rem;
+}
+
+.resources__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 24px;
+
+    & a {
+        &:hover {
+            text-decoration: underline 2px #5f60ff;
+        }
+    }
+}
+
+.resources__cards {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 1.5rem;
+
+    @media (max-width: 840px) {
+        grid-template-columns: repeat(6, 1fr);
+     }
+
+     @media (max-width: 570px) {
+        display: flex;
+        flex-flow: column;
+     }
+}
+
+.resources__card {
+    position: relative;
+
+    display: flex;
+    flex-flow: column;
+
+    grid-column: span 4 / span 4;
+
+    border-radius: 8px;
+    box-shadow: 0 0 0 1px rgba(33, 33, 33, 0.2);
+
+    & img {
+        width: 100%;
+        height: 100%;
+        border-radius: 0 0 8px 8px;
+
+        @media (min-width: 990px) {
+            border-radius: 8px 8px 0 0;
+        }
+
+        @media (max-width: 570px) {
+           display: none;
+        }
+    }
+
+    @media (max-width: 990px) {
+        flex-flow: column-reverse;
+    }
+
+    @media (max-width: 840px) {
+        grid-column: span 2 / span 2;
+    }
+}
+
+.resources-content {
+    display: flex;
+    justify-content: center;
+    flex-flow: column;
+    flex: 1 1 auto;
+    gap: 16px;
+    padding: 20px 16px 0;
+}
+
+.resources-content__top {
+    font-weight: 400;
+    font-size: .875rem;
+    letter-spacing: .02em;
+    line-height: 1.5;
+    text-transform: uppercase;
+}
+
+.resources-content__title {
+    font-weight: 600;
+    font-size: 1.1rem;
+    line-height: 1.5;
+}
+
+.resources-content__info {
+    font-weight: 400;
+    line-height: 1.5;
+    opacity: 0.8;
+}
+
+.resources-content__line {
+    margin: 1rem 0;
+    height: 0.5px;
+    width: 100%;
+    background-color: black;
+    opacity: 0.2;
+}
+
+.resources-content__bottom {
+    display: flex;
+    align-items: center;
+    
+    padding: 0 0 1.5rem 0;
+
+    & a {
+        display: inline-flex;
+        gap: 10px;
+
+        &:hover {
+            text-decoration: underline 2px #5f60ff;
+        }
+    }
+}

@@ -5,6 +5,7 @@
 
 /* components */
 @import url('./component/_buy-component.css');
+@import url('./component/_resources.css');
 @import url('./component/_select-term.css');
 @import url('./component/_header.css');
 @import url('./component/_footer.css');
