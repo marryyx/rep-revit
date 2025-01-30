@@ -16,10 +16,28 @@
     }
 }
 
+.auth form {
+    display: flex;
+    flex-flow: column;
+    gap: 20px;
+
+    & .form__group {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+
+        @media (max-width: 420px) {
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+}
+
 .auth__top {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    margin-bottom: 28px;
 
     & p {
         font-size: 22px;
