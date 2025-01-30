@@ -62,16 +62,16 @@ header {
     position: absolute;
     inset: 0 0 0 auto;
 
-    width: 50%;
-    height: 100vh;
+    width: 100%;
+    height: auto;
 }
 
 .aside img {
     object-fit: contain;
-    object-position: center;
+    object-position: 70rem;
 
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
 }
 
 .title {
