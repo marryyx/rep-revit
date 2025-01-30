@@ -1,17 +1,16 @@
 @font-face {
   font-family: 'markfont';
-  src: url('../fonts/markfont.eot?x4b6vy');
-  src: url('../fonts/markfont.eot?x4b6vy#iefix') format('embedded-opentype'),
-    url('../fonts/markfont.ttf?x4b6vy') format('truetype'),
-    url('../fonts/markfont.woff?x4b6vy') format('woff'),
-    url('../fonts/markfont.svg?x4b6vy#markfont') format('svg');
+  src:  url('../fonts/markfont.eot?tea0pa');
+  src:  url('../fonts/markfont.eot?tea0pa#iefix') format('embedded-opentype'),
+    url('../fonts/markfont.ttf?tea0pa') format('truetype'),
+    url('../fonts/markfont.woff?tea0pa') format('woff'),
+    url('../fonts/markfont.svg?tea0pa#markfont') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
 }
 
-[class^="ari-"],
-[class*=" ari-"] {
+[class^="ari-"], [class*=" ari-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: 'markfont' !important;
   speak: never;
@@ -26,6 +25,18 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.ari-close:before {
+  content: "\e90e";
+}
+.ari-people:before {
+  content: "\e90d";
+}
+.ari-lang:before {
+  content: "\e90c";
+}
+.ari-basket:before {
+  content: "\e90b";
+}
 .ari-arrow:before {
   content: "\e90a";
 }

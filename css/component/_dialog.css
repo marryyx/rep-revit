@@ -1,0 +1,54 @@
+.basket {
+    display: flex;
+    justify-content: center;
+    flex-flow: column;
+
+    position: fixed;
+    right: 0;
+    top: 76px;
+    left: auto;
+    bottom: 0;
+
+    min-width: 31rem;
+    border: none;
+    box-shadow: 0 0 5px 0;
+    z-index: 1000;
+}
+
+.basket__container {
+    padding: 1rem;
+    background-color: white;
+}
+
+.basket__top-cart {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-width: 100%;
+    margin-bottom: 1rem;
+
+    & p {
+        font-size: 20px;
+        font-weight: 600;
+    }
+}
+
+.basket-btn-close {
+    display: inline-flex;
+    align-items: center;
+    padding: 3px 3px 0 3px;
+
+    & svg {
+        width: 0.8rem;
+        height: 0.8rem;
+    }
+}
+
+.basket__new-sub {
+    display: flex;
+    font-size: 1.3rem;
+    padding: 1rem 0;
+    min-width: 100%;
+    border-top: 1px solid rgb(207, 207, 207);
+    border-bottom: 1px solid rgb(207, 207, 207);
+}
