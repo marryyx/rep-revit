@@ -1,17 +1,58 @@
-div p, #bold-text
-    {
+.link {
     color: red;
+    text-decoration: none;
 }
 
-
-/*.text-color.some {
-    color: red;
+.link:hover {
+    text-decoration: underline;
+    color: rgb(148, 0, 0);
+    cursor: pointer;
 }
 
-#bold-text {
-    color: violet;
+.link:active {
+    text-decoration-color: rgb(0, 0, 0);
+    color: black;
 }
 
-#some-text.text-color {
-    color: blue 
-} */
+.link:visited {
+    color: rgb(255, 0, 0);
+}
+
+input:enabled {
+    width: 100px;
+}
+
+input:focus {
+    width: 200px;
+}
+
+input:disabled {
+    width: 250px;
+}
+
+div:not(:empty) {
+    color:rgb(0, 0, 0)
+}
+
+p.main-text:not(:empty)::before {
+    content: '228';
+    color: aqua;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+p.main-text:empty::after {
+    content: attr(tiltle);
+    color: rgb(255, 0, 0);
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+p.main-text:not(:empty)::first-letter {
+    color: rgb(0, 72, 105);
+    font-size: 25px;
+}
+
+p:first-of-type {
+    font-size: 30px;
+}
