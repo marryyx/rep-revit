@@ -181,10 +181,6 @@
         line-height: 1.25;
     }
 
-    & svg {
-        width: clamp(1.375rem, 0.385vw + 1.154rem, 1.5rem);
-    }
-
     &:hover {
         border: 1px solid rgb(139, 85, 152);
     }
@@ -206,10 +202,14 @@
 
     margin-top: .75rem;
 
-    & span {
+    & .learn-more {
         opacity: 1;
         color: white;
         text-decoration: underline;
+        cursor: pointer;
+    }
+
+    & span {
         cursor: pointer;
     }
 }

@@ -26,42 +26,36 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.ari-arrow:before {
+  content: "\e90a";
+}
 .ari-Access:before {
   content: "\e900";
 }
-
 .ari-usage:before {
   content: "\e905";
 }
-
 .ari-star:before {
   content: "\e907";
 }
-
 .ari-buy:before {
   content: "\e909";
 }
-
 .ari-see-more:before {
   content: "\e901";
 }
-
 .ari-revit-cost:before {
   content: "\e902";
 }
-
 .ari-pay-flex:before {
   content: "\e903";
 }
-
 .ari-lock-your-price:before {
   content: "\e904";
 }
-
 .ari-buy-with-flex:before {
   content: "\e906";
 }
-
-.ari-buy:before {
+.ari-buy-component-footer-first:before {
   content: "\e908";
 }
