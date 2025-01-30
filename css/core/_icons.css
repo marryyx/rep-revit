@@ -25,6 +25,12 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.ari-contact:before {
+  content: "\e922";
+}
+.ari-more:before {
+  content: "\e924";
+}
 .ari-minimize1:before {
   content: "\e921";
 }
