@@ -24,3 +24,25 @@
         rotate: 360deg;
     }
 }
+
+@keyframes asidePupUpWindow {
+    0% {
+        left: -280px;
+        min-width: 0;
+    }
+
+    100% {
+        left: 0;
+        min-width: 280px;
+    }
+}
+
+@keyframes personalFormPupUp {
+    0% {
+        flex: 0 0 0;
+    }
+
+    100% {
+        flex: 0 0 40%;
+    }
+}

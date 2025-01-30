@@ -54,8 +54,8 @@
 
 .card-personal__divider {
     height: 1px;
-
-    background: var(--color-black-op-50);
+    background: var(--color-black-op-100);
+    opacity: 0.3;
 }
 
 .card-personal__item {
@@ -75,7 +75,7 @@
         --opacity-text-value: 1;
         --card-person-visibly-text: visible;
 
-        background: linear-gradient(60deg, rgba(95, 96, 255, 0.2), rgba(95, 96, 255, 0.1));
+        background: #e6e6ff;
     }
 
     @media (min-width: 730px) {
@@ -85,6 +85,36 @@
 
     &.--img {
         min-height: 105px;
+    }
+
+    &.--active {
+        background: #e6e6ff;
+        border: 1px solid #ccf;
+        outline: none;
+
+        &::before {
+            position: absolute;
+            right: -11px;
+            top: calc(50% - 14px);
+
+            border-left: 11px solid #ccf;
+            border-bottom: 14px solid rgba(0, 0, 0, 0);
+            border-top: 14px solid rgba(0, 0, 0, 0);
+
+            content: '';
+        }
+
+        &::after {
+            position: absolute;
+            right: -10px;
+            top: calc(50% - 12px);
+
+            border-left: 10px solid #e6e6ff;
+            border-bottom: 12px solid rgba(0, 0, 0, 0);
+            border-top: 12px solid rgba(0, 0, 0, 0);
+
+            content: "";
+        }
     }
 }
 
@@ -141,7 +171,7 @@
 
 .card-personal__container {
     position: relative;
-    
+
     display: flex;
     align-items: center;
 

@@ -14,12 +14,15 @@
     &.--is-open {
         position: absolute;
         top: 74px;
+        bottom: 0;
         left: 0;
+
         z-index: 110;
 
-        min-height: 100%;
-
         border-right: 1px solid black;
+
+        width: 0;
+        animation: asidePupUpWindow 0.3s ease-in-out;
     }
 }
 

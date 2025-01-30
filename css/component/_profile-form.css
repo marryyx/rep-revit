@@ -8,12 +8,14 @@
 
     margin: -32px 0 0;
 
-    flex: 0 0 40%;
+    /* flex: 0 0 40%; */
 
     border: 1px solid #ccf;
     border-top: none;
     border-bottom: none;
     background: var(--color-light);
+
+    animation: personalFormPupUp 0.3s ease-in-out forwards;
 
     @media (max-width: 989px) {
         position: fixed;

@@ -2,10 +2,10 @@
     display: none !important;
 }
 
-/* .gm-scroll-hide {
-    display: none !important;
+.gm-scroll-hide {
+    overflow: hidden !important;
 }
 
-.gm-hidden {
+/* .gm-hidden {
     visibility: hidden !important;
 } */
