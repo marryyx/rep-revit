@@ -18,7 +18,12 @@
     grid-template-rows: repeat(3, 1fr);
 
     grid-column-gap: 10px;
-    grid-row-gap: 30px;
+
+
+    @media (max-width: 998px) {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+    }
 }
 
 .adobe__card {
@@ -37,6 +42,7 @@
     border: 5px solid rgb(20, 190, 238);
     background-color: rgba(0, 39, 48, 0.5);
     color: white;
+    
 
     & .adobe__title {
         margin-bottom: 10px;
@@ -96,6 +102,11 @@
             color: rgb(112, 37, 67);
         }
     }
+
+    @media (max-width: 998px) {
+        grid-area: 3 / 2 / 3 / 5;
+        transform: translate(0, 20%);
+    }
 }
 
 .adobe__card.--ai {
@@ -103,6 +114,7 @@
     background-color: rgba(47, 24, 0, 0.5);
 
     grid-area: 2 / 2 / 3 / 5;
+    transform: translate(0, 14%);
 
     & .adobe__title.--ai {
         color: rgb(232, 126, 34);
@@ -120,7 +132,7 @@
     background-color: rgba(48,10,30, 0.5);
 
     grid-area: 2 / 3 / 3 / 4;
-    transform: translate(0,-58%);
+    transform: translate(0,-43%);
 
     & .adobe__title.--xd {
         color: rgb(229,72,162);
@@ -141,17 +153,26 @@
 
     grid-area: 2 / 4 / 3 / 5;
 
-    transform: translate(0,-40%);
+    transform: translate(0,-20%);
 
     & .adobe__title.--an {
-        transform: translate(0, 10px);
         color: rgb(221,102,77);
+
+        @media (min-width: 998px) {
+            transform: translate(0, 10%);
+        }
     }
 
     .adobe__capt.--an {
         & span {
             color: rgb(137,62,51);
         }
+    }
+
+    @media (max-width: 998px) {
+        grid-area: 3 / 3 / 3 / 5;
+        transform: translate(0, 21%);
+        padding: 15px 30px 50px 10px;
     }
 }
 
@@ -160,7 +181,7 @@
     background-color: rgba(7,48,39, 0.5);
 
     grid-area: 2 / 3 / 4 / 4;
-    transform: translate(0,64%);
+    transform: translate(0,86%);
 
     & .adobe__title.--au {
         color: rgb(77,214,190);
@@ -186,7 +207,7 @@
     background-color: rgba(7,50,2, 0.5);
 
     grid-area: 2 / 4 / 4 / 4;
-    transform: translate(0,64%);
+    transform: translate(0,86%);
 
     & .adobe__title.--dw {
         color: rgb(71,247,15);
@@ -204,5 +225,10 @@
         & .spacer {
             margin-right: 10px;
         }
+    }
+
+    @media (max-width: 998px) {
+        grid-area: 4 / 2;
+        transform: translate(0, 10%);
     }
 }
