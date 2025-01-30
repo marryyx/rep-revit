@@ -9,6 +9,14 @@ body {
     height: 500px;
 }
 
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 50px;
+    background-color: black;
+}
+
 .nav-list {
     display: flex;
     align-items: center;
@@ -31,6 +39,7 @@ a {
     font-size: 18px;
     list-style-type: none;
     position: relative;
+    transition: all .25s ease;
 }
 
 .nav-list-link::after {
@@ -41,10 +50,19 @@ a {
     position: absolute;
     bottom: -8px;
     left: 0;
+    transform: scaleX(0);
     transition: all .25s ease;
 }
 
+.nav-list-link:hover {
+    color: rgb(160, 115, 160);
+}
+
+.nav-list-link:hover:after {
+    transform: scaleX(1);
+}
+
 a:hover {
-    color: rgb(122, 122, 122);
+    color: rgb(160, 115, 160);
     cursor: pointer;
 }
