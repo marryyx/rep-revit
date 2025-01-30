@@ -11,136 +11,33 @@
 </head>
 
 <body>
-    <div class="grid-container">
 
-        <aside class="aside">
+    <div class="conteiner">
 
-            <div class="aside__top">
-
-                <div class="company">
-                    <div class="company__logo">CM</div>
-                    <div class="company__text">CodingMarky</div>
-                </div>
-
+        <div class="favourites">
+            <div class="favourites__text">
+                What`s your favourites?
             </div>
 
-            <div class="aside__content">
+            <div class="favourites__food">
 
-                <a href="" class="aside__link aside__link--is-active"><i class='bx bx-home-alt'></i>Dashboard</a>
-                <a href="" class="aside__link"><i class='bx bx-windows'></i>Content</a>
-                <a href="" class="aside__link"><i class='bx bx-signal-5'></i>Analytics</a>
-                <a href="" class="aside__link"><i class='bx bx-like'></i>Likes</a>
-                <a href="" class="aside__link"><i class='bx bx-chat'></i>Comments</a>
-                <a href="" class="aside__link"><i class='bx bx-share'></i> Share</a>
-                <span class="aside__link --line"></span>
-                <a href="" class="aside__link"><i class='bx bx-log-in'></i>Logout</a>
-
-                <a href="" class="aside__link">
-                    <i class='bx bx-moon'></i>
-
-                    <span>Dark Mode</span>
+                <div class="favourites__checkbox">
+                    <input class="favourites__input" name="checkbox" type="checkbox">
+                    <label class="favourites__label" for="checkbox">
+                        <span>Broccoli</span> 
+                        <span class="tick"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" viewBox="0 0 191.667 191.667" xml:space="preserve">
+                            <path d="M95.833,0C42.991,0,0,42.99,0,95.833s42.991,95.834,95.833,95.834s95.833-42.991,95.833-95.834S148.676,0,95.833,0z   M150.862,79.646l-60.207,60.207c-2.56,2.56-5.963,3.969-9.583,3.969c-3.62,0-7.023-1.409-9.583-3.969l-30.685-30.685  c-2.56-2.56-3.97-5.963-3.97-9.583c0-3.621,1.41-7.024,3.97-9.584c2.559-2.56,5.962-3.97,9.583-3.97c3.62,0,7.024,1.41,9.583,3.971  l21.101,21.1l50.623-50.623c2.56-2.56,5.963-3.969,9.583-3.969c3.62,0,7.023,1.409,9.583,3.969  C156.146,65.765,156.146,74.362,150.862,79.646z"/>
+                            </svg></span>
+                    </label>
+                </div>
                 
-                    <div class="switcher --mrg">
-                        <input class="switcher__input" id="check" type="checkbox">
-                        <label class="switcher__label" for="check"></label>
-                    </div>
-                </a>
+
 
             </div>
-        </aside>
 
-        <header class="header">
-            <div class="header__list">
-                <button class="list-btn">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-            </div>
-
-            <form action="#" class="header__searchbox">
-                <button class="search"><i class='bx bx-search'></i></button>
-                <input type="text" class="search-input" placeholder="Search here...">
-                <div class="user-avatar"></div>
-            </form>
-
-            <img src="image/image.png" alt="#" class="logo">
-        </header>
-
-        <main class="main">
-            <div class="dashboard__main">
-
-                <div class="topics">
-                    <div class="topics__top"><i class='bx bx-time-five'></i>Dasboard</div>
-                    <div class="topics__list">
-                        <div class="populad-card"><i class='bx bx-like'></i>
-                            <div>Total Likes</div>
-                            <p>50,120</p>
-                        </div>
-                        <div class="populad-card --yellow"><i class='bx bx-chat'></i>
-                            <div>Comments</div>
-                            <p>25,120</p>
-                        </div>
-                        <div class="populad-card --fiolet"><i class='bx bx-share bx-flip-horizontal'></i>
-                            <div>Total Share</div>
-                            <p>10,320</p>
-                        </div>
-                    </div>
-
-                    <div class="activity">
-                        <div class="section-caption"><i class='bx bx-calendar-alt'></i>Recent Activity</div>
-                        <div class="table">
-                            <table class='table__activity'>
-                                <thead>
-                                    <tr>
-                                        <td>Name</td>
-                                        <td>Email</td>
-                                        <td>Joined</td>
-                                        <td>Type</td>
-                                        <td>Status</td>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>Prem Shani</td>
-                                        <td>premshahi@gmail.com</td>
-                                        <td>2022-02-12</td>
-                                        <td>New</td>
-                                        <td>Liked</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Deepa Chanci</td>
-                                        <td>deepchand@gmail.com</td>
-                                        <td>2022-02-12</td>
-                                        <td>Member</td>
-                                        <td>Shared</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Prakash shahi</td>
-                                        <td>prakashshahi@gmail.com</td>
-                                        <td>2022-02-13</td>
-                                        <td>New</td>
-                                        <td>Liked</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Manisha Chand</td>
-                                        <td>manishachan@gmail.com</td>
-                                        <td>2022-02-13</td>
-                                        <td>Member</td>
-                                        <td>Shared</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </main>
-
+        </div>
 
     </div>
-
 
 </body>
 
