@@ -21,11 +21,10 @@
                     <div class="auth__logo"></div>
                 </div>
 
-                <form action="">
-                    <div class="input__signin">
-                        <label class="auth__label" for="email">Email</label>
-                        <input class="auth__input --email" id="email" name="email"
-                            placeholder="name@example.com" type="email" required>
+                <form>
+                    <div class="input --signin">
+                        <label>Email</label>
+                        <input id="email" placeholder="name@example.com" type="email" required>
 
                         <div class="auth__not-email">
                             <p>Please enter an email</p>
@@ -36,15 +35,38 @@
                     </div>
 
                     <div class="auth__button">
-                        <button class="button --sumbit" type="sumbit" name="email">Next</button>
+                        <button id="submit" class="button --sumbit" type="sumbit">Next</button>
                     </div>
                 </form>
 
                 <div class="auth__bottom">
                     <p>New to autodesk?</p>
-                    <a class="form__link" href="createAccount.html">Create account</a>
+                    <a class="form__link" href="create-account.html">Create account</a>
                 </div>
             </div>
+
+            <!-- <div class="auth-welcome">
+                <div class="auth-welcome__top">
+                    <span>Welcome</span>
+                    <span class="auth-top-email"></span>
+                    <span class="auth-ari-people ari-people"></span>
+                </div>
+
+                <div class="input">
+                    <label class="auth__label --justify">password<span><a
+                                href="#">forgot?</a></span></label>
+                    <input class="auth__input" id="password" type="password" required>
+                </div>
+
+                <div class="auth__button">
+                    <button class="button-sumbit" type="sumbit" name="email">Sign in</button>
+                </div>
+
+                <div class="input__pravicy --small">
+                    <input id="pravicy" name="pravicy" type="checkbox" required>
+                    <label for="pravicy">Stay signed in</label>
+                </div>
+            </div> -->
 
             <footer class="auth__footer">
                 <p>Your account for everything Autodesk</p>
@@ -52,42 +74,6 @@
             </footer>
         </section>
     </div>
-
-    <!-- <div class="form-Wrapper">
-        <div class="container">
-            <div class="form-Wrapper__top">
-                <p>Sign in</p>
-                <div class="form-Wrapper__logo"></div>
-            </div>
-
-            <div class="form-Wrapper__signin">
-                <label class="form-Wrapper__label" for="email">Email</label>
-                <input class="form-Wrapper__input --email" id="email" name="email" placeholder="name@example.com"
-                    type="email" required>
-
-                <div class="form-Wrapper__not-email">
-                    <p>Please enter an email</p>
-                </div>
-                <div class="form-Wrapper__message">
-                    <p>This email or username is not recognized</p>
-                </div>
-            </div>
-
-            <div class="form-Wrapper__button">
-                <button class="button-sumbit" type="sumbit" name="email">Next</button>
-            </div>
-
-            <div class="form-Wrapper__bottom">
-                <p>New to autodesk?</p>
-                <a class="form__link" href="createAccount.html">Create account</a>
-            </div>
-        </div>
-    </div>
-
-    <div class="footer-form">
-        <p>Your account for everything Autodesk</p>
-        <a class="form__link" href="#">Learn more</a>
-    </div> -->
 
     <script src="./js/signin.js" type="module"></script>
 

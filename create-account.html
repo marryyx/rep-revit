@@ -22,37 +22,39 @@
                 </div>
 
                 <form action="">
-                    <div class="auth__full-name">
-                        <label class="auth__label" for="FirstName">First name</label>
-                        <label class="auth__label" for="LastName">Last name</label>
+                    <div class="input --full-name">
+                        <label>First name</label>
+                        <label>Last name</label>
 
-                        <input class="auth__input --full-name" id="usernameFirst" name="FirstName" type="text" required>
-                        <input class="auth__input --full-name" id="usernameLast" name="LastName" type="text" required>
+                        <input id="usernameFirst" name="FirstName" type="text"
+                            pattern="^[A-Za-zА-Яа-яёЁ\s\-]+$" required>
+                        <input class="auth__input" id="usernameLast" name="LastName" type="text"
+                            pattern="^[A-Za-zА-Яа-яёЁ\s\-]+$" required>
                     </div>
 
-                    <div class="auth__form --email">
-                        <label class="auth__label" for="email">Email</label>
-                        <input class="auth__input --email" id="email" name="email" type="email" required>
+                    <div class="input">
+                        <label>Email</label>
+                        <input id="email" type="email" required>
                     </div>
 
-                    <div class="auth__form --confirm-email">
-                        <label class="auth__label" for="confirmEmail">Confirm email</label>
-                        <input class="auth__input" id="confirmEmail" name="confirmEmail" type="email" required>
+                    <div class="input">
+                        <label>Confirm email</label>
+                        <input id="confirmEmail" type="email" required>
                     </div>
 
-                    <div class="auth__form --password">
-                        <label class="auth__label" for="password">password</label>
-                        <input class="auth__input" id="password" name="password" type="password" required>
+                    <div class="input">
+                        <label>password</label>
+                        <input id="password" type="password" minlength="8" required>
                     </div>
 
-                    <div class="auth__pravicy">
-                        <input id="pravicy" name="pravicy" type="checkbox" required>
-                        <label for="pravicy">I agree to the <a class="form__link" href="#">Autodesk Terms of Use</a> and
+                    <div class="input__privacy">
+                        <input id="pravicy" type="checkbox" required>
+                        <label>I agree to the <a class="form__link" href="#">Autodesk Terms of Use</a> and
                             acknowledge the <a class="form__link" href="#">Privacy Statement.</a></label>
                     </div>
 
                     <div class="auth__button">
-                        <button id="sumbit" class="button --sumbit" type="submit">Create account</button>
+                        <button id="submit" class="button --sumbit" type="submit">Create account</button>
                     </div>
 
                     <div class="auth__bottom">
