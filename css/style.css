@@ -1,11 +1,11 @@
 /* главные  */
-
 @import url(./core/keyframes.css);
 @import url(./core/fonts.css);
 @import url(./core/base.css);
-/* компоненты */
+@import url(./core/root.css);
 
-@import url(./component/header.css);
+/* компоненты */
 @import url(./component/aside.css);
+@import url(./component/header.css);
 @import url(./component/main.css);
-@import url(./component/table.css)
+@import url(./component/table.css);
