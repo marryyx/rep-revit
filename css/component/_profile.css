@@ -81,6 +81,17 @@
     overflow-y: auto;
 }
 
+.profile-main__container {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+
+    max-width: 1140px;
+
+    margin: 0 auto;
+}
+
+
 .profile-main__top-card {
     display: flex;
     align-items: center;
@@ -124,9 +135,7 @@
     flex-wrap: wrap;
     flex: 1;
 
-    max-width: 1140px;
-
-    margin: 2rem auto;
+    margin: 2rem 0;
 
     &.--personal {
         gap: 24px;
