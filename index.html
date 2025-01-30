@@ -4,38 +4,124 @@
 
 <head>
 
-    <title>Marky | Login</title>
+    <title>Marky | Mef</title>
     <link rel="stylesheet" href="css/style.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
 </head>
 
 <body>
+    <div class="grid-container">
 
-    <div class="wrapper">
-        <form action="">
-            <h1>Login</h1>
-            <div class="input-box">
-                <input type="text" placeholder="Username" required>
-                <i class='bx bxs-user'></i>
+        <aside class="aside">
+            <div class="aside__top">
+                <div class="company__logo">CM</div>
+                <div class="compamy__text">CodingMarky</div>
             </div>
-            <div class="input-box">
-                <input type="password" placeholder="password" required>
-                <i class='bx bxs-lock-alt'></i>
+            <div class="aside__content">
+                <a href="" class="aside__link --is-active"><i class='bx bx-home-alt'></i>Dashboard</a>
+                <a href="" class="aside__link"><i class='bx bx-windows'></i>Content</a>
+                <a href="" class="aside__link"><i class='bx bx-signal-5'></i>Analytics</a>
+                <a href="" class="aside__link"><i class='bx bx-like'></i>Likes</a>
+                <a href="" class="aside__link"><i class='bx bx-chat'></i>Comments</a>
+                <a href="" class="aside__link"><i class='bx bx-share'></i> Share</a>
+                <a href="" class="aside__line"></a>
+                <a href="" class="aside__link"><i class='bx bx-log-in'></i>Logout</a>
+                <a href="" class="aside__link"><i class='bx bx-moon'></i>Dark Mode</a>
+            </div>
+        </aside>
+
+        <header class="header">
+            <div class="header__list">
+                <button class="list-btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
             </div>
 
-            <div class="remember-forgot">
-                <label><input type="checkbox">Remember me</label>
-                <a href="#">Forgot password?</a>
-            </div>
+            <form action="#" class="header__searchbox">
+                <input type="text" class="search-input" placeholder="Search here...">
+                <div class="user-avatar"></div>
+            </form>
 
-            <button type="submit" class="btn">Login</button>
+            <img src="image/image.png" alt="#" class="logo">
+        </header>
 
-            <div class="register-link">
-                <p>Don`t have an account? <a href="#">Register</a></p>
+        <main class="main">
+            <div class="dashboard__main">
+
+                <div class="topics">
+                    <div class="topics__top"><i class='bx bx-time-five'></i>Dasboard</div>
+                    <div class="topics__list">
+                        <div class="populad-card"><i class='bx bx-like'></i>
+                            <div>Total Likes</div>
+                            <p>50,120</p>
+                        </div>
+                        <div class="populad-card --yellow"><i class='bx bx-chat'></i>
+                            <div>Comments</div>
+                            <p>25,120</p>
+                        </div>
+                        <div class="populad-card --fiolet"><i class='bx bx-share bx-flip-horizontal'></i>
+                            <div>Total Share</div>
+                            <p>10,320</p>
+                        </div>
+                    </div>
+
+                    <div class="activity">
+                        <div class="section-caption"><i class='bx bx-calendar-alt'></i>Recent Activity</div>
+                        <div class="table">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <td>Name</td>
+                                        <td>Email</td>
+                                        <td>Joined</td>
+                                        <td>Type</td>
+                                        <td>Status</td>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Prem Shani</td>
+                                        <td>premshahi@gmail.com</td>
+                                        <td>2022-02-12</td>
+                                        <td>New</td>
+                                        <td>Liked</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Deepa Chanci</td>
+                                        <td>deepchand@gmail.com</td>
+                                        <td>2022-02-12</td>
+                                        <td>Member</td>
+                                        <td>Shared</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Prakash shahi</td>
+                                        <td>prakashshahi@gmail.com</td>
+                                        <td>2022-02-13</td>
+                                        <td>New</td>
+                                        <td>Liked</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Manisha Chand</td>
+                                        <td>manishachan@gmail.com</td>
+                                        <td>2022-02-13</td>
+                                        <td>Member</td>
+                                        <td>Shared</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
             </div>
-        </form>
+        </main>
+
+
     </div>
+
 
 </body>
 

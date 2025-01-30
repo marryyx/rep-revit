@@ -1,4 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Madimi+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+
+@import url(./keyframes.css);
 
 * {
     margin: 0;
@@ -12,119 +15,283 @@ body {
     justify-content: center;
     align-items: center;
 
-    min-height: 100vh;
+    min-width: 100vw;
 
-    background: url('image.jpg') ;
-    background-size: cover;
-    background-position: center;
+    /* min-height: 100vh; */
 }
 
-.wrapper {
-    width: 420px;
+.grid-container {
+    display: grid;
+    grid-template-areas: "sidebar header" "sidebar main";
+}
 
+.header {
+    display: flex;
+    grid-area: header;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 30px;
+
+    min-height: 20%;
+
+    padding: 10px;
+    background: purple;
+}
+
+.header__list {
+    display: flex;
+    align-items: center;
+
+    a {
+        font-size: 50px;
+        color: black;
+    }
+}
+
+.list-btn {
+    display: flex;
+    flex-direction: column;
+
+    padding: 0;
+    border: none;
+    font: inherit;
+    color: inherit;
     background-color: transparent;
-    border: 2px solid rgba(255, 255, 255, .2);
-    backdrop-filter: blur(20px);
-    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
-
-    color: #fff;
-    border-radius: 10px;
-    padding: 30px 40px;
+    cursor: pointer;
 }
 
-.wrapper h1 {
-    font-size: 36px;
-    text-align: center;
-}
+.list-btn span {
+    display: block;
 
-.wrapper .input-box {
+    width: 30px;
+    height: 5px;
+
+    background-color: black;
+    margin-bottom: 5px;
     position: relative;
-
-    width: 100%;
-    height: 50px;
-    margin: 30px 0;
 }
 
-.input-box input {
+
+.search-input {
+    width: 100vh;
+    height: 5vh;
+    padding: 20px 10px;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    width: 3%;
+    border-radius: 50%;
+}
+
+.aside {
+    display: flex;
+    flex-direction: column;
+    grid-area: sidebar;
+    background-color: red;
+
+    font-family: 'Varela Round';
+
+
+    height: 100vh;
+    width: 20vw;
+}
+
+.aside__top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid black;
+
+    gap: 30px;
+
+    height: 10%;
     width: 100%;
+}
+
+.company__logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: aqua;
+    width: 60px;
+    height: 60px;
+
+    font-size: 24px;
+    font-weight: 600;
+
+    border-radius: 50%;
+}
+
+.compamy__text {
+    font-size: 30px;
+}
+
+.aside__content {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
     height: 100%;
 
-    background-color: transparent;
-    border: none;
-    outline: none;
-    border: 2px solid rgba(255, 255, 255 , .2);
-    border-radius: 40px;
-    font-size: 16px;
-    color: #fff;
-
-    padding: 20px 45px 20px 20px;
+    gap: 65px;
+    border: 2px solid yellow;
 }
 
-.input-box input::placeholder {
-    color: #fff;
-}
-
-.input-box i {
-    position: absolute;
-    right: 20px;
-    top: 50%;
-    transform: translateY(-50%);
-
-    font-size: 20px;
-}
-
-.wrapper .remember-forgot {
+.aside__link {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
 
-    font-size: 14.5px;
-
-    margin: -15px 0 15px;
-}
-
-.remember-forgot label input {
-    accent-color: #fff;
-    margin-right: 3px;
-}
-
-.remember-forgot a {
-    color: #fff;
     text-decoration: none;
+    color: #8f8f8f;
+
+    font-size: 26px;
 }
 
-.remember-forgot a:hover {
-    text-decoration: underline;
+.aside__link a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
 }
 
-.wrapper .btn {
-  width: 100%;
-  height: 45px; 
+.aside__link i {
+    position: absolute;
+    width: 190px;
+}
 
-  background: #fff;
+.aside__line {
+    border: 1px solid #8f8f8f;
+    width: 80%;
+}
 
-  border: none;
-  outline: none;
-  border-radius: 40px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, .1);
-  cursor: pointer;
+.--is-active {
+    color: #4170f4;
+}
+
+.main {
+    grid-area: main;
+    height: max-content;
+    border: 5px solid aqua;
+    background: green;
+}
+
+.topics {
+    display: flex;
+    flex-direction: column;
+}
+
+.topics__top {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 10px 0 3% 5%;
+    font-size: 35px;
+}
+
+.bx-time-five {
+    display: flex;
+
+    color: white;
+    background-color: #4170f4;
+    width: 35px;
+    height: 35px;
+    border-radius: 25%;
+    font-size: 35px;
+}
+
+.topics__list {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.populad-card {
+    background-color: #c0dfff;
+    width: 350px;
+    height: 300px;
+
+    border-radius: 5%;
+
+    padding: 58px 0;
+}
+
+.populad-card i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 68px;
+
+    
+    margin-bottom: 10px;
+}
+.populad-card div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 24px;
+}
+.populad-card p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 48px;
+}
+
+.populad-card.--yellow {
+    background: #fff3d7;
+}
+
+.populad-card.--fiolet {
+    background-color: #f0e1fd;
+}
+
+.section-caption {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 3% 0 3% 5%;
+    font-size: 35px;
+}
+.bx-calendar-alt {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: white;
+    background-color: #4170f4;
+    width: 35px;
+    height: 35px;
+    border-radius: 25%;
+    font-size: 35px;
+}
+
+.table__activity {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+tbody {
+    margin-right: 50px;
+  }
   
-  font-size: 16px;
-  color: #333;
-  font-weight: 600;
-}
-
-.wrapper .register-link {
-    font-size: 14.5px;
+  tbody > tr > td:last-of-type {
     text-align: center;
-    margin: 20px 0 15px;
-}
-
-.register-link p a {
+  }
+  
+  thead {
+    border-bottom: 2px solid rgb(160 160 160);
+    background-color: #2c5e77;
     color: #fff;
-    text-decoration: none;
-    font-weight: 600;
-}
-
-.register-link p a:hover {
-    text-decoration: underline;
-}
+  }
