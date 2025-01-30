@@ -41,9 +41,9 @@
     height: 60px;
     width: 100%;
 
-    color: white;
+    color: var(--color-light);
 
-    background: black;
+    background: var(--color-black);
     border-radius: 8px 8px 0 0;
 
     & span:first-child {
@@ -68,12 +68,12 @@
 
             font-size: 12px;
             font-weight: 400;
-            color: rgb(255, 255, 255);
+            color: var(--color-light);
 
             opacity: var(--close-tooltipe-opa, 0);
             transition: opacity .15s ease-in-out;
 
-            background-color: rgb(102, 102, 102);
+            background-color: var(--color-grey);
             border-radius: 5px;
             z-index: 100;
         }
@@ -98,12 +98,12 @@
 
             font-size: 12px;
             font-weight: 400;
-            color: rgb(255, 255, 255);
+            color: var(--color-light);
 
             opacity: var(--close-tooltipe-opa, 0);
             transition: opacity .15s ease-in-out;
 
-            background-color: rgb(102, 102, 102);
+            background-color: var(--color-grey);
             border-radius: 5px;
             z-index: 100;
         }
@@ -132,12 +132,12 @@
 
             font-size: 12px;
             font-weight: 400;
-            color: rgb(255, 255, 255);
+            color: var( --color-light);
 
             opacity: var(--close-tooltipe-opa, 0);
             transition: opacity .15s ease-in-out;
 
-            background-color: rgb(102, 102, 102);
+            background-color: var(--color-grey);
             border-radius: 5px;
             z-index: 100;
         }
@@ -164,7 +164,7 @@
     height: 490px;
     width: 100%;
 
-    background-color: #f9f9f9;
+    background-color: var(--color-light-grey);
     overflow-y: auto;
     overflow-x: hidden;
 
@@ -181,9 +181,9 @@
 
     font-size: 14px;
     line-height: 1.5;
-    color: rgb(33, 33, 33);
+    color: var(--color-dark-grey);
 
-    background-color: white;
+    background-color: var(--color-light);
     border: 1px solid rgba(0, 0, 0, 0.2);
     border-radius: 10px 10px 10px 0;
 }
@@ -204,9 +204,9 @@
 
     font-size: 14px;
     line-height: 1.5;
-    color: rgb(255, 255, 255);
+    color: var(--color-light);
 
-    background-color: rgb(33, 33, 33);
+    background-color: var(--color-dark-grey);
     border-radius: 10px 10px 0 10px;
 }
 
@@ -214,7 +214,7 @@
     & p {
         font-size: 14px;
         line-height: 1.5;
-        color: rgb(33, 33, 33);
+        color: var(--color-dark-grey);
 
         margin-bottom: 10px;
     }
@@ -260,7 +260,7 @@ details[open] .content__example {
     width: 100%;
 
     background-color: white;
-    border-top: 1px solid rgb(222, 222, 222);
+    border-top: 1px solid #dedede;
 
     & textarea {
         flex-grow: 2;
@@ -268,7 +268,7 @@ details[open] .content__example {
         line-height: 1.5;
 
         padding: 20px 12px 0 12px;
-        color: rgb(0, 0, 0);
+        color: var(--color-black);
 
         border: none;
         resize: none;

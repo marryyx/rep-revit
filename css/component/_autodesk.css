@@ -11,7 +11,7 @@
         background-image: url(../../image/bg-revit.avif);
         background-repeat: no-repeat;
         background-position: top;
-        background-color: #f9f9f9;
+        background-color: var(--color-light-grey);
         z-index: -10;
     }
 }
@@ -24,7 +24,7 @@
     font-size: clamp(1.5rem, calc(1.29rem + 0.926vw), 2.125rem);
     letter-spacing: 0;
     line-height: 1.2;
-    color: black;
+    color: var(--color-black);
 }
 
 .autodesk__subtitle {
@@ -55,7 +55,7 @@
 
         color: rgba(0, 0, 0, 0.8);
 
-        border: 1px solid black;
+        border: 1px solid var(--color-black);
         border-radius: 5px;
 
         & span {
@@ -85,7 +85,7 @@
     }
 
     & a:hover {
-        text-decoration: underline #5f60ff;
+        text-decoration: underline var(--color-blue-violet);
     }
 
     @media (max-width: 990px) {

@@ -71,7 +71,7 @@
     }
 
     &:hover {
-        text-decoration: underline #5f60ff;
+        text-decoration: underline var(--color-blue-violet);
     }
 }
 
@@ -86,7 +86,7 @@
     }
 
     &:hover {
-        text-decoration: underline #5f60ff;
+        text-decoration: underline var(--color-blue-violet);
     }
 }
 
@@ -117,7 +117,7 @@
         width: 120px;
 
         &.--select {
-            border: 3px solid black;
+            border: 3px solid var(--color-black);
         }
     }
 }

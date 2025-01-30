@@ -18,7 +18,7 @@
 
     margin-bottom: 16px;
 
-    color: #212121;
+    color: var(--color-charocal);
 
     @media (min-width: 990px) {
         grid-template-columns: 1.7fr 1fr 1fr;
@@ -47,16 +47,16 @@
     border-radius: 50%;
 
     &.--black {
-        background-color: black;
+        background-color: var(--color-black);
     }
 
     &.--smoke {
         background: linear-gradient(to left, #000000 50%, #ffffff 50%);
-        border: 1px solid black;
+        border: 1px solid var(--color-black);
     }
 
     &.--white {
-        border: 1px solid black;
+        border: 1px solid var(--color-black);
     }
 }
 
@@ -67,8 +67,8 @@
 
     & button {
         padding: 4px 10px;
-        border: 1px solid black;
-        box-shadow: 0 0 1px 0.5px black;
+        border: 1px solid var(--color-black);
+        box-shadow: 0 0 1px 0.5px var(--color-black);
         scale: 1;
         transition: all 0.2s ease-in-out;
 

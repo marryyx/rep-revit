@@ -2,7 +2,7 @@
     display: flex;
     min-width: 100%;
     padding-bottom: 1rem;
-    color: white;
+    color: var(--color-light);
 
     @media (max-width: 720px) {
         flex-flow: column;
@@ -67,7 +67,7 @@
 
     border: 2px solid rgba(255, 255, 255, 0.7);
     border-radius: 2px;
-    background-color: #000;
+    background-color: var(--color-black);
     cursor: pointer;
 
     & p {
@@ -98,11 +98,11 @@
     }
 
     &.--is-select {
-        border: 2px solid white;
+        border: 2px solid var(--color-light);
     }
 
     &:hover {
-        border: 2px solid rgb(139, 85, 152);
+        border: 2px solid var(--color-purple);
     }
 }
 
@@ -120,23 +120,23 @@
 
         & .buttons-buy-tokens {
             padding: 10px 20px;
-            background-color: white;
-            border: 1px solid white;
+            background-color: var(--color-light);
+            border: 1px solid var(--color-light);
             border-radius: 5px;
-            color: black;
+            color: var(--color-black);
             font-weight: 500;
         }
 
         & .buttons-buy-flex {
             padding: 10px 20px;
-            border: 1px solid white;
+            border: 1px solid var(--color-light);
             border-radius: 5px;
             font-weight: 500;
         }
     }
 
     & .--btn-buy:hover {
-        border: 1px solid rgb(139, 85, 152);
+        border: 1px solid var(--color-purple);
     }
 
     @media (max-width: 720px) {
@@ -164,13 +164,13 @@
 .select-term__button-add {
     display: flex;
     align-items: center;
-    color: #000;
+    color: var(--color-black);
     width: 100%;
     opacity: 1;
     box-shadow: none;
     padding: 9px 1.25rem;
-    border: 1px solid white;
-    background-color: white;
+    border: 1px solid var(--color-light);
+    background-color: var(--color-light);
     user-select: none;
 
     & h2 {
@@ -182,7 +182,7 @@
     }
 
     &:hover {
-        border: 1px solid rgb(139, 85, 152);
+        border: 1px solid var(--color-purple);
     }
 }
 
@@ -204,7 +204,7 @@
 
     & .learn-more {
         opacity: 1;
-        color: white;
+        color: var(--color-light);
         text-decoration: underline;
         cursor: pointer;
     }

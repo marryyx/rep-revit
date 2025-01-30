@@ -3,7 +3,7 @@
     padding: 2rem 0;
     /* margin-bottom: 1.5rem; */
 
-    background: #f9f9f9;
+    background: var(--color-light-grey);
     border-top: 1px solid rgba(0, 0, 0, 0.1);
 
     @media (max-width: 640px) {
@@ -42,12 +42,12 @@
         font-size: 14px;
 
         &:hover {
-            color: #5f60ff;
+            color: var(--color-blue-violet);
         }
     }
 
     & .last-links:last-of-type:hover {
-        box-shadow: 0 0 0 2px #5f60ff;
+        box-shadow: 0 0 0 2px var(--color-blue-violet);
         border-radius: 10px;
     }
     
@@ -88,6 +88,6 @@
     }
 
     &:not(:last-of-type):hover {
-        text-decoration: underline #5f60ff;
+        text-decoration: underline var(--color-blue-violet);
     }
 }

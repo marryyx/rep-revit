@@ -27,7 +27,7 @@
 
 
     &.--is-active {
-        box-shadow: 0 2px 0 0 white;
+        box-shadow: 0 2px 0 0 var(--color-light);
     }
 
     &[data-sticker]::after {
@@ -36,9 +36,9 @@
         padding: 6px 8px;
         margin: auto auto auto 5px;
         font-size: 0.625rem;
-        background-color: #00A85D;
+        background-color: var(--color-see-green);
         border-radius: 10px;
-        color: black;
+        color: var(--color-black);
     }
 }
 
@@ -80,7 +80,7 @@
     align-items: center;
     gap: 7px;
 
-    color: #fff;
+    color: var(--color-light);
     font-size: 0.875rem;
     line-height: 1.5;
 

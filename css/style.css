@@ -1,7 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
-
-/* base */
+/* core */
 @import url('./core/_base.css');
+@import url('./core/_fonts.css');
+@import url('./core/_icons.css');
+@import url('./core/_root.css');
 
 /* components */
 @import url('./component/_buy-component.css');
@@ -19,4 +20,3 @@
 @import url('./component/_au-assi.css');
 @import url('./component/_autodesk-widget.css');
 @import url('./component/_video-1.css');
-@import url('./component/_fonts.css');

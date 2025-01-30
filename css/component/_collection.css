@@ -149,10 +149,10 @@
     & a {
         font-size: 18px;
         text-decoration: underline;
-        color: black;
+        color: var(--color-black);
 
         &:hover {
-            text-decoration: underline #5f60ff;
+            text-decoration: underline var(--color-blue-violet);
         }
     }
 
