@@ -4,7 +4,7 @@
 
 <head>
 
-    <title>Marky | Bar</title>
+    <title>Marky | JavaScript</title>
     <link rel="stylesheet" href="css/style.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
@@ -16,35 +16,21 @@
 
     <div class="container">
 
-        <div class="progress">
+        <main class="main">
+            <div class="main__username">
+                <label class="main__label" for="username">Введите имя: </label>
+                <input class="main__input" type="text" id="username" required minlength="4" maxlength="10">
+                <label class="main__label --2" for="symbol">введите символ <br>(который заменет все числа в имени):</label>
+                <input class="main__input --2" type="text" id="symbol" value="$" required minlength="1" maxlength="3">
 
-            <div class="bg"></div>
-
-            <div class="progress__bar">
-                <div class="progress__path">
-                    <div class="progress__bar-path --1">
-                        <p>Select</p>
-                    </div>
-
-                    <div class="progress__bar-path --2">
-                        <p>Review</p>
-                    </div>
-
-                    <div class="progress__bar-path --3">
-                        <p>Payment</p>
-                    </div>
-
-                    <div class="progress__bar-path --4">
-                        <p>Success</p>
-                    </div>
-                </div>
-
+                <button class="button">Send</button>
             </div>
-        </div>
-
-        </div>
+        </main>
 
     </div>
+
+
+    <script src="./js/index.js"></script>
 
 </body>
 

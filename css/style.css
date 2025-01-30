@@ -1,11 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 
-/* components  */
-@import url(./component/_progress.css);
-
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 button {
@@ -20,8 +18,8 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100vh;
-    background-color: rgb(232,223,216);
+    min-height: 100vh;
+    background-color: rgb(85, 85, 85);
 }
 
 .container {
@@ -30,47 +28,56 @@ body {
     padding: 0 24px;
 }
 
-mark {
-    color: currentColor;
-    background: unset;
+.main {
+    display: flex;
+    align-items: center;
+    font-family: 'Rubik';
+    color: white;
 }
 
-.bg {
-    position: absolute;
-    z-index: -2;
-
-    width: 400px;
-    height: 400px;
-
-    transform: rotate(45deg);
-
-    background-color: rgb(244,218,138);
+.main__username {
+    display: flex;
+    align-items: center;
+    flex-flow: column;
+    gap: 24px;
+    padding: 48px;
+    border: 1.5px solid rgb(255, 255, 255);
+    background-color: rgba(255, 255, 255, 0.15);
+    border-radius: 10px;
 }
 
-.bg::before {
-    position: absolute;
-    inset: auto auto 0 0;
-    z-index: -1;
-
-    width: 200px;
-    height: 200px;
-
-    transform: translate(-10%, 25%);
-
-    background-color: rgba(152,194,127, 0.8);
-    content: '';
+.main__label {
+    font-weight: 600;
+    text-align: center;
+    & span {
+        color: rgb(250, 40, 40);
+        text-decoration: underline;
+    }
 }
 
-.bg::after {
-    position: absolute;
-    inset: 0 0 auto auto;
-    z-index: -1;
+.main__input {
+    padding: 5px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
 
-    width: 200px;
-    height: 200px;
+    & .main__input__second {
+        text-align: center;
+    }
+}
 
-    transform: translate(10%, -25%);
+.button {
+    padding: 7px 30px;
+    border-radius: 10px;
+    color: rgb(0, 0, 0);
+    font-weight: 500;
+    background-color: rgb(255, 255, 255);
 
-    background-color: rgba(236,156,178, 0.8);
-    content: '';
+    &:hover {
+        opacity: .9;
+    }
+
+    &:active {
+        scale: .98;
+    }
 }
