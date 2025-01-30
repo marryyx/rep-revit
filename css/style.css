@@ -4,6 +4,7 @@
 @import url('./component/_select-term.css');
 @import url('./component/_header.css');
 @import url('./component/_dialog.css');
+@import url('./component/_ari_faq.css');
 @import url('./fonts.css');
 
 * {
@@ -44,6 +45,10 @@ body {
     min-width: 1440px;
     margin: 0 auto;
     padding: 0 24px;
+
+    &.--faq {
+        max-width: 1200px;
+    }
 
     @media (max-width: 1440px) {
         min-width: 1200px;
