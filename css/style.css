@@ -8,6 +8,9 @@
 body {
     background-color: white;
 
+    display: flex;
+    flex-direction: column;
+
     min-width: 100vw;
     min-height: 100vh;
 
@@ -15,164 +18,131 @@ body {
 
     --color: #7000ff;
     --size: 17px;
+
+    --header-size: 68px;
+}
+
+header {
+    position: relative;
+    z-index: 1;
+
+    display: flex;
+    gap: 100px;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0 24px;
+
+    min-height: var(--header-size);
+}
+
+.header__menu {
+    display: inline-flex;
+    gap: 24px;
+
+    font-size: 20px;
 }
 
 .main {
     display: flex;
     align-items: center;
-
-    /*width: 50rem;*/
-    /*height: 500px; */
-    /* border: 5px solid red; */
+    flex: 1 1;
+    
+    margin-top: calc(var(--header-size) * -1);
+    padding: var(--header-size) 24px 24px;
 
     position: relative;
+
+    width: 100%;
+    /* background-color: red;  */
 }
 
-.a_new_era {
-    position: absolute;
-    transform: translate(250px, -200px);
-    font-size: 40px;
-}
-
-.a_new_era:nth-child(2) {
-    position: absolute;
-    transform: translate(250px, -160px);
-    font-size: 40px;
-}
-
-.dop_text {
-    position: absolute;
-    transform: translate(250px, -100px);
-    font-size: 30px;
-}
-
-.dop_text_2 {
-    position: absolute;
-    transform: translate(250px, -60px);
-    font-size: 30px;
-}
-
-.losefat {
-    position: absolute;
-    transform: translate(250px, 20px);
-}
-
-.Howitworks {
-    position: absolute;
-    transform: translate(480px, 20px);
-}
 
 .aside {
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
-    
-    z-index: -1;
-    position: relative;
-}
-
-.image {
-    display: flex;
-    
-    position: relative;
-
-    height: 50vw;
-
-
-    transform: translate(1050px, -80px);
-}
-
-.imagefut {
     position: absolute;
-    width:50vw;
     inset: 0 0 0 auto;
+
+    width: 50%;
+    height: 100vh;
+}
+
+.aside img {
+    object-fit: contain;
+    object-position: center;
+
+    width: 100%;
+    height: 100%;
+}
+
+.title {
+    font-size: 40px;
+}
+
+.text {
+    font-size: 30px;
 }
 
 
-.button1 {
-    display: flex;
+button {
+    display: inline-flex;
+    align-items: center;
     justify-content: center;
-}
 
-.losefat {
     min-width: 150px;
     min-height: 40px;
 
-    align-items: center;
-
-    font-size: 25px;
-    padding: 10px;
-    color: rgba(255, 255, 255, 1);
-
-    background: rgba(123, 97, 255, 1);
-}
-
-.Howitworks {
-    min-width: 150px;
-    min-height: 40px;
-
-    align-items: center;
-    font-size: 25px;
-
     padding: 10px;
 
+    font-size: 25px;
+    color: white;
+
+    cursor: pointer;
+
+    background-color: #7000ff;
     border: 2px solid var(--color);
 }
 
-header {
-    display: flex;
-    margin-top: 30px;
-
-    justify-content: center;
-    align-items: center;
-    gap: 100px;
-}
-
-.fitfusion {
-    display: flex;
-    margin-right: 370px;
-
-    font-size: 20px;
-    font-weight: bold;
-}
-
-.fitfusion::before {
-    content: attr(data-fitfusion);
-    color: var(--color);
-}
-
-.fitfusion::after {
-    content: attr(data-fitfusion-1);
-}
-
-.home {
-    color: var(--color);
-    font-size: var(--size);
-}
-
-.workouts,
-.diets,
-.faq,
-.signin {
-    font-size: var(--size);
-}
-
-.signin {
-    display: flex;
-    margin-left: 370px;
-}
-
-.register {
-    border: 2px solid blueviolet;
-    align-items: center;
-    padding: 10px;
-}
-
-button {
-    padding: 0;
-    border: none;
-    font: inherit;
-    color: inherit;
+.button.--light {
+    color: currentColor;
     background-color: transparent;
-    cursor: pointer;
+}
+
+.buttons {
+    margin-top: 20px;
+}
+
+.button.--line {
+    border: 2px solid var(--color);
+}
+
+.button.--light.singin {
+    border: none;
+}
+
+.button.--line.reg {
+    border: 2px solid var(--color);
+    color: var(--color);
+    background-color: rgba(255, 255, 255, 0);
+}
+
+.button.--line.howit {
+    border: 2px solid var(--color);
+    background-color: white;
+    color: black;
+}
+
+.logo {
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.logo span:first-child {
+    color:var(--color);
+}
+
+a {
+    margin-left: 110px;
+    color: black;
+
+    text-decoration: none;
 }
