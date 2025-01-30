@@ -54,6 +54,13 @@ body {
      @media (max-width: 1440px) {
         --container-size: 1200px;
     }
+
+    &.--small {
+        width: 100%;
+        
+        margin: 0 auto;
+        padding: 0 24px;
+    }
 }
 
 .video {
