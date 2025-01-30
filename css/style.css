@@ -1,36 +1,10 @@
 /* главные */
-@import url(./fonts.css);
-@import url(./keyframes.css);
+@import url(./core/keyframes.css);
+@import url(./core/fonts.css);
+@import url(./core/base.css);
 
 /* компоненты */
 @import url(./component/header.css);
 @import url(./component/aside.css);
 @import url(./component/main.css);
 @import url(./component/table.css);
-
-/* -------------------------- */
-
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Madimi One';
-}
-
-body {
-    display: flex;
-    justify-content: center;
-    align-items: stretch;
-
-    min-width: 100vw;
-    min-height: 100vh;
-    overflow: hidden;
-}
-
-.grid-container {
-    display: grid;
-    grid-template-rows: max-content 1fr;
-    grid-template-columns: 24vw 1fr;
-    grid-template-areas: "sidebar header" "sidebar main";
-}
