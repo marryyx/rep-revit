@@ -56,6 +56,7 @@
     flex-wrap: wrap;
 
     min-height: 80px;
+
     padding: 0 24px;
     margin: 0 -24px;
 
@@ -63,6 +64,8 @@
 
     &:hover {
         --opacity-text-value: 1;
+        --card-person-visibly-text: visible;
+
         background: linear-gradient(60deg, rgba(95, 96, 255, 0.2), rgba(95, 96, 255, 0.1));
     }
 
@@ -125,4 +128,52 @@
     line-height: 1.5;
 
     opacity: var(--opacity-text-value, 0.4);
+}
+
+.card-personal__container {
+    position: relative;
+    
+    display: flex;
+    align-items: center;
+
+    margin-left: auto;
+    margin-right: 8px;
+}
+
+.card-personal__button {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 20px;
+    height: 20px;
+
+    color: var(--color-light);
+
+    border-radius: 4px;
+    background: var(--color-black);
+
+    &::before {
+        position: absolute;
+
+        font-family: 'markfont' !important;
+        font-size: 8px;
+        font-weight: 400;
+
+        content: '\e901';
+    }
+}
+
+.card-personal__desc {
+    display: flex;
+    align-items: center;
+
+    font-size: 14px;
+    line-height: 16px;
+
+    margin-right: 10px;
+
+    visibility: var(--card-person-visibly-text, hidden);
 }
