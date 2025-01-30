@@ -74,6 +74,11 @@
         line-height: 1.5;
     }
 
+    & a {
+        display: flex;
+        align-items: center;
+    }
+
     & a:hover {
         text-decoration: underline var(--color-blue-violet);
     }

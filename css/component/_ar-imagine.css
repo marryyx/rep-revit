@@ -75,21 +75,6 @@
     }
 }
 
-.ar-imagine__link {
-    display: inline-flex;
-    gap: 10px;
-    font-size: 16px;
-    font-weight: 700;
-
-    & span {
-        font-size: 16px;
-    }
-
-    &:hover {
-        text-decoration: underline var(--color-blue-violet);
-    }
-}
-
 .ar-imagine__video {
     position: relative;
     margin-bottom: 10px;

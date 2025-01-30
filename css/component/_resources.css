@@ -112,13 +112,4 @@
     align-items: center;
     
     padding: 0 0 1.5rem 0;
-
-    & a {
-        display: inline-flex;
-        gap: 10px;
-
-        &:hover {
-            text-decoration: underline 2px var(--color-blue-violet);
-        }
-    }
 }
