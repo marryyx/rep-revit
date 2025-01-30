@@ -1,81 +1,65 @@
 body {
+    background: white;
+    margin: 0;
     width: 100%;
-    background: #ffffff;
 }
 
-.wrapper {
+.num {
+    padding: 24px;
     display: grid;
-    gap: 40px;
-    grid-auto-rows: 100%;
-    text-align: center;
-    font-weight: bold;
-    color: rgb(0, 0, 0);
-  }
-  .one {
-    grid-column: 1/3;
-    grid-row: 1;
-    background: #799928;
-  }
-  .two {
-    grid-column: 3/6 ;
-    grid-row: 1/3;
-    background: #cb319e;
-  }
-  .three {
-    grid-column: 6/11;
-    grid-row: 1 / 5;
-    background: #ee6e62;
-  }
-  .four {
-    grid-column: 11/13;
-    grid-row: 1;
-    background: #f0c438;
-  }
+    grid-row: 1fr;
+    gap: 24px;
+    background: #FFC403;;
+    border-radius: 50px;
+    height: 100vh;
+}
+
+.one {
+    grid-area: a;
+    background: #ff0000;
+}
+.two {
+    grid-area: b;
+    background: rgba(184, 255, 0, 1);
+    ;
+ }
+.three {
+    grid-area: c;
+    background: rgba(95, 0, 255, 1);
+}
+.four {
+    grid-area: d;
+    background: rgba(43, 167, 0, 1);
+ }
   
-  .five {
-    grid-row: 2;
-    grid-column: 1/3;
-    background: #538d45;
-  }
+.five {
+    grid-area: g;
+    background: rgba(31, 72, 0, 1);
+}
 
-  .six {
-    background: #267d88;
-    grid-row: 2;
-    grid-column: 11/13;
-  }
+.six {
+    grid-area: e;
+    background: rgba(124, 39, 39, 1); 
+}
 
-  .seven {
-    background: #799928;
-    grid-row: 3;
-    grid-column: 1/3;
-  }
-  
-  .eight {
-    grid-row: 3;
-    grid-column: 3;
-    background: #478856;
-  }
+.seven {
+    grid-area: u;
+    background: rgba(39, 46, 54, 1);
+}
 
-  .nine {
-    background: #30cac3;
-    grid-row: 3;
-    grid-column: 4/6;
-  }
+@media (min-width: 992px) {
+    .num {
+        grid-template-areas: 
+        "a a b b"
+        "c d b b"
+        "g e e u";
+    }
+}
 
-  .ten {
-    background: #30c98f;
-    grid-row: 3;
-    grid-column: 11/13;
-  }
-
-  .eleven {
-    grid-column: 1/6;
-    grid-row: 4;
-    background: #554079;
-  }
-
-  .twelve {
-    background: #df202e;
-    grid-row: 4;
-    grid-column: 11/13;
-  }
+@media (max-width: 992px) {
+    .num {
+    & > * {
+        grid-area: unset;
+   }
+   }
+}
