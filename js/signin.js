@@ -5,8 +5,8 @@ const wrapperAuth = document.querySelector('.auth');
 const emailInput = wrapperAuth.querySelector('#email');
 const form = wrapperAuth.querySelector('form');
 
-const passwordContainer = wrapperAuth.querySelector('.auth__input-container');
-const passwordInput = wrapperAuth.querySelector('#password');
+const inputPasswordParrent = wrapperAuth.querySelector('[data-target-password]');
+const inputPassword = inputPasswordParrent.querySelector('input');
 
 // -----------------
 
@@ -33,9 +33,13 @@ const setAuthUser = () => {
     localStorage.setItem(USER_AUTH_KEY, JSON.stringify(FINDED_USER_DATA));
 };
 
-const inputPassword = () => {
-    const isHidden = getComputedStyle(passwordContainer).display === 'none';
+const checkInputPasswordVisible = () => {
+    const isHidden = inputPasswordParrent.classList.contains('gm-hide');
     return isHidden;
+}
+
+const showInputPassword = () => {
+    inputPasswordParrent.classList.remove('gm-hide');
 }
 
 const getUserData = () => {
@@ -47,25 +51,23 @@ const getUserData = () => {
         if (emailInput.value === elm.email) {
             emailFound = true;
 
-            const password = inputPassword();
+            const password = checkInputPasswordVisible();
 
             if (password) {
-                passwordContainer.classList.add('--show')
-                passwordInput.setAttribute('required', 'required');
+                showInputPassword();
+                inputPassword.setAttribute('required', 'required');
                 return;
             }
 
-            if (passwordInput.value !== elm.password) {
-                console.log('the password is incorrect')
-            }
-
-            if (passwordInput.value === elm.password) {
+            if (inputPassword.value === elm.password) {
                 FINDED_USER_DATA.push(elm)
                 isAuthEmail = true;
 
                 setAuthUser();
                 
                 Routing.goToHome();
+            } else {
+                console.log('the password is incorrect')
             }
         }
     });
@@ -82,8 +84,6 @@ form.addEventListener('submit', (event) => {
     getUserData()
 });
 
-// document.addEventListener("DOMContentLoaded", (event) => {
-//     const data = getDataUserOfStore();
-
-//     USER_DATA.push(...data)
+// document.addEventListener("DOMContentLoaded", () => {
+//     console.log('checkInputPasswordVisible =', checkInputPasswordVisible())
 // });

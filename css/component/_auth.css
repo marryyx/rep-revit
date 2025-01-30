@@ -23,11 +23,10 @@
 
     & .form__group {
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
         gap: 16px;
 
-        @media (max-width: 420px) {
-            grid-template-columns: repeat(1, 1fr);
+        @media (min-width: 420px) {
+            grid-template-columns: 1fr 1fr;
         }
     }
 }
@@ -66,24 +65,17 @@
     }
 }
 
-.auth__input-container {
-    display: none;
-
-    &.--show {
-        display: block;
-    }
-}
-
 .auth__bottom {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 6px;
+    flex-flow: column;
+    align-items: stretch;
+    gap: 16px;
 
-    margin-top: 24px;
-
-    font-size: 14px;
-    opacity: 0.7;
+    & p {
+        text-align: center;
+        font-size: 14px;
+        opacity: 0.7;
+    }
 
     @media (max-width: 275px) {
         flex-flow: column;
