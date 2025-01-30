@@ -1,96 +1,93 @@
 export const assistantComponent = () => {
 
-// const openAssistant = () => {
-//     const autodeskWidget = document.querySelector('.autodesk-widget')
+    const btnAssistant = document.querySelector('.au-assi__container')
+    const auAssi = document.querySelector('.au-assi')
+    const autodeskWidget = document.querySelector('.autodesk-widget')
+    const btnAssistantClose = document.querySelector('.autodesk-widget__header .ari-close')
 
-//     const assistant =
-//     `<div class="autodesk-widget__layout">
-//         <div class="autodesk-widget__header">
-//             <span class="header-title">Autodesk Assistant</span>
-//             <span class="ari-close"></span>
-//         </div>
-//         <div class="autodesk-widget__content">
-//             <div class="content__card">Hi, I’m Autodesk Assistant. I can help with product selection, purchasing,
-//                 and support. If needed, you can also request an agent at any time via the input bar.</div>
-//             <div class="content__card">I use AI to recommend solutions. I’m still learning, so please leave feedback
-//                 to help me improve my answers.</div>
-//             <div class="content__card">Please describe your question in detail using complete sentences, and mention
-//                 product name and version, if applicable.
-//                 <details class="content-card__bottom">
-//                     <summary class="content__example">Show examples</summary>
-//                     <p>You can say something like:</p>
-//                     <p>What can Revit do?</p>
-//                     <p>How do Flex tokens work?</p>
-//                     <p>How do I download my AutoCAD trial?</p>
-//                     <p>I’m using Maya 2024 and autosave isn't working.</p>
-//                     <p>I’m an Architect looking for something to help me model 3D design concepts.</p>
-//                 </details>
-//             </div>
-//         </div>
-//         <div class="autodesk-widget__footer">
-//             <input type="text" placeholder="Rephrase or ask another question">
-//             <button><span class="ari-send"></span></button>
-//         </div>
-//     </div>`;
+    const messageAssistant = document.querySelector('.au-assi__welcome')
+    const messageAssistantClose = document.querySelector('.au-assi__top .au-assi-close')
 
-//     autodeskWidget.insertAdjacentHTML("beforeend", assistant);
-    
-// };
+    const buttonFullScreen = document.querySelector('.autodesk-widget__header .ari-fullscreen');
+    const headerFullClass = document.querySelector('.autodesk-widget__header .header-title');
 
-const btnAssistant = document.querySelector('.au-assi__container')
-const auAssi = document.querySelector('.au-assi')
-const autodeskWidget = document.querySelector('.autodesk-widget')
-const btnAssistantClose = document.querySelector('.autodesk-widget__header .ari-close')
+    const contentHeight = document.querySelector('.autodesk-widget__content');
 
-const messageAssistant = document.querySelector('.au-assi__welcome')
-const messageAssistantClose = document.querySelector('.au-assi__top .au-assi-close')
+    const endChatWindow = document.querySelector('.autodesk-widget-end-chat');
+    const endChatYesButton = document.querySelector('.autodesk-widget-end-chat__btn.--black');
+    const endChatNoButton = document.querySelector('.autodesk-widget-end-chat__btn.--white');
 
-const buttonFullScreen = document.querySelector('.autodesk-widget__header .ari-fullscreen');
-const headerFullClass = document.querySelector('.autodesk-widget__header .header-title');
+    let isOpen = false;
 
-const contentHeight = document.querySelector('.autodesk-widget__content')
+    const fullScreen = () => {
+        autodeskWidget.classList.toggle('--full');
+        headerFullClass.classList.toggle('--full');
+        contentHeight.classList.toggle('--full');
+    };
 
-const fullScreen = () => {
-    autodeskWidget.classList.toggle('--full');
-    headerFullClass.classList.toggle('--full');
-    contentHeight.classList.toggle('--full');
-};
+    const openAssistantWindow = () => {
+        autodeskWidget.classList.remove('--hide');
+        isOpen = false;
+    };
 
-messageAssistantClose.addEventListener('click', () => {
-    messageAssistant.classList.add('--close')
-});
+    const closeAssistantWindow = () => {
+        autodeskWidget.classList.add('--hide');
+        endChatWindow.classList.add('--hide');
+        isOpen = true;
+    };
 
-buttonFullScreen.addEventListener('click', () => {
-    fullScreen();
-});
+    // const assistantWindow = () => {
+    //     if (isOpen === true) {
+    //         console.log('true');
+    //     } else {
+    //         console.log('false');
+    //     }
+    // };
 
-btnAssistant.addEventListener('click', () => {
-    auAssi.classList.add('--hide');
-    messageAssistant.classList.add('--close')
-    autodeskWidget.classList.remove('--hide');
-});
+    messageAssistantClose.addEventListener('click', () => {
+        messageAssistant.classList.add('--close')
+    });
 
-btnAssistantClose.addEventListener('click', () => {
-    auAssi.classList.remove('--hide');
-    autodeskWidget.classList.add('--hide');
+    buttonFullScreen.addEventListener('click', () => {
+        fullScreen();
+    });
 
-    autodeskWidget.classList.remove('--full');
-    autodeskWidget.classList.remove('--full');
-    headerFullClass.classList.remove('--full');
-});
+    btnAssistant.addEventListener('click', () => {
+        auAssi.classList.add('--hide');
+        messageAssistant.classList.add('--close')
+        openAssistantWindow()
+    });
 
-const inputContent = document.querySelector('.autodesk-widget__input');
-const sendInput = document.querySelector('.button-send')
-const contentCard = document.querySelector('.content__card-user')
+    btnAssistantClose.addEventListener('click', () => {
+        auAssi.classList.remove('--hide');
+        endChatWindow.classList.remove('--hide');
 
-const inputContentCard = (content) => {
-    if (!content) return
-    const userMessage = `<div class="message-user">${content}</div>`;
-    contentCard.insertAdjacentHTML("beforeend", userMessage);
-}
+        autodeskWidget.classList.remove('--full');
+        autodeskWidget.classList.remove('--full');
+        headerFullClass.classList.remove('--full');
 
-sendInput.addEventListener('click', () => {
-    inputContentCard(inputContent.value);
-    inputContent.value = '';
-});
+    });
+
+    endChatNoButton.addEventListener('click', () => {
+        endChatWindow.classList.add('--hide');
+    });
+
+    endChatYesButton.addEventListener('click', () => {
+        closeAssistantWindow()
+    });
+
+    const inputContent = document.querySelector('.autodesk-widget__input');
+    const sendInput = document.querySelector('.button-send')
+    const contentCard = document.querySelector('.content__card-user')
+
+    const inputContentCard = (content) => {
+        if (!content) return
+        const userMessage = `<div class="message-user">${content}</div>`;
+        contentCard.insertAdjacentHTML("beforeend", userMessage);
+    }
+
+    sendInput.addEventListener('click', () => {
+        inputContentCard(inputContent.value);
+        inputContent.value = '';
+    });
 }

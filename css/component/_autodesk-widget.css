@@ -132,7 +132,7 @@
 
             font-size: 12px;
             font-weight: 400;
-            color: var( --color-light);
+            color: var(--color-light);
 
             opacity: var(--close-tooltipe-opa, 0);
             transition: opacity .15s ease-in-out;
@@ -154,7 +154,7 @@
 }
 
 .autodesk-widget__content {
-    position: relative; 
+    position: relative;
 
     display: flex;
     flex-direction: column;
@@ -306,6 +306,8 @@ details[open] .content__example {
 
 .autodesk-widget-end-chat {
     position: absolute;
+    display: flex;
+    flex-direction: column;
     z-index: 1000;
     inset: 0;
 
@@ -319,6 +321,10 @@ details[open] .content__example {
     border: 1px solid black;
     box-shadow: inset 0 -5px 0 1px black;
     border-radius: 8px;
+
+    &.--hide {
+        display: none;
+    }
 }
 
 .autodesk-widget-end-chat__top {
