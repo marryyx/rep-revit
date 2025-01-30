@@ -69,6 +69,7 @@
 .autodesk__info {
     display: flex;
     align-items: center;
+    flex-direction: row;
 
     gap: 24px;
     margin-bottom: 1.5rem;
@@ -85,5 +86,10 @@
 
     & a:hover {
         text-decoration: underline #5f60ff;
+    }
+
+    @media (max-width: 990px) {
+        align-items: start;
+        flex-direction: column;
     }
 }
