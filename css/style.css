@@ -1,100 +1,12 @@
-* {
-    margin: 0;
-    padding: 0;
-}
-
 body {
     background: rgb(48, 48, 48);
-    height: 2000px;
 }
 
-header, footer {
-    width: 100%;
-    height: 70px;
-    text-align: center;
-    background: rgb(20, 20, 20);
+li {
     color: white;
-    line-height: 70px;
-}
-
-header {
-    border-bottom: 4px solid black;
-    margin-bottom: 50px;
-    float: left;
-    z-index: 2;
-    position: relative;
-}
-
-.nav {
-    list-style: none;
-    display: block;
-    width: 50%;
-    margin-left: 25%;
-    float: left;
-    text-align: center;
-    margin-bottom: 50px;
-}
-
-.nav li {
-    display: inline;
-    background: white;
-    border: 1px solid silver;
-    padding: 0 20px;
-}
-
-.nav li:not(:last-of-type) {
-    margin-right: 20px;
-}
-
-.nav li:hover {
-    background: rgb(68, 68, 68);
-    color: white;
-    border-radius: 50px;
     cursor: pointer;
 }
 
-main {
-    width: 40%;
-    margin: 10%;
-    background: rgb(197, 197, 197);
-    padding: 20px 2.5%;
-    float: left;
-}
-
-aside {
-    width: 20%;
-    padding: 20px 2.5%;  
-    background: rgb(197, 197, 197);  
-    /*border:  1px solid silver;*/
-    float: left;
-    margin-left: 10%;
-
-    position: relative;
-    /*top: 75px;*/
-    z-index: 1;
-}
-
-#add-to-cart {
-    background: red;
-    color: white;
-    text-align: center;
-    width: 50px;
-    height: 50px;
-    line-height: 50px;
-    border-radius: 50%;
-    position: fixed;
-    top: 100px;
-    left: 70px;
-    cursor: pointer;
-}
-
-#add-to-cart:hover {
-    background: rgb(129, 1, 1);
-}
-
-
-footer {
-    border-top: 4px solid black;
-    margin-top: 50px;
-    float: left;
+li:hover {
+    color: rgb(104, 104, 104);
 }
