@@ -1,68 +1,81 @@
-* {
-    margin: 0;
-    padding: 0;
-    
-}
-
 body {
-    background: #222;
-    height: 500px;
-}
-
-.header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 50px;
-    background-color: black;
-}
-
-.nav-list {
-    display: flex;
-    align-items: center;
-}
-
-.nav-list li {
-    padding: 0 10px;
-    color: white;
-    font-weight: bold;
-    font-size: 15px;
-    list-style-type: none;
-}
-
-a {
-    color: white;
-    text-decoration: none;
-    padding: 0 10px;
-    color: white;
-    font-weight: bold;
-    font-size: 18px;
-    list-style-type: none;
-    position: relative;
-    transition: all .25s ease;
-}
-
-.nav-list-link::after {
-    content: "";
-    background: plum;
-    height: 2px;
     width: 100%;
-    position: absolute;
-    bottom: -8px;
-    left: 0;
-    transform: scaleX(0);
-    transition: all .25s ease;
+    background: #ffffff;
 }
 
-.nav-list-link:hover {
-    color: rgb(160, 115, 160);
-}
+.wrapper {
+    display: grid;
+    gap: 40px;
+    grid-auto-rows: 100%;
+    text-align: center;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+  }
+  .one {
+    grid-column: 1/3;
+    grid-row: 1;
+    background: #799928;
+  }
+  .two {
+    grid-column: 3/6 ;
+    grid-row: 1/3;
+    background: #cb319e;
+  }
+  .three {
+    grid-column: 6/11;
+    grid-row: 1 / 5;
+    background: #ee6e62;
+  }
+  .four {
+    grid-column: 11/13;
+    grid-row: 1;
+    background: #f0c438;
+  }
+  
+  .five {
+    grid-row: 2;
+    grid-column: 1/3;
+    background: #538d45;
+  }
 
-.nav-list-link:hover:after {
-    transform: scaleX(1);
-}
+  .six {
+    background: #267d88;
+    grid-row: 2;
+    grid-column: 11/13;
+  }
 
-a:hover {
-    color: rgb(160, 115, 160);
-    cursor: pointer;
-}
+  .seven {
+    background: #799928;
+    grid-row: 3;
+    grid-column: 1/3;
+  }
+  
+  .eight {
+    grid-row: 3;
+    grid-column: 3;
+    background: #478856;
+  }
+
+  .nine {
+    background: #30cac3;
+    grid-row: 3;
+    grid-column: 4/6;
+  }
+
+  .ten {
+    background: #30c98f;
+    grid-row: 3;
+    grid-column: 11/13;
+  }
+
+  .eleven {
+    grid-column: 1/6;
+    grid-row: 4;
+    background: #554079;
+  }
+
+  .twelve {
+    background: #df202e;
+    grid-row: 4;
+    grid-column: 11/13;
+  }
