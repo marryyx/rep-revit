@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Protest+Strike&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 body {
+    display: flex;
+    flex-direction: column;
+
+
     background: rgba(255, 196, 3, 1);
     min-width: 100vw;
     min-height: 100vh;
@@ -8,7 +12,7 @@ body {
     font-family: 'Roboto';
 }
 
-.main, .header, .block_5, footer {
+.main, .header, .block_5, .footer {
     display: flex;
     gap: 24px;
 
@@ -16,7 +20,9 @@ body {
 
 .main {
     flex-direction: column;
-    min-height: 4vh;
+    height: 100%;
+
+    flex: 1 1;
 }
 
 .header {
@@ -70,16 +76,21 @@ body {
 
 .block_5 {
     display: flex;
-    align-items: stretch;
+    /* align-items: stretch; */
     justify-content: stretch;
     justify-items: stretch;
     flex: 1 1;
 
-    padding: 24px;
+    padding: 48px;
 
     background: green;
 
-    :where(.one .text_inf) {
+    :where(.one .block_info) {
+        display: flex;
+        align-items: center;
+
+        padding: 68px;
+
         flex: 1 1;
     }
     
@@ -87,15 +98,13 @@ body {
 
 .one {
     background: linear-gradient(117.04deg, #6E176B 20.61%, #2357A4 79.3%);
-    width: 800px;
-    height: 100%;
+    
     display: flex;
     text-align: center;
 
     border-radius: 30px;
     margin-left: 20px;
     
-    align-self: stretch;
 }
 
 .text_1 {
@@ -109,14 +118,14 @@ body {
 
 .block_info {
     background: rgba(220, 38, 38, 1);
-    width: 800px;
-    height: 100%;
+    
     margin: 10px 20px;
+
     margin-left: auto;
 }
 
 h1 {
-    font-size: 25px;
+    font-size: 40px;
     text-align: center;
     color: rgb(255, 255, 255);
 }
@@ -138,9 +147,10 @@ li {
 }
 
 .main_2 {
-    display: inline-flex;
+    display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: row;
     color: white;
     gap: 60px;
     margin-top: 60px;
@@ -153,7 +163,7 @@ li {
 }
 
 .block_znak {
-    display: flex;;
+    display: flex;
     background: rgb(255, 255, 255);
     width: 70px;
     height: 70px;
