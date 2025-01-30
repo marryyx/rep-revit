@@ -1,13 +1,15 @@
+import { AuthService } from '../services/auth.service.js';
 import { CLIENT_STORAGE_KEYS } from '../store/globals-params-store.js';
 
 const avatarComponentInit = (host) => {
+    const auth = new AuthService();
+
     const avatarTitle = host.querySelector('figcaption');
-    const userAuthData = JSON.parse(localStorage.getItem(CLIENT_STORAGE_KEYS.userAuthData));
+    const userAuthData = auth.getFullNameABR();
 
     if (!userAuthData) return 
 
-    const name = `${userAuthData[0].usernameFirst.slice(0, 1)}${userAuthData[0].usernameLast.slice(0, 1)}`;
-    avatarTitle.textContent = name.toUpperCase();
+    avatarTitle.textContent = userAuthData;
 }
 
 const avatarComponent = () => {

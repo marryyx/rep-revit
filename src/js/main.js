@@ -32,6 +32,7 @@ const route = Routing.getRutes();
 document.addEventListener("DOMContentLoaded", (event) => {
     const pageHome = window.location.pathname === '/' || pathname(route.home);
     const userAuthData = localStorage.getItem(CLIENT_STORAGE_KEYS.userAuthData);
+    const accountComponent = new AccountComponent().init();
     avatarComponent();
 
     if (pageHome) {
@@ -39,7 +40,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
         basketComponent();
         langChangeComponent();
         subheadComponent();
-        new AccountComponent();
+        // new AccountComponent().init();
         videoComponent();
         assistantComponent();
         faq();
@@ -54,7 +55,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
         
         profileComponent();
         asideProfileComponent();
-        new AccountComponent();
+        // new AccountComponent();
         profileModalComponent();
     }
 
@@ -66,7 +67,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
         
         personalComponent();
         asideProfileComponent();
-        new AccountComponent();
+        // new AccountComponent();
         profileModalComponent();
     }
     if (pathname(route.signUp)) {

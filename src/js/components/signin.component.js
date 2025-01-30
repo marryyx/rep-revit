@@ -1,4 +1,5 @@
 import { Routing } from '../root/routing.js'
+import { AuthService } from '../services/auth.service.js';
 import { CLIENT_STORAGE_KEYS } from '../store/globals-params-store.js';
 
 const USER_DATA_KEY = CLIENT_STORAGE_KEYS.userData;
@@ -10,6 +11,8 @@ let isAuthEmail = false;
 
 
 const signinComponentInit = (host) => {
+    const auth = new AuthService();
+    
     const emailInput = host.querySelector('#email');
     const form = host.querySelector('form');
 
