@@ -38,8 +38,8 @@ header {
 
 .header__menu {
     display: inline-flex;
-    gap: 24px;
-
+    gap: 60px;
+    
     font-size: 20px;
 }
 
@@ -155,7 +155,7 @@ a {
     text-decoration: none;
 }
 
-.container {
+.logo, .header__menu, .header_right, .main__left  {
     max-width: 1440px;
     width: 100%;
 
