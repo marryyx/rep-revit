@@ -38,7 +38,7 @@ body {
     padding: 0 0 24px 0;
 }
 
-.favourites__food {
+.favourites__form {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
@@ -47,7 +47,7 @@ body {
     width: 450px;
 }
 
-.favourites__checkbox {
+.checkbox {
     position: relative;
     display: inline-flex;
 
@@ -65,7 +65,7 @@ body {
     transition-property: background-color, color;
 }
 
-.favourites__input {
+.checkbox__input {
     position: absolute;
     inset: 0;
     z-index: 1;
@@ -75,7 +75,7 @@ body {
     cursor: pointer;
 }
 
-.favourites__label {
+.checkbox__label {
     position: relative;
     display: inline-flex;
     align-items: center;
@@ -88,11 +88,11 @@ body {
 
     fill: white;
 
-    animation: anim-tick 0.3s ease-in-out;
+    animation: anim-tick 0.2s ease-in-out;
     }
 }
 
-.favourites__checkbox:has(.favourites__input:checked) {
+.checkbox:has(.checkbox__input:checked) {
     color: white;
     background-color: black;
 
@@ -100,11 +100,11 @@ body {
 }
 
 @keyframes anim-tick {
-    0% {
+    from {
         opacity: 0;
         transform: translate(-10px);
     }
-    100% {
+    to {
         opacity: 1;
         transform: translate(0);
     }
