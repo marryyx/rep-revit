@@ -15,11 +15,11 @@
 .ar-imagine__col {
     display: flex;
     flex-flow: column;
-    flex: 1;
+    flex: 1 1 340px;
 
-    @media (max-width: 920px) {
+    /* @media (max-width: 920px) {
         width: 100%;
-    }
+    } */
 }
 
 .ar-imagine__title {
