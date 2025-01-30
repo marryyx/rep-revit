@@ -1,27 +1,14 @@
 .autodesk-widget {
     position: fixed;
-    height: 620px;
-    width: 400px;
+
+    display: flex;
+    flex-direction: column;
+
     bottom: 30px;
     right: 30px;
 
-    @media (max-width: 730px) {
-        height: 100%;
-        width: 100%;
-        top: 0;
-        left: 0;
-    }
-}
+    z-index: 200;
 
-.autodesk-widget__layout {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    margin: 0 20px 20px;
-    height: calc(100% - 20px);
-    width: calc(100% - 40px);
     box-shadow: 2px 2px 10px 0 rgba(0, 0, 0, .25);
     animation: animCard 1s ease-in-out;
 
@@ -29,44 +16,41 @@
         display: none;
     }
 
-    &.--full {
-        transform: translate(-70%, -20%);
-        height: 70vh;
-        width: 50vw;
-        box-shadow: none;
-    }
-
     @media (max-width: 730px) {
-        margin: 0;
+        top: 0;
+        left: 0;
         height: 100%;
         width: 100%;
     }
-}
 
+    &.--full {
+        margin: auto;
+        inset: 0;
+        height: 80vh;
+        width: 60vw;
+    }
+}
 
 .autodesk-widget__header {
     display: flex;
     align-items: center;
+    gap: 20px;
+
     padding: 0 30px;
+
     height: 60px;
     width: 100%;
+
     color: white;
+
     background: black;
     border-radius: 8px 8px 0 0;
 
     & span:first-child {
         width: 75%;
 
-        &.--full {
-            width: 88%;
-
-            @media (max-width: 920px) {
-                width: 80%;
-            }
-        }
-
         @media (max-width: 730px) {
-            width: 90%;
+            width: 85%;
         }
     }
 
@@ -171,8 +155,11 @@
 
 .autodesk-widget__content {
     position: relative; 
+
     display: flex;
     flex-direction: column;
+    flex: 3;
+
     padding: 20px;
     height: 490px;
     width: 100%;
@@ -180,10 +167,9 @@
     overflow-y: auto;
     overflow-x: hidden;
 
-    @media (max-width: 730px) {
-        width: 100%;
+    /* @media (max-width: 730px) {
         height: 100%;
-    }
+    } */
 }
 
 .content__card {

@@ -1,5 +1,6 @@
 .products {
     display: flex;
+    flex-flow: column;
     min-width: 100%;
     margin-bottom: 5rem;
 }
@@ -14,8 +15,13 @@
 
 .products__block {
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
     margin-bottom: 16px;
+
+    @media (max-width: 620px) {
+        flex-direction: column;
+    }
 }
 
 .products__element-first {
@@ -68,6 +74,11 @@
 
         @media (max-width: 680px) {
             border-right: none;
+        }
+
+        @media (max-width: 620px) {
+            border-left: 1px solid black;
+            border-right: 1px solid black;
         }
 
         @media (min-width: 779px) {

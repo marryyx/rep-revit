@@ -39,7 +39,7 @@ export const assistantContent = () => {
 
 const btnAssistant = document.querySelector('.au-assi__container')
 const auAssi = document.querySelector('.au-assi')
-const autodeskWidgetLayot = document.querySelector('.autodesk-widget__layout')
+const autodeskWidget = document.querySelector('.autodesk-widget')
 const btnAssistantClose = document.querySelector('.autodesk-widget__header .ari-close')
 
 const messageAssistant = document.querySelector('.au-assi__welcome')
@@ -53,20 +53,20 @@ messageAssistantClose.addEventListener('click', () => {
 });
 
 buttonFullScreen.addEventListener('click', () => {
-    autodeskWidgetLayot.classList.add('--full');
+    autodeskWidget.classList.add('--full');
     HeaderFullClass.classList.add('--full');
 });
 
 btnAssistant.addEventListener('click', () => {
     auAssi.classList.add('--hide');
     messageAssistant.classList.add('--close')
-    autodeskWidgetLayot.classList.remove('--hide');
+    autodeskWidget.classList.remove('--hide');
 });
 
 btnAssistantClose.addEventListener('click', () => {
     auAssi.classList.remove('--hide');
-    autodeskWidgetLayot.classList.add('--hide');
-    autodeskWidgetLayot.classList.remove('--full');
+    autodeskWidget.classList.add('--hide');
+    autodeskWidget.classList.remove('--full');
     HeaderFullClass.classList.remove('--full');
 });
 

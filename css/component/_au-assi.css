@@ -5,12 +5,10 @@
     align-items: flex-end;
     justify-content: flex-end;
     gap: 24px;
-    
-    min-width: 100%;
 
     right: 30px;
     bottom: 30px;
-    z-index: 2000;
+    z-index: 200;
 
     cursor: pointer;
 
