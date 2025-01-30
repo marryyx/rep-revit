@@ -15,7 +15,7 @@ const spanCounterSymbols = document.querySelector('.profile-form__counter-symbol
 const USER_AUTH_KEY = 'userAuthData';
 // ----------------------------------------
 
-const personalPage = () => {
+const personalComponent = () => {
     const getUserAuthData = () => {
         const data = localStorage.getItem(USER_AUTH_KEY)
         return JSON.parse(data);
@@ -96,4 +96,4 @@ const personalPage = () => {
     });
 }
 
-export { personalPage }
+export { personalComponent }
