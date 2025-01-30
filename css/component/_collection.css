@@ -114,20 +114,15 @@
         margin-bottom: 1.5rem;
     }
 
-    & img {
-        width: 120px;
+    & .collection-video-btn-1, .collection-video-btn-2 {
+        cursor: pointer;
+        width: 200px;
     }
 
     @media (max-width: 1000px) {
         flex-direction: column;
 
-        & img {
-            width: 100%;
-        }
-    }
-
-    @media (max-width: 500px) {
-        & img {
+        & .collection-video-btn-1, .collection-video-btn-2 {
             width: 100%;
         }
     }

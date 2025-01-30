@@ -1,0 +1,26 @@
+.video-first, .video-second {
+    display: none;
+    position: fixed;
+    z-index: 1;
+}
+
+.video-first::backdrop, .video-second::backdrop {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.video-first[open], .video-second[open] {
+    display: flex;
+    margin: auto;
+}
+
+.video-first__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.video-close {
+    position: fixed;
+    inset: 0;
+    opacity: 0;
+}

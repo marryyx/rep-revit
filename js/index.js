@@ -153,4 +153,34 @@ const addToBasket = (type, term, quanity, price) => {
 
     const itemsLenght = basketContent.querySelectorAll('.basket__content-card').length;
     setBasketCounter(itemsLenght);
-}
+};
+
+const btnVideoFirst = document.querySelector('.collection-video-btn-1');
+const btnVideoSecond = document.querySelector('.collection-video-btn-2');
+const closeVideo = document.querySelectorAll('.video-close');
+const dialogVideoFirst = document.querySelector('.video-first');
+const dialogVideoSecond = document.querySelector('.video-second');
+const vid = document.querySelector('.video');
+const vidTwo = document.querySelector('.video-two');
+
+btnVideoFirst.addEventListener('click', () => {
+    dialogVideoFirst.showModal();
+});
+
+closeVideo.forEach(element => {
+    element.addEventListener('click', () => {
+        dialogVideoFirst.close();
+        vid.pause();
+    });
+});
+
+btnVideoSecond.addEventListener('click', () => {
+    dialogVideoSecond.showModal();
+});
+
+closeVideo.forEach(element => {
+    element.addEventListener('click', () => {
+        dialogVideoSecond.close();
+        vidTwo.pause();
+    });
+});
