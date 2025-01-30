@@ -10,8 +10,6 @@
     max-width: 386px;
     width: 100%;
 
-    font-family: "Artifakt Element";
-
     @media (max-width: 370px) {
         min-width: 100%;
         width: 100%;
@@ -87,30 +85,4 @@
     text-align: center;
 
     opacity: 0.8;
-}
-
-.auth__message,
-.auth__not-email {
-    width: 100%;
-    height: 40px;
-
-    color: #424242;
-
-    background: #faede9;
-    border-color: transparent !important;
-
-    & p {
-        padding: 13px 7px 7px;
-        font-size: 12px;
-        opacity: 0.8;
-        text-align: left;
-    }
-}
-
-.auth__message {
-    display: var(--auth-message-display, none);
-}
-
-.auth__not-email {
-    display: var(--auth-message-email-display, none);
 }

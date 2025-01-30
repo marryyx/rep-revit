@@ -1,37 +1,49 @@
+import { Routing } from './root/routing.js'
+
 const wrapperAuth = document.querySelector('.auth');
 
-const email = wrapperAuth.querySelector('#email');
-const buttonSumbit = wrapperAuth.querySelector('#sumbit');
+const emailInput = wrapperAuth.querySelector('#email');
+const form = wrapperAuth.querySelector('form');
 
 // -----------------
 
 const USER_DATA_KEY = 'userData';
-const USER_DATA = [];
+// const USER_DATA = [];
 const USER_DATA_RED = {};
 
 // -----------------
 
 const getDataUserOfStore = () => {
     const dataUser = localStorage.getItem(USER_DATA_KEY);
+
+    if (!dataUser) return
+
     return JSON.parse(dataUser)
 };
 
-function logInInputCheked() {
-    const users = getDataUserOfStore();
-    // const message = wrapperAuth.querySelector('.auth__message');
-    const value = email.value;
+const getUserData = () => {
+    const data = getDataUserOfStore();
 
-    users.forEach(item => {
-        if (value != item.email) {
-            console.log('нет')
-        } else if (value === item.email) {
-            console.log('да')
+    let emailFound = false;
+
+    data.forEach(elm => {
+        if (emailInput.value === elm.email) {
+            emailFound = true;
         }
     });
+
+    if (!emailFound) {
+        console.log('email not found.');
+        return
+    }
 }
 
-buttonSumbit.addEventListener('click', () => {
-    logInInputCheked();
+form.addEventListener('submit', (event) => {
+    event.preventDefault();
+
+    getUserData();
+
+    Routing.goToHome();
 });
 
 // document.addEventListener("DOMContentLoaded", (event) => {
