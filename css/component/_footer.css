@@ -3,27 +3,55 @@
     padding: 2rem 0;
     /* margin-bottom: 1.5rem; */
 
-    background: var(--color-light-grey);
+    background: #f9f9f9;;
     border-top: 1px solid rgba(0, 0, 0, 0.1);
-
-    @media (max-width: 640px) {
-        display: none;
-    }
 }
 
 .footer__block {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 24px;
+    gap: 32px;
     width: 90%;
+
+    @media (max-width: 920px) {
+        width: 100%;
+    }
+
+    @media (max-width: 600px) {
+        justify-content: center;
+        flex-flow: column;
+        gap: 24px;
+
+        padding: 24px 0 0;
+
+        background: white;
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        border-bottom: 2px solid;
+        border-radius: 8px;
+    }
 }
 
 .footer__card {
     display: flex;
     flex-flow: column;
     justify-content: center;
+
+    margin: 0 auto auto 0;
+
+    &.--is-select {
+        --footer-links-display: flex;
+        --footer-top-icon-arrow: 0deg;
+    }
+
+    @media (max-width: 600px) {
+        width: 100%;
+        padding: 0 24px;
+
+        &:not(:last-of-type) {
+            border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+        }
+    }
 }
 
 .footer__top {
@@ -32,12 +60,35 @@
     line-height: 1.25;
 
     min-height: 40px;
+
+    @media (max-width: 600px) {
+        cursor: pointer;
+
+        &::before {
+            content: '\e920';
+
+            display: inline-flex;
+            align-items: center;
+
+            margin-right: 10px;
+
+            transform: var(--footer-top-icon-arrow, rotate(-90deg));
+
+            font-family: 'markfont' !important;
+            font-size: 12px;
+        }
+    }
 }
 
 .footer__links {
     display: flex;
     flex-flow: column;
     gap: 16px;
+
+    &.--grid-container {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
 
     & a:not(.last-links) {
         opacity: 0.7;
@@ -49,9 +100,14 @@
         }
     }
 
-    & .last-links:last-of-type:hover {
+    & .last-links:hover {
         box-shadow: 0 0 0 2px var(--color-blue-violet);
         border-radius: 10px;
+        max-width: max-content;
+    }
+
+    @media (max-width: 600px) {
+        display: var(--footer-links-display, none) !important;
     }
 }
 
