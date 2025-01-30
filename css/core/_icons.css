@@ -25,6 +25,18 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.ari-personal:before {
+  content: "\e929";
+}
+.ari-communications:before {
+  content: "\e92a";
+}
+.ari-profile:before {
+  content: "\e92b";
+}
+.ari-password-profile:before {
+  content: "\e92c";
+}
 .ari-settings:before {
   content: "\e926";
 }
