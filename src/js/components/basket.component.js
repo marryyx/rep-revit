@@ -35,7 +35,7 @@ const addToBasket = (data) => {
     const basket =
         `<div class="basket__content-card" data-item-id="${id}">
                 <div class="basket__content-top">
-                    <p><img src="./image/${typeImage}" alt="#">${typeCaption}</p>
+                    <p><img src="../../../assets/image/${typeImage}" alt="#">${typeCaption}</p>
                     <h3 class="total">${price}</h3>
                 </div>
 
