@@ -52,15 +52,24 @@
 }
 
 .language-change__item {
-    font-size: 14px;
+    position: relative;
 
-    & a {
+    font-size: 13px;
+
+    & .link-lang {
         display: block;
         padding: 10px 24px;
 
         opacity: 0.6;
 
         transition: background 0.2s linear;
+
+        /* & .link-lang .select {
+            font-family: 'markfont' !important;
+            &::after {
+                content: '\e924';
+            }
+        } */
 
         &:hover {
             background: rgb(240, 240, 240);

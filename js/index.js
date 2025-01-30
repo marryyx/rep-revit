@@ -6,6 +6,7 @@ import { videoComponent } from './components/video.component.js';
 import { assistantComponent } from './components/assistant.component.js';
 import { faq } from './components/faq.component.js';
 import { footerComponent } from './components/footer.component.js';
+import { formComponent } from './components/form.component.js';
 
 document.addEventListener("DOMContentLoaded", (event) => {
     tabsComponent();
@@ -15,6 +16,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
     videoComponent();
     assistantComponent();
     faq();
-    footerComponent()
+    footerComponent();
+    formComponent();
     console.log("Page loaded✅")
 });
