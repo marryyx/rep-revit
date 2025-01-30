@@ -99,6 +99,10 @@ body {
 .buy-component__tabs-content {
     display: flex;
     margin-bottom: 48px;
+
+    &.--is-hide {
+        display: none;
+    }
 }
 
 .select-term {
@@ -119,11 +123,28 @@ body {
 
     & .select-term__title {
         margin-bottom: .5rem;
-        font-size: clamp(0.75rem, 0.769vw + 0.308rem, 1rem);
+        font-size: 1rem;
         font-weight: 700;
         letter-spacing: 0;
         line-height: 1.5;
         text-transform: uppercase;
+    }
+
+    & .select-term__title-flex {
+        display: inline-flex;
+        align-items: center;
+        margin-bottom: .5rem;
+        font-size: 0.775rem;
+        font-weight: 700;
+        letter-spacing: 0;
+        line-height: 1.5;
+        text-transform: uppercase;
+        margin-bottom: 2rem;
+
+        & svg {
+            width: 0.775rem;
+            fill: white;
+        }
     }
 
     & .select-term__subtitle {
@@ -134,7 +155,7 @@ body {
         margin-bottom: 10px;
 
         font-weight: 400;
-        font-size: clamp(0.625rem, 0.769vw + 0.183rem, 0.875rem);
+        font-size: 0.875rem;
         letter-spacing: 0;
         line-height: 1.5;
 
@@ -171,10 +192,16 @@ body {
         font-weight: 600;
     }
 
+    & .select-term__up-price {
+        margin: 0.3rem auto 1.7rem 0;
+    }
+
     & span {
         display: flex;
         align-items: flex-end;
 
+        margin: auto auto auto 0;
+        text-align: left;
         opacity: 0.5;
         font-size: clamp(0.625rem, 0.385vw + 0.404rem, 0.75rem);
         padding: 7px 0;
@@ -182,7 +209,7 @@ body {
         width: 100%;
 
         & svg {
-            margin-left: 3rem;
+            margin: auto 0 auto auto;
             width: 1rem;
             height: 1rem;
         }
@@ -202,6 +229,33 @@ body {
     flex-flow: column;
     margin: 2rem 0 0 2rem;
     min-width: 40%;
+
+    & .select-term__buttons-buy {
+        display: inline-flex;
+        gap: 10px;
+        margin: 10px auto auto auto;
+        width: 100%;
+
+        & .buttons-buy-tokens {
+            padding: 10px 20px;
+            background-color: white;
+            border: 1px solid white;
+            border-radius: 5px;
+            color: black;
+            font-weight: 500;
+        }
+
+        & .buttons-buy-flex {
+            padding: 10px 20px;
+            border: 1px solid white;
+            border-radius: 5px;
+            font-weight: 500;
+        }
+    }
+
+    & .--btn-buy:hover{
+        border: 1px solid rgb(139, 85, 152);
+    }
 
     @media (max-width: 720px) {
         margin: 2rem 0 0;
@@ -258,20 +312,31 @@ body {
 }
 
 .select-term__bottom {
+    position: relative;
     display: flex;
     align-items: center;
-    gap: 5px;
+    flex-flow: column;
+    gap: 24px;
+
+    margin: auto auto auto 0;
+
     font-weight: 400;
     font-size: 0.75rem;
-    letter-spacing: 0;
     line-height: 1.5;
-    opacity: .7;
+    color: rgba(255, 255, 255, 0.7);
 
     margin-top: .75rem;
 
     & svg {
         width: 0.75rem;
         fill: white;
+    }
+
+    & span {
+        opacity: 1;
+        color: white;
+        text-decoration: underline;
+        cursor: pointer;
     }
 }
 
@@ -280,6 +345,10 @@ body {
     min-width: 100%;
     padding: 24px 0;
     border-top: 1px solid rgba(255, 255, 255, 0.5);
+
+    &.--footer-hide {
+        display: none;
+    }
 }
 
 .buy-component__nav {

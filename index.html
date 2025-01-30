@@ -4,7 +4,7 @@
 
 <head>
 
-    <title>Моя страница</title>
+    <title>AutoDesk Revit</title>
     <link rel="stylesheet" href="css/style.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
@@ -22,15 +22,15 @@
             </div>
 
             <div class="buy-component__tabs">
-                <button class="buy-component__tab">
+                <button class="buy-component__tab" data-tab="first">
                     Subscription
                 </button>
-                <button class="buy-component__tab" data-sticker="NEW">
+                <button class="buy-component__tab" data-tab="second" data-sticker="NEW">
                     Flex
                 </button>
             </div>
 
-            <div class="buy-component__tabs-content">
+            <div class="buy-component__tabs-content" data-tab="first">
                 <div class="select-term">
                     <div class="select-term__first">
                         <div class="select-term__title">
@@ -80,7 +80,7 @@
 
                             <button class="select-term__card" data-select="third">
                                 <span>1 month</span>
-                                <p>???</p>
+                                <p class="select-term__up-price">???</p>
                             </button>
 
                         </div>
@@ -91,8 +91,6 @@
                         <div class="select-term__top --selected" data-term="first"><span
                                 class="price-text-buy">$8,730</span><span class="desk-text-buy">/3 years for 1 user (pay
                                 annually)</span></div>
-                        <!-- <div class="select-term__top" data-term="second"><span class="price-text-buy">$2,910</span><span class="desk-text-buy">/year for 1 user</span></div>
-                        <div class="select-term__top" data-term="third"><span class="price-text-buy">$365</span><span class="desk-text-buy">/month for 1 user</span></div> -->
                         <button class="select-term__button-add">
                             <h2>ADD TO CART</h2><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
                                 <g id="utility/caret-right">
@@ -101,26 +99,109 @@
                                 </g>
                             </svg>
                         </button>
-                        <div class="select-term__bottom">Credit and debit cards, PayPal, Pay by Bank and direct debit
-                            (ACH)
-                            accepted. <svg version="1.1" xmlns="http://www.w3.org/2000/svg"
-                                xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 330 330" xml:space="preserve">
-                                <g>
-                                    <path
-                                        d="M165,0C74.019,0,0,74.02,0,165.001C0,255.982,74.019,330,165,330s165-74.018,165-164.999C330,74.02,255.981,0,165,0z
-                                    M165,300c-74.44,0-135-60.56-135-134.999C30,90.562,90.56,30,165,30s135,60.562,135,135.001C300,239.44,239.439,300,165,300z" />
-                                    <path d="M164.998,70c-11.026,0-19.996,8.976-19.996,20.009c0,11.023,8.97,19.991,19.996,19.991
-                                   c11.026,0,19.996-8.968,19.996-19.991C184.994,78.976,176.024,70,164.998,70z" />
-                                    <path d="M165,140c-8.284,0-15,6.716-15,15v90c0,8.284,6.716,15,15,15c8.284,0,15-6.716,15-15v-90C180,146.716,173.284,140,165,140z
-                                   " />
-                                </g>
-                            </svg></div>
+                        <div class="select-term__bottom">
+                            <p>Credit and debit cards, PayPal, Pay by Bank and direct debit
+                                (ACH)
+                                accepted. <svg version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 330 330"
+                                    xml:space="preserve">
+                                    <g>
+                                        <path
+                                            d="M165,0C74.019,0,0,74.02,0,165.001C0,255.982,74.019,330,165,330s165-74.018,165-164.999C330,74.02,255.981,0,165,0z
+                                M165,300c-74.44,0-135-60.56-135-134.999C30,90.562,90.56,30,165,30s135,60.562,135,135.001C300,239.44,239.439,300,165,300z" />
+                                        <path d="M164.998,70c-11.026,0-19.996,8.976-19.996,20.009c0,11.023,8.97,19.991,19.996,19.991
+                               c11.026,0,19.996-8.968,19.996-19.991C184.994,78.976,176.024,70,164.998,70z" />
+                                        <path d="M165,140c-8.284,0-15,6.716-15,15v90c0,8.284,6.716,15,15,15c8.284,0,15-6.716,15-15v-90C180,146.716,173.284,140,165,140z
+                               " />
+                                    </g>
+                                </svg></p>
+                        </div>
                     </div>
 
                 </div>
             </div>
 
-            <div class="buy-component__footer">
+            <div class="buy-component__tabs-content --is-hide" data-tab="second">
+                <div class="select-term">
+                    <div class="select-term__first">
+                        <div class="select-term__title-flex">
+                            <h3>Revit cost: 10 tokens/day <svg version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 330 330"
+                                    xml:space="preserve">
+                                    <g>
+                                        <path
+                                            d="M165,0C74.019,0,0,74.02,0,165.001C0,255.982,74.019,330,165,330s165-74.018,165-164.999C330,74.02,255.981,0,165,0z
+                            M165,300c-74.44,0-135-60.56-135-134.999C30,90.562,90.56,30,165,30s135,60.562,135,135.001C300,239.44,239.439,300,165,300z" />
+                                        <path d="M164.998,70c-11.026,0-19.996,8.976-19.996,20.009c0,11.023,8.97,19.991,19.996,19.991
+                           c11.026,0,19.996-8.968,19.996-19.991C184.994,78.976,176.024,70,164.998,70z" />
+                                        <path d="M165,140c-8.284,0-15,6.716-15,15v90c0,8.284,6.716,15,15,15c8.284,0,15-6.716,15-15v-90C180,146.716,173.284,140,165,140z
+                           " />
+                                    </g>
+                                </svg></h3>
+                        </div>
+
+                        <div class="select-term__cards">
+
+                            <button class="select-term__card" data-select="first">
+                                <span>Minimum</span>
+                                <p>$300</p>
+                                <span>100tokens
+                                    <br>10days over 1 year</span>
+                            </button>
+
+                            <button class="select-term__card" data-select="second">
+                                <span>Popular</span>
+                                <p>$1,500</p>
+                                <span>500 tokens <br>
+                                    50 days over 1 year</span>
+                            </button>
+
+                            <button class="select-term__card" data-select="third">
+                                <span>Custom</span>
+                                <p>Varies</p>
+                                <span>Estimate tokens</span>
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                    <div class="select-term__second">
+                        <div class="select-term__top --selected" data-term="first"><span
+                                class="price-text-buy" id="price-buy-2">$8,730</span></div>
+                        <div class="select-term__buttons-buy">
+                            <button class="buttons-buy-tokens">Buy tokens</button>
+                            <button class="buttons-buy-flex">Learn how Flex works</button>
+                        </div>
+                        <div class="select-term__bottom">
+                            <p>Tokens expire 1 year from date of purchase. Not all products and features are available
+                                with Flex. <span>Learn more.</span></p>
+                        </div>
+                        <div class="select-term__bottom">
+                            <p>Credit and debit cards, PayPal, Pay by Bank and direct debit
+                                (ACH)
+                                accepted.
+                                <svg version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 330 330"
+                                    xml:space="preserve">
+                                    <g>
+                                        <path
+                                            d="M165,0C74.019,0,0,74.02,0,165.001C0,255.982,74.019,330,165,330s165-74.018,165-164.999C330,74.02,255.981,0,165,0z
+                                M165,300c-74.44,0-135-60.56-135-134.999C30,90.562,90.56,30,165,30s135,60.562,135,135.001C300,239.44,239.439,300,165,300z" />
+                                        <path d="M164.998,70c-11.026,0-19.996,8.976-19.996,20.009c0,11.023,8.97,19.991,19.996,19.991
+                               c11.026,0,19.996-8.968,19.996-19.991C184.994,78.976,176.024,70,164.998,70z" />
+                                        <path d="M165,140c-8.284,0-15,6.716-15,15v90c0,8.284,6.716,15,15,15c8.284,0,15-6.716,15-15v-90C180,146.716,173.284,140,165,140z
+                               " />
+                                    </g>
+                                </svg>
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="buy-component__footer" data-tab="first">
                 <div class="buy-component__nav">
                     <a class="buy-component__link" href="#"><svg xmlns="http://www.w3.org/2000/svg"
                             id="icon-svg-incentive-30-day" viewBox="0 0 40 40">
@@ -164,6 +245,89 @@
                             <path class="cls-1"
                                 d="M12.8636,22.61292A3.5406,3.5406,0,0,0,9.39592,25.524a1.01807,1.01807,0,0,0,.1811.61843l-.15018.30922c-.47267.78629-.74655,1.28107-.45059,1.502a1.4384,1.4384,0,0,0,.402.21645c-.1281,2.24846.09278,2.28381.32249,2.32358A7.02775,7.02775,0,0,0,10.73,30.476v1.40917l.08393.08393a2.80522,2.80522,0,0,0,1.94811.58311c.07951,0,.16787,0,.2518-.00442a3.19273,3.19273,0,0,0,2.138-.72447l.11044-.11925-.04859-.159a6.78338,6.78338,0,0,1-.265-2.18222,3.75352,3.75352,0,0,0,1.6212-3.03478A3.40544,3.40544,0,0,0,12.8636,22.61292Zm1.67421,6.34787-.106.06627-.02208.12368a6.45107,6.45107,0,0,0,.212,2.37217,3.15089,3.15089,0,0,1-1.63444.455,2.827,2.827,0,0,1-1.68746-.349v-1.7758l-.31365.03093c-.45059.04416-.83933.053-1.04251.053a14.65446,14.65446,0,0,1,.02208-1.99228l.02208-.32688L9.661,27.64a.416.416,0,0,1-.19437-.053,8.23384,8.23384,0,0,1,.45941-.85256l.25622-.53453.18552-.29154-.318-.08835a.39945.39945,0,0,1-.08393-.296,2.98329,2.98329,0,0,1,2.89784-2.34127A2.863,2.863,0,0,1,16.00883,26.328,3.20642,3.20642,0,0,1,14.53781,28.96079Z" />
                         </svg> See more reasons to buy with Autodesk</a>
+                </div>
+            </div>
+
+            <div class="buy-component__footer --footer-hide" data-tab="second">
+                <div class="buy-component__nav">
+                    <a class="buy-component__link" href="#"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 21 21">
+                            <path
+                                d="M13.598 10.002c0 .362-.275.748-.847 1.059-.563.305-1.358.502-2.251.502-.893 0-1.688-.197-2.25-.502-.573-.311-.847-.697-.847-1.06 0-.361.274-.747.846-1.058.563-.306 1.358-.503 2.251-.503.893 0 1.688.197 2.25.503.573.31.848.697.848 1.059z"
+                                stroke="#fff" stroke-width=".525" />
+                            <path d="M7.409 11.569c0 .838 1.384 1.517 3.091 1.517 1.707 0 3.091-.68 3.091-1.517"
+                                stroke="#fff" stroke-width=".525" stroke-linecap="round" />
+                            <path d="M7.409 13.04c0 .837 1.384 1.516 3.091 1.516 1.707 0 3.091-.68 3.091-1.517"
+                                stroke="#fff" stroke-width=".525" stroke-linecap="round" />
+                            <path
+                                d="M10.188 19.674a.315.315 0 0 0 .63 0h-.63zm.63 0v-5.25h-.63v5.25h.63zM10.818 1.326a.315.315 0 1 0-.63 0h.63zm-.63 0-.003 7.153h.63l.003-7.153h-.63z" />
+                            <path d="M16.383 4.686v3.36M16.383 9.726v6.72M4.623 3.006v8.4M4.623 13.086v5.04"
+                                stroke="#fff" stroke-width=".63" stroke-linecap="round" />
+                            <path
+                                d="M12.133 2.96 10.5 1.325 8.867 2.959M18.013 6.32 16.38 4.685l-1.633 1.633M6.253 4.64 4.62 3.005 2.987 4.639"
+                                stroke="#fff" stroke-width=".63" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg> Access more with Flex</a>
+                    <a class="buy-component__link" href="#"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 21 21">
+                            <path
+                                d="M11.865 4.515c0 .585-.442 1.186-1.312 1.658-.857.465-2.063.763-3.413.763-1.35 0-2.556-.298-3.414-.763C2.856 5.7 2.415 5.1 2.415 4.515s.442-1.186 1.311-1.658c.858-.465 2.064-.763 3.414-.763s2.556.298 3.413.763c.87.472 1.312 1.073 1.312 1.658z"
+                                stroke="#fff" stroke-width=".63" />
+                            <path
+                                d="M2.503 6.866c0 1.256 2.076 2.275 4.637 2.275 2.56 0 4.637-1.019 4.637-2.275M2.503 8.882c0 1.256 2.076 2.275 4.637 2.275 1.27 0 2.422-.25 3.26-.657M2.503 10.898c0 1.257 2.076 2.275 4.637 2.275 1.116 0 2.14-.193 2.94-.515M2.503 12.914c0 1.256 2.076 2.275 4.637 2.275 1.411 0 2.675-.31 3.525-.797"
+                                stroke="#fff" stroke-width=".63" stroke-linecap="round" />
+                            <path d="M2.503 14.93c0 1.256 2.076 2.275 4.637 2.275 2.13 0 3.925-.705 4.468-1.665"
+                                stroke="#fff" stroke-width=".63" stroke-linecap="round" />
+                            <path d="M2.503 16.946c0 1.256 2.076 2.275 4.637 2.275 2.56 0 4.637-1.019 4.637-2.275"
+                                stroke="#fff" stroke-width=".63" stroke-linecap="round" />
+                            <path fill="#fff" fill-opacity=".01" d="M11.13 8.82h6.72v6.72h-6.72z" />
+                            <path
+                                d="M14.303 10.827 13.137 9.66m0 0-1.167 1.167m1.167-1.167v3.64m3.81.233L15.782 14.7m0 0-1.167-1.166m1.167 1.166v-3.64"
+                                stroke="#fff" stroke-width=".472" stroke-linecap="round" stroke-linejoin="round" />
+                            <circle cx="14.49" cy="12.18" r="4.41" stroke="#fff" stroke-width=".63" />
+                        </svg> Estimate your usage</a>
+                    <a class="buy-component__link" href="#"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 21">
+                            <path d="M7.55 13.676h2.9a.9.9 0 0 1 .9.9v0a.9.9 0 0 1-.9.9h-2.9" stroke="#fff"
+                                stroke-width=".6" stroke-linecap="round" />
+                            <path d="M3.319 12.364H5.74a1.2 1.2 0 0 1 .849.351l.961.961" stroke="#fff" stroke-width=".6"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                            <path
+                                d="M17.908 13.919a.899.899 0 0 0-.889-1.559M10.865 18.3a1.991 1.991 0 0 1-1.015.276c-.307 0-.598-.07-.858-.193"
+                                stroke="#fff" stroke-width=".6" stroke-linecap="round" />
+                            <path d="M1.7 11.726h1.6v5.6H1.7" stroke="#fff" stroke-width=".6" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path d="m17.909 13.919-7.044 4.38" stroke="#fff" stroke-width=".6"
+                                stroke-linecap="round" />
+                            <path d="M8.992 18.383 5.31 16.696a.8.8 0 0 0-.333-.072H3.325" stroke="#fff"
+                                stroke-width=".6" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="m17.02 12.36-5.795 2.664" stroke="#fff" stroke-width=".6" stroke-linecap="round" />
+                            <circle cx="13" cy="7.926" r="4" stroke="#fff" stroke-width=".5" />
+                            <circle cx="13.03" cy="7.956" stroke="#fff" stroke-width=".197" r="3.4" />
+                            <path
+                                d="M12.99 5.554c-1.209 0-1.624 1.138-1.624 1.385 0 .136.037.235.085.297l-.073.148c-.22.37-.354.606-.207.717.048.037.11.074.183.099-.061 1.063.049 1.088.146 1.1.061.013.257.013.489-.012v.668l.036.037c.012.012.281.272.916.272h.122c.708-.037.99-.334 1.001-.346l.05-.062-.013-.05c0-.012-.171-.606-.122-1.038.232-.161.757-.63.757-1.447 0-1.1-.66-1.768-1.746-1.768zm.781 3.017-.049.037-.012.062c-.073.395.05.927.098 1.125-.098.074-.33.198-.77.223-.451.024-.695-.112-.793-.161v-.841l-.146.012c-.208.025-.391.025-.489.025-.024-.16-.012-.593.012-.952l.012-.16-.146.012a.224.224 0 0 1-.085-.025c.036-.099.134-.272.22-.408l.121-.26.086-.136-.159-.037c-.012-.012-.037-.05-.037-.136 0-.111.318-1.112 1.356-1.112.94 0 1.477.544 1.477 1.496 0 .729-.525 1.137-.696 1.236z"
+                                fill="#fff" stroke="#fff" stroke-width=".1" />
+                            <path d="M10.78 4.616A4.002 4.002 0 0 0 3 5.926a4 4 0 0 0 6.219 3.329" stroke="#fff"
+                                stroke-width=".5" />
+                            <path d="M10.286 4.977a3.402 3.402 0 0 0-6.657.98A3.4 3.4 0 0 0 9.1 8.653" stroke="#fff"
+                                stroke-width=".197" />
+                            <path
+                                d="M6.99 3.554c-1.209 0-1.624 1.138-1.624 1.385 0 .136.037.235.085.297l-.073.148c-.22.37-.354.606-.207.717.048.037.11.074.183.099-.061 1.063.049 1.088.146 1.1.061.013.257.013.489-.012v.668l.036.037c.012.012.281.272.916.272h.122c.708-.037.99-.334 1.001-.346l.05-.062-.013-.05c0-.012-.171-.606-.122-1.038.232-.161.757-.63.757-1.447 0-1.1-.66-1.768-1.746-1.768zm.781 3.017-.049.037-.012.062c-.073.395.05.927.098 1.125-.098.074-.33.198-.77.222-.451.025-.695-.11-.793-.16v-.841l-.147.012c-.207.025-.39.025-.488.025-.024-.16-.012-.593.012-.952l.013-.16-.147.012a.224.224 0 0 1-.085-.025 2.8 2.8 0 0 1 .22-.408l.121-.26.086-.136-.159-.037c-.012-.012-.036-.05-.036-.136 0-.111.317-1.112 1.355-1.112.94 0 1.477.544 1.477 1.496 0 .729-.525 1.137-.696 1.236z"
+                                fill="#fff" stroke="#fff" stroke-width=".1" />
+                        </svg> Buy more, save more</a>
+                    <a class="buy-component__link" href="#"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 21 21">
+                            <g clip-path="url(#xj98gqhema)">
+                                <path fill="#fff" fill-opacity=".01" d="M12.6 8.295H21v8.4h-8.4z" />
+                                <path d="M16.8 10.395v2.1h2.1m1.4 0a3.5 3.5 0 1 0-7 0 3.5 3.5 0 0 0 7 0z" stroke="#fff"
+                                    stroke-width=".6" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M13.2 13.7H1.6a1 1 0 0 1-1-1V5.1a1 1 0 0 1 1-1H15a1 1 0 0 1 1 1v3.463"
+                                    stroke="#fff" stroke-width=".6" stroke-linejoin="round" />
+                                <path stroke="#fff" stroke-width=".4" d="M.65 6.75H16M.65 7.35H16" />
+                                <path stroke="#fff" stroke-width=".4" stroke-linecap="round"
+                                    d="M2 10.833h6.125M2 12.033h4.4" />
+                            </g>
+                            <defs>
+                                <clipPath id="xj98gqhema">
+                                    <path fill="#fff" d="M0 0h21v21H0z" />
+                                </clipPath>
+                            </defs>
+                        </svg> Pay as you go with Flex</a>
                 </div>
             </div>
 
