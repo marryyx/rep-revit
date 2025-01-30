@@ -1,29 +1,17 @@
-import { CLIENT_STORAGE_KEYS } from '../store/globals-params-store.js';
-// import { Routing } from '../root/routing.js'
+import { AuthService } from '../services/auth.service'
 
 const profileMain = document.querySelector('.profile-main');
 
-// ----------------------------------------
-const USER_AUTH_KEY = CLIENT_STORAGE_KEYS.userAuthData;
-// ----------------------------------------
-
 const profileComponent = () => {
-    const getUserAuthData = () => {
-        const data = localStorage.getItem(USER_AUTH_KEY);
-
-        return JSON.parse(data);
-    };
+    const auth = new AuthService();
 
     const userTextContent = () => {
-        const dataUser = getUserAuthData();
+        const dataUser = auth.getAuthData();
 
         if (!dataUser) return;
 
-        dataUser.forEach(item => {
-            const userName = profileMain.querySelector('.profile-main__welcome [data-full-name-user]');
-
-            userName.textContent = `${item.usernameFirst} ${item.usernameLast}`;
-        });
+        const userName = profileMain.querySelector('.profile-main__welcome [data-full-name-user]');
+        userName.textContent = auth.getFullName();
     };
 
     userTextContent();

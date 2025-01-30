@@ -1,17 +1,48 @@
+import { Routing} from '../root/routing.js';
 import { CLIENT_STORAGE_KEYS } from '../store/globals-params-store.js';
+
+const FINDED_USER_DATA = [];
 
 
 export class AuthService {
     constructor() {
         this.localAuthKey = CLIENT_STORAGE_KEYS.userAuthData;
+        this.localUsersKey = CLIENT_STORAGE_KEYS.userData;
     }
-    
-    // signIn() {
-        
-    // }
+
+    getDataUsersOfServer() {
+        const dataUser = localStorage.getItem(this.localUsersKey);
+
+        if (!dataUser) return
+
+        return JSON.parse(dataUser)
+    };
+
+    setUserAuth() {
+        const data = this.getUsesOfTemp(); 
+        if (!data) return
+
+        localStorage.setItem(this.localAuthKey, JSON.stringify({...data[0]}));
+    };
+
+    setUserOfTemp(data) {
+        FINDED_USER_DATA.push(data);
+    };
+
+    getUsesOfTemp() {
+        return FINDED_USER_DATA;
+    };
+
+    signIn(userData) {
+        this.setUserOfTemp(userData);
+        this.setUserAuth();
+
+        Routing.goToHome();
+    }
 
     signOut() {
         localStorage.removeItem(this.localAuthKey);
+        window.location.reload();
     }
 
     getAuthData() {
@@ -22,44 +53,34 @@ export class AuthService {
     getUserFirstName() {
         const data = this.getAuthData();
 
-        if(!data) return;
+        if (!data) return;
 
-        let name;
-
-        data.forEach((item) => { name = item.usernameFirst });
-
-        return name;
+        return data.usernameFirst;
     };
 
     getUserLastName() {
         const data = this.getAuthData();
 
-        if(!data) return;
+        if (!data) return;
 
-        let name;
-
-        data.forEach((item) => { name = item.usernameLast });
-        return name;
+        return data.usernameLast;
     };
 
     getFullName() {
         const data = this.getAuthData();
 
-        if(!data) return;
+        if (!data) return;
 
-        let name;
-
-        data.forEach((item) => { name = `${item.usernameFirst} ${item.usernameLast}` });
-        return name;
+        return `${data.usernameFirst} ${data.usernameLast}`;
     };
 
     getFullNameABR() {
         const data = this.getAuthData();
 
-        if(!data) return;
+        if (!data) return;
 
-        const first = data[0].usernameFirst.slice(0, 1);
-        const last = data[0].usernameLast.slice(0, 1);
+        const first = data.usernameFirst.slice(0, 1);
+        const last = data.usernameLast.slice(0, 1);
 
         return (first + last).toUpperCase();
     }
@@ -67,11 +88,8 @@ export class AuthService {
     getUserEmail() {
         const data = this.getAuthData();
 
-        if(!data) return;
-        
-        let email;
+        if (!data) return;
 
-        data.forEach((item) => { email = item.email });
-        return email;
+        return data.email;
     };
 }

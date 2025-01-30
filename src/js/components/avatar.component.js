@@ -1,5 +1,4 @@
 import { AuthService } from '../services/auth.service.js';
-import { CLIENT_STORAGE_KEYS } from '../store/globals-params-store.js';
 
 const avatarComponentInit = (host) => {
     const auth = new AuthService();
