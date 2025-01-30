@@ -21,11 +21,11 @@ function recheckAccountUser() {
     const dataUser = getAuthData();
 
     if (!dataUser) {
-        headerAccount.classList.add('--is-show');
-        headerSignIn.classList.remove('--is-show');
+        headerAccount.classList.add('gm-hide');
+        headerSignIn.classList.remove('gm-hide');
     } else {
-        headerSignIn.classList.add('--is-show');
-        headerAccount.classList.remove('--is-show');
+        headerSignIn.classList.add('gm-hide');
+        headerAccount.classList.remove('gm-hide');
 
         dataUser.forEach(item => {
             emailUser.innerHTML = item.email;
@@ -42,7 +42,7 @@ export const accountComponent = () => {
     }
 
     accountUser.addEventListener('click', () => {
-        menuUser.classList.toggle('--close');
+        menuUser.classList.toggle('gm-hide');
     });
 
     btnSignOut.addEventListener('click', () => {

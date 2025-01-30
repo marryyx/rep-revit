@@ -7,7 +7,7 @@
     top: 0;
     z-index: 2000;
 
-    background: white;
+    background: var(--color-light);
     border-bottom: 1px solid rgba(204, 204, 204, 0.5);
 
     /* height: 55px; */
@@ -144,7 +144,7 @@
                 border: 1px solid #cdcdcd;
                 border-top: 0;
                 border-radius: 0 0 12px 12px;
-                background: white;
+                background: var(--color-light);
 
                 overflow: hidden;
             }
@@ -188,7 +188,7 @@
                 border: 1px solid #cdcdcd;
                 border-top: 0;
                 border-radius: 0;
-                background: white;
+                background: var(--color-light);
 
                 overflow: hidden;
             }
@@ -279,7 +279,7 @@
             --link-first-disp: none;
             --link-last-disp: inline-flex;
 
-            background-color: white;
+            background-color: var(--color-light);
             border-bottom: 1px solid #cdcdcd;
 
             &+.subhead__dropdown-menu {

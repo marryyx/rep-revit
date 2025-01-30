@@ -5,7 +5,7 @@ export const faq = () => {
 
     function clickBtnSeeMore() {
         faqSeeMoreButton.addEventListener("click", () => {
-            faqSeeMore.classList.toggle('--hide');
+            faqSeeMore.classList.toggle('gm-hide');
             faqSeeMoreButton.classList.toggle('--bottom');
         });
     }
