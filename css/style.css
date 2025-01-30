@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
 
+@import './keyframes.css';
+
 body {
     background: linear-gradient(#5f5f5f, #131313) fixed;
     margin: 0;
@@ -10,313 +12,104 @@ body {
     font-family: 'Quicksand';
 }
 
-.card {
+.main {
     display: flex;
+    flex-direction: column;
 
     justify-content: center;
     align-items: center;
 
-    --color-1: #f15025;
-    --color-2: #f47265;
-    --color-3: #8062aa;
-    --color-4: #46b9eb;
-    --color-5: #48ba7f;
-
-    --border: 2px solid black;
-    --border-1: 2px solid white;
+    min-height: 100%;
 }
 
 .cards {
-    display: grid;
+    --figma-color-1: #f15025;
+    --figma-color-2: #f47265;
+    --figma-color-3: #8062aa;
+    --figma-color-4: #46b9eb;
+    --figma-color-5: #48ba7f;
 
-    grid-template-columns: repeat(4, 1fr);
+    --figma-elm-size: 30px;
 
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
 
-    margin: 20rem 0;
+    justify-content: center;
+    align-items: center;
 
-}
-
-.card-figma-1 {
-    display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    grid-template-rows: repeat(7, 1fr);
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
-
-    background-color: white;
-
-    margin: 0 50px;
-
-    width: 200px;
-    height: 200px;
-}
-
-.figma:first-child {
-    background: var(--color-1);
-
-    border-top-left-radius: 25px;
-    border-bottom-left-radius: 25px;
-
-    transform: translate(46%);
-
-    grid-area: 3 / 3 / 4 / 5;
-}
-
-.figma:nth-child(2) {
-    background: var(--color-2);
-
-    transform: translate(-46%);
-
-    border-top-right-radius: 25px;
-    border-bottom-right-radius: 25px;
-
-    grid-area: 3 / 5 / 4 / 7;
-}
-
-.figma:nth-child(3) {
-    background: var(--color-3);
-
-    transform: translate(46%);
-
-    border-top-left-radius: 25px;
-    border-bottom-left-radius: 25px;
-
-    grid-area: 4 / 3 / 5 / 5;
-}
-
-.figma:nth-child(4) {
-    background: var(--color-4);
-
-    transform: translate(-45%);
-
-    border-radius: 50px;
-
-    grid-area: 4 / 5 / 5 / 7;
-}
-
-.figma:last-child {
-    background: var(--color-5);
-
-    transform: translate(46%);
-
-    border-top-left-radius: 25px;
-    border-bottom-left-radius: 25px;
-    border-bottom-right-radius: 25px;
-
-    grid-area: 5 / 3 / 6 / 5;
+    margin: 50px;
 }
 
 .figma {
-    width: 30px;
-    height: 30px;
-}
-
-.block-figma-2 {
     display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    grid-template-rows: repeat(7, 1fr);
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
+    grid-template: repeat(8, var(--figma-elm-size)) / repeat(8, var(--figma-elm-size));
 
-    background-color: black;
-
-    margin: 0 50px;
-
-    width: 200px;
-    height: 200px;
+    background-color: var(--card-figma-fill, white);
 }
 
-.figma-2 {
-    width: 30px;
-    height: 30px;
+.figma:nth-child(even) {
+    --card-figma-fill: black;
 }
 
-.figma-2:first-child {
-    background: var(--color-1);
-
-    border-top-left-radius: 25px;
-    border-bottom-left-radius: 25px;
-
-    transform: translate(46%);
-
-    grid-area: 3 / 3 / 4 / 5;
+.figma-border {
+    --border-size: 2px;
+    --border-color: rgb(0, 0, 0);
 }
 
-.figma-2:nth-child(2) {
-    background: var(--color-2);
+.figma-border-white {
+    --border-size: 2px;
+    --border-color: white;
+}
 
-    transform: translate(-46%);
+.figma-not-fill-color {
+    --figma-color-1: transparent;
+    --figma-color-2: transparent;
+    --figma-color-3: transparent;
+    --figma-color-4: transparent;
+    --figma-color-5: transparent;
+}
 
-    border-top-right-radius: 25px;
-    border-bottom-right-radius: 25px;
+.figma-elm {
+    grid-area: 3 / 4 / 4 / 5;
 
+    width: var(--figma-elm-size);
+    height: var(--figma-elm-size);
+
+    border-radius: 25px 0 0 25px;
+    border: var(--border-size, 0) solid var(--border-color);
+    box-sizing: border-box;
+    /* box-shadow: inset 0 0 0 var(--border-size, 0) var(--border-color); */
+
+    background: var(--figma-color-1);
+
+    translate: 0% 50%;
+}
+
+.figma-elm:nth-child(2) {
     grid-area: 3 / 5 / 4 / 7;
+
+    border-radius: 0 25px 25px 0;
+    background: var(--figma-color-2);
 }
 
-.figma-2:nth-child(3) {
-    background: var(--color-3);
+.figma-elm:nth-child(3) {
+    grid-area: 4 / 4 / 5 / 5;
 
-    transform: translate(46%);
-
-    border-top-left-radius: 25px;
-    border-bottom-left-radius: 25px;
-
-    grid-area: 4 / 3 / 5 / 5;
+    border-radius: 25px 0 0 25px;
+    background: var(--figma-color-3);
 }
 
-.figma-2:nth-child(4) {
-    background: var(--color-4);
-
-    transform: translate(-45%);
-
-    border-radius: 50px;
-
+.figma-elm:nth-child(4) {
     grid-area: 4 / 5 / 5 / 7;
+
+    border-radius: 50%;
+    background: var(--figma-color-4);
 }
 
-.figma-2:last-child {
-    background: var(--color-5);
+.figma-elm:last-child {
+    grid-area: 5 / 4 / 6 / 5;
 
-    transform: translate(46%);
-
-    border-top-left-radius: 25px;
-    border-bottom-left-radius: 25px;
-    border-bottom-right-radius: 25px;
-
-    grid-area: 5 / 3 / 6 / 5;
-}
-
-.block-figma-3 {
-    display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    grid-template-rows: repeat(7, 1fr);
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
-
-    background-color: white;
-
-    margin: 0 50px;
-
-    width: 200px;
-    height: 200px;
-}
-
-.figma-3:first-child {
-    border-top-left-radius: 25px;
-    border-bottom-left-radius: 25px;
-    transform: translate(37%);
-
-    grid-area: 3 / 3 / 4 / 5;
-}
-
-.figma-3:nth-child(2) {
-    transform: translate(-37%);
-
-    border-top-right-radius: 25px;
-    border-bottom-right-radius: 25px;
-
-    grid-area: 3 / 5 / 4 / 7;
-}
-
-.figma-3:nth-child(3) {
-
-    transform: translate(37%);
-
-    border-top-left-radius: 25px;
-    border-bottom-left-radius: 25px;
-
-    grid-area: 4 / 3 / 5 / 5;
-}
-
-.figma-3:nth-child(4) {
-
-    transform: translate(-37%);
-
-    border-radius: 50px;
-
-    grid-area: 4 / 5 / 5 / 7;
-}
-
-.figma-3:last-child {
-    transform: translate(37%);
-
-    border-top-left-radius: 25px;
-    border-bottom-left-radius: 25px;
-    border-bottom-right-radius: 25px;
-
-    grid-area: 5 / 3 / 6 / 5;
-}
-
-.figma-3 {
-    border: var(--border);
-
-    width: 30px;
-    height: 30px;
-}
-
-
-.block-figma-4 {
-    display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    grid-template-rows: repeat(7, 1fr);
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
-
-    background-color: black;
-
-    margin: 0 50px;
-
-    width: 200px;
-    height: 200px;
-}
-
-.figma-4:first-child {
-    border-top-left-radius: 25px;
-    border-bottom-left-radius: 25px;
-    transform: translate(37%);
-
-    grid-area: 3 / 3 / 4 / 5;
-}
-
-.figma-4:nth-child(2) {
-    transform: translate(-37%);
-
-    border-top-right-radius: 25px;
-    border-bottom-right-radius: 25px;
-
-    grid-area: 3 / 5 / 4 / 7;
-}
-
-.figma-4:nth-child(3) {
-    transform: translate(37%);
-
-    border-top-left-radius: 25px;
-    border-bottom-left-radius: 25px;
-
-    grid-area: 4 / 3 / 5 / 5;
-}
-
-.figma-4:nth-child(4) {
-    transform: translate(-37%);
-
-    border-radius: 50px;
-
-    grid-area: 4 / 5 / 5 / 7;
-}
-
-.figma-4:last-child {
-    transform: translate(37%);
-
-    border-top-left-radius: 25px;
-    border-bottom-left-radius: 25px;
-    border-bottom-right-radius: 25px;
-
-    grid-area: 5 / 3 / 6 / 5;
-}
-
-.figma-4 {
-    border: var(--border-1);
-
-    width: 30px;
-    height: 30px;
+    border-radius: 25px 0 25px 25px;
+    background: var(--figma-color-5);
 }
