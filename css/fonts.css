@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'markfont';
-  src:  url('../fonts/markfont.eot?r7byym');
-  src:  url('../fonts/markfont.eot?r7byym#iefix') format('embedded-opentype'),
-    url('../fonts/markfont.ttf?r7byym') format('truetype'),
-    url('../fonts/markfont.woff?r7byym') format('woff'),
-    url('../fonts/markfont.svg?r7byym#markfont') format('svg');
+  src:  url('../fonts/markfont.eot?3j267n');
+  src:  url('../fonts/markfont.eot?3j267n#iefix') format('embedded-opentype'),
+    url('../fonts/markfont.ttf?3j267n') format('truetype'),
+    url('../fonts/markfont.woff?3j267n') format('woff'),
+    url('../fonts/markfont.svg?3j267n#markfont') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -25,6 +25,9 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.ari-fullscreen:before {
+  content: "\e91f";
+}
 .ari-block:before {
   content: "\e91e";
 }

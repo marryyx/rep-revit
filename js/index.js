@@ -264,8 +264,14 @@ const btnAssistantClose = document.querySelector('.autodesk-widget__header .ari-
 const messageAssistant = document.querySelector('.au-assi__welcome')
 const messageAssistantClose = document.querySelector('.au-assi__top .au-assi-close')
 
+const buttonFullScreen = document.querySelector('.autodesk-widget__header .ari-fullscreen')
+
 messageAssistantClose.addEventListener('click', () => {
     messageAssistant.classList.add('--close')
+});
+
+buttonFullScreen.addEventListener('click', () => {
+    autodeskWidgetLayot.classList.add('--full');
 });
 
 btnAssistant.addEventListener('click', () => {
@@ -277,6 +283,7 @@ btnAssistant.addEventListener('click', () => {
 btnAssistantClose.addEventListener('click', () => {
     auAssi.classList.remove('--hide');
     autodeskWidgetLayot.classList.add('--hide');
+    autodeskWidgetLayot.classList.remove('--full');
 });
 
 const inputContent = document.querySelector('.autodesk-widget__input');
