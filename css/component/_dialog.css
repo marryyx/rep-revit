@@ -26,6 +26,15 @@
     background-color: rgba(0, 0, 0, 0.6);
 }
 
+.basket__wrap {
+    display: flex;
+    flex-flow: column;
+    flex: 1 1;
+    z-index: 1;
+    bottom: 0;
+    background-color: white;
+}
+
 .basket__top-cart {
     display: flex;
     align-items: center;
@@ -128,8 +137,11 @@
 }
 
 .basket__container {
+    position: sticky;
     padding: 20px;
+    bottom: 0;
     border-top: 1px solid rgb(202, 202, 202);
+    background-color: white;
 }
 
 .basket__footer {
@@ -170,4 +182,11 @@
 .basket__footer-bottom {
     font-size: 12px;
     color: rgba(0, 0, 0, 0.7);
+}
+
+.basket__close {
+    position: fixed;
+    inset: 0;
+    opacity: 0;
+    overflow: hidden;
 }
