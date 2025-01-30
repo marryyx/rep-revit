@@ -34,6 +34,19 @@ export const assistantComponent = () => {
         isOpen = true;
     };
 
+    function reportWindowSize() {
+        const windowWidth = window.innerWidth;
+        
+        if (windowWidth <= 430) {
+            messageAssistant.classList.add('--close');
+        }
+    }
+
+    reportWindowSize();
+    window.addEventListener("resize", () => {
+        reportWindowSize();
+    });
+
     // const assistantWindow = () => {
     //     if (isOpen === true) {
     //         console.log('true');
