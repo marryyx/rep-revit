@@ -1,95 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Protest+Strike&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
 body {
-    background: white;
+    background: rgba(255, 196, 3, 1);
+    min-width: 100vw;
+    min-height: 100vh;
     margin: 0;
-    width: 100%;
+    font-family: 'Roboto';
 }
 
-.num {
-    padding: 24px;
-    display: grid;
-    grid-row: 1fr;
+.main, .header, .block_5, footer {
+    display: flex;
     gap: 24px;
-    background: #FFC403;;
-    border-radius: 50px;
-    height: 100vh;
+
+}
+
+.main {
+    flex-direction: column;
+    min-height: 4vh;
+}
+
+.header {
+    justify-content: flex-end;
+    min-height: 4vh;
+    background: rgba(95, 0, 255, 1);
+    border: 10px solid red;
+    margin: 0;
+}
+
+.block {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+
+.invis {
+    display: flex;
+    align-items: center; 
+    margin-left: 20vh;
+    border-right: 10px solid red;
+}
+
+.block_1 {
+    background: rgba(158, 172, 0, 1);
+    width: 72px;
+    height: 14px;
+    margin-right: 19px;
+}
+
+.block_2 {
+    background: rgba(158, 172, 0, 1);
+    width: 72px;
+    height: 14px;
+    margin-right: 19px;
+}
+
+.block_3 {
+    background: rgba(158, 172, 0, 1);
+    width: 72px;
+    height: 14px;
+    margin-right: 19px;
+}
+
+.block_4 {
+    background: rgba(158, 172, 0, 1);
+    width: 72px;
+    height: 14px;
+    margin-right: 19px;
+}
+
+.block_5 {
+    display: flex;
+    align-items: stretch;
+    justify-content: stretch;
+    justify-items: stretch;
+    flex: 1 1;
+
+    padding: 24px;
+
+    background: green;
+
+    :where(.one .text_inf) {
+        flex: 1 1;
+    }
+    
 }
 
 .one {
-    grid-area: a;
-    background: #ff0000;
-}
-.two {
-    grid-area: b;
-    background: rgba(184, 255, 0, 1);
-    ;
- }
-.three {
-    grid-area: c;
-    background: rgba(95, 0, 255, 1);
-}
-.four {
-    grid-area: d;
-    background: rgba(43, 167, 0, 1);
- }
-  
-.five {
-    grid-area: g;
-    background: rgba(31, 72, 0, 1);
+    background: linear-gradient(117.04deg, #6E176B 20.61%, #2357A4 79.3%);
+    width: 800px;
+    height: 100%;
+    display: flex;
+    text-align: center;
+
+    border-radius: 30px;
+    margin-left: 20px;
+    
+    align-self: stretch;
 }
 
-.six {
-    grid-area: e;
-    background: rgba(124, 39, 39, 1); 
+.text_1 {
+    display: flex;
+    text-align: center;
+    font-size: 35px;
+    color: white;
+    padding: 5px;
+    align-items: center
 }
 
-.seven {
-    grid-area: u;
-    background: rgba(39, 46, 54, 1);
+.block_info {
+    background: rgba(220, 38, 38, 1);
+    width: 800px;
+    height: 100%;
+    margin: 10px 20px;
+    margin-left: auto;
 }
 
-@media (min-width: 992px) {
-    .num {
-        grid-template-areas: 
-        "a a b b"
-        "c d b b"
-        "g e e u";
-    }
+h1 {
+    font-size: 25px;
+    text-align: center;
+    color: rgb(255, 255, 255);
 }
 
-@media (max-width: 992px) {
-    .num {
-    & > * {
-        grid-area: unset;
-   }
-   }
+h2 {
+    margin-left: 40px;
+    color: rgb(255, 255, 255); 
 }
 
-@media (max-width: 480px) {
-    .one {
-        background-color: #ff7979;
-    }
+li {
+    color: white;
+    font-size: 23px;
+    padding-bottom: 20px;
+}
 
-    .two {
-        background-color: rgb(211, 255, 99);
-    }
+.footer {
+    background: rgba(124, 39, 39, 1);
+    height: 149px;
+}
 
-    .three {
-        background-color: rgb(174, 127, 255);
-    }
+.main_2 {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    gap: 60px;
+    margin-top: 60px;
+    margin-left: 60px;
+    font-size: 20px;
+}
 
-    .four {
-        background-color: rgb(80, 150, 57);
-    }
+.sponsmat {
+    margin-left: 380px;
+}
 
-    .five {
-        background: rgb(52, 75, 35);
-    }
+.block_znak {
+    display: flex;;
+    background: rgb(255, 255, 255);
+    width: 70px;
+    height: 70px;
+    border-radius: 50px;
+}
 
-    .six {
-        background-color: rgb(112, 74, 74);
-    }
-
-    .seven {
-        background-color: rgb(105, 125, 146);
-    }
+.znak {
+    color: rgba(124, 39, 39, 1);
+    font-size: 40px;
+    display: flex;
+    align-items: center;
+    margin: auto;
 }
