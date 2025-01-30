@@ -1,7 +1,17 @@
-p {
-     color: rgb(133, 189, 22);
+div p, #bold-text
+    {
+    color: red;
 }
 
-b {
-    color: rgb(2, 143, 2);
+
+/*.text-color.some {
+    color: red;
 }
+
+#bold-text {
+    color: violet;
+}
+
+#some-text.text-color {
+    color: blue 
+} */
