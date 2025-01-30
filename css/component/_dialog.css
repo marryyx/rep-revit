@@ -60,17 +60,76 @@
     border-bottom: 1px solid rgb(202, 202, 202);
 }
 
-.basket__container {
-    padding: 20px;
-    border-top: 1px solid rgb(202, 202, 202);
-}
-
 .basket__content {
     display: flex;
     flex-flow: column;
     flex: 1;
+    padding: 20px;
+
     overflow-x: hidden;
     overflow-y: auto;
+}
+
+.basket__content-card {
+    display: flex;
+    flex-flow: column;
+    border-bottom: 1px solid rgba(202, 202, 202, 0.7);
+    margin-bottom: 10px;
+}
+
+.basket__content-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+
+    & p {
+        display: inline-flex;
+        font-size: 14px;
+        gap: 10px;
+    }
+
+    & h3 {
+        font-size: 1rem;
+        font-weight: 600;
+    }
+}
+
+.basket__content-title {
+    display: flex;
+    gap: 40%;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.basket__content-subtitle {
+    display: flex;
+    gap: 40%;
+    margin-bottom: 32px;
+
+    & h3 {
+        font-weight: 600;
+        font-size: 16px;
+    }
+}
+
+.basket__content-btn-remove {
+    font-size: 12px;
+    opacity: 0.6;
+    margin-bottom: 10px;
+
+    & button {
+        text-decoration: underline;
+
+        &:hover {
+            text-decoration: underline #5f60ff;
+        }
+    }
+}
+
+.basket__container {
+    padding: 20px;
+    border-top: 1px solid rgb(202, 202, 202);
 }
 
 .basket__footer {
