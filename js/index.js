@@ -1,81 +1,124 @@
-let
-    mainpush = document.querySelector('.main__push'),
+const roudedFigObg = {
+    one: ["🔵", "🔵", "🔵", "🔵"],
+    two: ["🔵", "🟢", "🟡", "🟠"],
+    three: ["🔵", "🟡", "🔵", "🟠"],
+    four: ["1", "32", "5", "12", "27"],
+};
 
-    Elpush = ["🔵", "🔵", "🔵", "🔵"];
+const arrayMethod = (arr, arrayMethod, elm) => {
 
-Elpush.push("🟣");
+    const arrNew = [...arr];
+    const houseElm = document.querySelector(elm);
 
-mainpush.innerHTML = Elpush.join(' ');
+    if (arrayMethod === 'push') {
+        arrNew.push("🟣");
+        houseElm.innerHTML = arrNew.join(" ");
+    }
 
-// *************************************
+    if (arrayMethod === 'unshift') {
+        arrNew.unshift("🟣");
+        houseElm.innerHTML = arrNew.join(" ");
+    }
 
-let mainunshift = document.querySelector('.main__unshift');
-let array2 = ["🔵", "🔵", "🔵", "🔵"];
-array2.unshift("🟣");
-mainunshift.innerHTML = array2.join(' ');
+    if (arrayMethod === 'pop') {
+        arrNew.pop();
+        houseElm.innerHTML = arrNew.join(" ");
+    }
 
-// *************************************
+    if (arrayMethod === 'shift') {
+        arrNew.shift();
+        houseElm.innerHTML = arrNew.join(" ");
+    }
 
-let
-    mainpop = document.querySelector('.main__pop'),
-    array3 = ["🔵", "🟢", "🟡", "🟠"];
-array3.pop();
-mainpop.innerHTML = array3.join(' ');
+    if (arrayMethod === 'map') {
+        const map = arrNew.map((elm) => elm === "🔵" ? "🟣" : "🔵");
+        houseElm.innerHTML = map.join(" ");
+    }
 
-// *************************************
+    if (arrayMethod === 'filter') {
+        const filter = arrNew.filter((elm) => elm === "🔵");
+        houseElm.innerHTML = filter.join(" ");
+    }
 
-let
-    mainshift = document.querySelector('.main__shift'),
-    array4 = ["🔵", "🟢", "🟡", "🟠"];
-array4.shift();
-mainshift.innerHTML = array4.join(' ');
+    if (arrayMethod === 'reverse') {
+        arrNew.reverse((elm) => elm === "🔵");
+        houseElm.innerHTML = arrNew.join(" ");
+    }
 
-// *************************************
+    if (arrayMethod === 'at') {
+        houseElm.innerHTML = arrNew.at(2);
+    }
 
-let
-    mainmap = document.querySelector('.main__map'),
-    array5 = ["🔵", "🔵", "🔵", "🔵"];
+    if (arrayMethod === 'slice') {
+        houseElm.innerHTML = arrNew.slice(2).join(" ");
+    }
 
-let newmap = array5.map(() => "🟣");
-    // function (elm) {
-    //     if (elm === "🔵") {
-    //         return "🟣"
-    //     }
-    //     else {
-    //         return "🔵"
-    //     }
-    // }
-mainmap.innerHTML = newmap.join(' ');
+    if (arrayMethod === 'sort') {
+        arrNew.sort(function(a, b){return a-b});
+        houseElm.innerHTML = arrNew.join(" ");
+    }
 
-// *************************************
+};
 
-let
-    mainfilter = document.querySelector('.main__filter'),
-    array6 = ["🔵", "🟡", "🔵", "🟠"];
-let array6New = array6.filter((elm) => elm === "🔵");
-mainfilter.innerHTML = array6New.join(' ');
+arrayMethod(roudedFigObg.one, 'push', '.main__push');
+arrayMethod(roudedFigObg.one, 'unshift', '.main__unshift');
 
-// *************************************
+arrayMethod(roudedFigObg.two, 'pop', '.main__pop');
+arrayMethod(roudedFigObg.two, 'shift', '.main__shift');
 
-let
-    mainreverse = document.querySelector('.main__reverse'),
-    array7 = ["🔵", "🟢", "🟡", "🟠"];
-array7.reverse();
-mainreverse.innerHTML = array7.join(' ');
+arrayMethod(roudedFigObg.one, 'map', '.main__map');
 
-// *************************************
+arrayMethod(roudedFigObg.three, 'filter', '.main__filter');
 
-let
-    mainat = document.querySelector('.main__at'),
-    array8 = ["🔵", "🟢", "🟡", "🟠"];
-array8.at(2);
-mainat.innerHTML = array8.at(2);
+arrayMethod(roudedFigObg.two, 'reverse', '.main__reverse');
+arrayMethod(roudedFigObg.two, 'at', '.main__at');
+arrayMethod(roudedFigObg.two, 'slice', '.main__slice');
 
-// *************************************
+arrayMethod(roudedFigObg.four, 'sort', '.main__sort');
 
-let
-    mainslice = document.querySelector('.main__slice'),
-    array9 = ["🔵", "🟢", "🟡", "🟠"];
-mainslice.innerHTML = array9.slice(2).join(' ');
+//////////////////////////////////////////////////////
 
-// *************************************
+const numbers = ["3", "-5", "1.5", "10", "4"];
+
+const arrayNum = document.querySelector('.math__array');
+arrayNum.innerHTML = numbers.join(", ");
+
+const absNum = document.querySelector('.math__abs');
+const absoluteValue = Math.abs(-10);
+absNum.innerHTML = absoluteValue;
+
+const ceilNum = document.querySelector('.math__ceil');
+const ceilValue = Math.ceil(3.2);
+ceilNum.innerHTML = ceilValue;
+
+const floorNum = document.querySelector('.math__floor');
+const floorValue = Math.floor(4.7);
+floorNum.innerHTML = floorValue;
+
+const maxNum = document.querySelector('.math__max');
+const maxValue = Math.max(...numbers);
+maxNum.innerHTML = maxValue;
+
+const minNum = document.querySelector('.math__min');
+const minValue = Math.min(...numbers);
+minNum.innerHTML = minValue;
+
+const powNum = document.querySelector('.math__pow');
+const powValue = Math.pow(3,2);
+powNum.innerHTML = powValue;
+
+const randomNum = document.querySelector('.math__random');
+function getRandomInt(max) {
+    return Math.floor(Math.random() * max)
+}
+randomNum.innerHTML = getRandomInt(3);
+
+const roundNum = document.querySelector('.math__round');
+const roundValue = Math.round(3.7);
+roundNum.innerHTML = roundValue;
+
+
+const sqrtNum = document.querySelector('.math__sqrt');
+const sqrtValue = Math.sqrt(9);
+// const sqrtValue = Math.sqrt(-9); - будет выводить: Nan
+sqrtNum.innerHTML = sqrtValue;

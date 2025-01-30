@@ -42,11 +42,11 @@ body {
     margin-bottom: 48px;
 
     max-width: 450px;
-    color: rgb(93,201,211);
+    color: rgb(93, 201, 211);
 
     & span:first-child {
         font-size: 58px;
-        color: rgb(247,202,67);
+        color: rgb(247, 202, 67);
     }
 
     & span:last-child {
@@ -85,6 +85,82 @@ body {
 }
 
 .main__second {
+    display: flex;
+    align-items: center;
+    flex-flow: column;
+    margin-left: 20px;
+    font-size: 16px;
+    gap: 40px;
+}
+
+.math {
+    display: flex;
+    justify-content: center;
+    flex-flow: column;
+    padding: 48px 0;
+    font-family: "Rubik", sans-serif;
+}
+
+.math__top {
+    display: flex;
+    align-items: center;
+    flex-flow: column;
+    text-align: center;
+}
+
+.math__title {
+    padding: 0 0 24px 0;
+    font-size: 48px;
+    font-weight: 500;
+    color: white;
+
+    & p {
+        font-size: 20px;
+
+        & span {
+            color: rgb(247, 202, 67);
+        }
+    }
+}
+
+.math__subtitle {
+    margin-bottom: 48px;
+    color: white;
+    opacity: .7;
+    max-width: 280px;
+}
+
+.math__content {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+
+    color: white;
+}
+
+.math__first {
+    display: flex;
+    flex-flow: column;
+    gap: 40px;
+    margin-right: 40px;
+    font-weight: 600;
+}
+
+.math__block {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.math__block::before {
+    position: absolute;
+    inset: auto -40px auto auto;
+    font-weight: bold;
+    font-size: 28px;
+    content: '→';
+}
+
+.math__second {
     display: flex;
     align-items: center;
     flex-flow: column;
