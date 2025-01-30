@@ -54,7 +54,8 @@
 
         & svg {
             width: clamp(0.625rem, 1.154vw - 0.038rem, 1rem);
-            height: 1rem;
+            stroke: white;
+            fill: none;
         }
     }
 }

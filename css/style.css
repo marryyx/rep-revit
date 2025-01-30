@@ -2,6 +2,7 @@
 
 @import url('./component/_buy-component.css');
 @import url('./component/_select-term.css');
+@import url('./fonts.css');
 
 * {
     margin: 0;
@@ -30,6 +31,7 @@ body {
     justify-content: center;
     min-height: 100vh;
     background-color: rgb(255, 255, 255);
+    font-family: 'icomoon' !important;
 }
 
 .container {
