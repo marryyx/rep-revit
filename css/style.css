@@ -10,6 +10,7 @@
 @import url('./ui/_buttons.css');
 @import url('./ui/_inputs.css');
 @import url('./ui/_links.css');
+@import url('./ui/_avatar.css');
 
 /* components */
 @import url('./component/_buy-component.css');

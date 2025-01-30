@@ -1,0 +1,9 @@
+.avatar {
+    width: 48px;
+    aspect-ratio: 1;
+
+    font-size: clamp(1.125rem, 1.06rem + 0.278vw, 1.3125rem);
+
+    border-radius: 50%;
+    background-color: var(--color-blue-violet);
+}
