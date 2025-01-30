@@ -25,6 +25,9 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.ari-right-up:before {
+  content: "\e925";
+}
 .ari-contact:before {
   content: "\e922";
 }
