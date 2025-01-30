@@ -9,7 +9,7 @@ const tabs = document.querySelectorAll('.buy-component__tab');
 const priceBlock = document.querySelector('.price-text-buy');
 const deskBlock = document.querySelector('.desk-text-buy');
 
-const priceCard = document.querySelector('#price-buy-2');
+// const priceCard = document.querySelector('#price-buy-2');
 const btnInfo = document.querySelector('.buttons-buy-tokens')
 
 const clearTabAndCard = (element, newClass) => {

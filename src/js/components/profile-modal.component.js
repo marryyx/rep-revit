@@ -13,8 +13,8 @@ const profileModalComponent = () => {
     const auth = new AuthService();
 
     const recheckAccountUser = () => {
-        emailUser.innerHTML = auth.getUserEmail;
-        fullname.textContent = auth.getFullName;
+        emailUser.innerHTML = auth.getUserEmail();
+        fullname.textContent = auth.getFullName();
     };
 
     accountUser.addEventListener('click', () => {
