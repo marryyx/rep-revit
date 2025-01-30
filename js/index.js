@@ -38,8 +38,11 @@ const clearSelectCard = () => {
 };
 
 const updatePrice = (key) => {
-    price = PLAN_PRICE[key].price;
-    description = PLAN_PRICE[key].description;
+    const price = PLAN_PRICE[key].price;
+    const description = PLAN_PRICE[key].description;
+
+    priceBlock.innerHTML = price;
+    deskBlock.textContent = description;
 };
 
 const updateContentOfPlan = (elm) => {
@@ -57,9 +60,6 @@ cardAll.forEach(element => {
         clearSelectCard();
         
         updatePrice(element.dataset.select);
-
-        priceBlock.innerHTML = price;
-        deskBlock.textContent = description;
 
         element.classList.add('--is-select');
     });
