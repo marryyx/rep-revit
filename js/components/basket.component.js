@@ -29,14 +29,13 @@ const setBasketCounter = (count) => {
 };
 
 const addToBasket = (data) => {
-    const { type, term, quanity, price } = data;
+    const { id, type, term, quanity, price } = data;
     const basketContent = document.querySelector('.basket__content');
     const typeImage = type ? 'coins.png' : 'revit.png';
     const typeCaption = type ? 'Flex' : 'Revit';
-    let itemId = 1;
 
     const basket =
-        `<div id="${itemId}" class="basket__content-card">
+        `<div class="basket__content-card" data-item-id="${id}">
                 <div class="basket__content-top">
                     <p><img src="./image/${typeImage}" alt="#">${typeCaption}</p>
                     <h3 class="total">${price}</h3>
@@ -58,10 +57,12 @@ const addToBasket = (data) => {
             </div>`;
     basketContent.insertAdjacentHTML("beforeend", basket);
 
-    const basketContentCard = document.querySelector('.basket__content-card')
-    const basketButtonRemove = document.querySelector('.basket__content-card .btn-remove');
-    basketButtonRemove.addEventListener('click', () => {
-        basketContentCard.remove();
+    const elm = document.querySelector(`[data-item-id="${id}"]`);
+    const removeBtn = elm.querySelector('.btn-remove');
+
+    removeBtn.addEventListener("click", () => {
+        removeCardItem(id);
+        elm.remove();
 
         const itemsLenght = basketContent.querySelectorAll('.basket__content-card').length;
         setBasketCounter(itemsLenght);
@@ -94,8 +95,19 @@ const showCartsItems = () => {
 }
 
 const setCartData = (typeParm, key) => {
-    const newObg = { type: typeParm, ...PLAN_PRICE[key] }
+    const leng = CARD_DATA_TEMP.length;
+    const newObg = { id: (leng + 1), type: typeParm, ...PLAN_PRICE[key] }
     CARD_DATA_TEMP.push(newObg);
+};
+
+const removeCardItem = (id) => {
+    const newData = CARD_DATA_TEMP.filter(elm => elm.id !== id);
+
+    CARD_DATA_TEMP.length = 0;
+    CARD_DATA_TEMP.push(...newData);
+    
+    updateCartDateOfStore(CARD_DATA_TEMP)
+    console.log("CARD_DATA_TEMP =", updateCartDateOfStore(newData))
 };
 
 const loadingMode = () => {
