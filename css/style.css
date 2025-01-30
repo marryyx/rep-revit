@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
 
-@import './keyframes.css';
+@import 'css/keyframes.css';
 
 body {
     background: linear-gradient(#5f5f5f, #131313) fixed;
@@ -112,4 +112,18 @@ body {
 
     border-radius: 25px 0 25px 25px;
     background: var(--figma-color-5);
+}
+
+.figma:nth-child(odd) {
+    transition: background-color 1s ease;
+    transition: transform 1s ease-in-out;
+}
+
+.figma:nth-child(odd):hover {
+    background-color: rgb(194, 194, 194);
+    transform: scale(1.2);
+}
+
+.animation-1 {
+    animation: figmanim 5s ease-in-out infinite;
 }

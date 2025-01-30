@@ -1,0 +1,22 @@
+@keyframes figmanim {
+    0% {
+        transform: rotate(0deg);
+        background-color: #000000;
+    }
+    25% {
+        transform: rotate(90deg);
+        background-color: #333333;
+    }
+    50% {
+        transform: rotate(180deg);
+        background-color: #5c5c5c;
+    }
+    75% {
+        transform: rotate(270deg);
+        background-color: #222222;
+    }
+    100% {
+        transform: rotate(360deg);
+        background-color: #000000;
+    }
+}
