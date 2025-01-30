@@ -53,25 +53,24 @@ header {
 
     position: relative;
 
-    width: 100%;
     /* background-color: red;  */
 }
 
 
 .aside {
     position: absolute;
-    inset: 0 0 0 auto;
+    inset: 0 0 0 60%;
 
-    width: 100%;
-    height: auto;
+    max-height: 100%;
+    overflow: hidden;
 }
 
 .aside img {
-    object-fit: contain;
-    object-position: 70rem;
+    /* object-fit: cover;
+    object-position: top right; */
 
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    /* height: auto; */
 }
 
 .title {
@@ -108,7 +107,7 @@ button {
 }
 
 .buttons {
-    margin-top: 20px;
+    margin-top: 15px;
 }
 
 .button.--line {
@@ -129,6 +128,7 @@ button {
     border: 2px solid var(--color);
     background-color: white;
     color: black;
+    margin-left: 50px;
 }
 
 .logo {
@@ -140,9 +140,25 @@ button {
     color:var(--color);
 }
 
+.title {
+    line-height: 42px;
+}
+
+.text {
+    line-height: 32px;
+}
+
 a {
     margin-left: 110px;
     color: black;
 
     text-decoration: none;
+}
+
+.container {
+    max-width: 1440px;
+    width: 100%;
+
+    margin: 0 auto;
+    padding: 0 24px;
 }
