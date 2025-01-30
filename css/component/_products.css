@@ -1,0 +1,144 @@
+.products {
+    display: flex;
+    min-width: 100%;
+    margin-bottom: 3rem;
+}
+
+.products__top {
+    font-weight: 700;
+    font-size: clamp(1rem, 0.5217rem + 1.7391vw, 1.5rem);
+    line-height: 1.25;
+
+    margin-bottom: 1rem;
+}
+
+.products__block {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 16px;
+}
+
+.products__element-first {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-top: 59px;
+    flex-grow: 2;
+}
+
+.products__item {
+    padding: 20px 10px;
+    border: 1px solid black;
+
+    &:not(:last-child) {
+        border-bottom: none;
+    }
+}
+
+.products__element-second {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+
+    & .products__item {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        font-size: 14px;
+
+        padding: 20px 10px;
+        border: 1px solid black;
+
+        & img {
+            width: 2rem;
+        }
+
+        &:first-child {
+            padding: 13px 10px;
+        }
+
+        &:not(:last-child) {
+            border-bottom: none;
+        }
+    }
+}
+
+.products__element-third {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+
+    & .products__item {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        font-size: 14px;
+
+        padding: 20px 10px;
+        border: 1px solid black;
+
+        & img {
+            width: 2rem;
+        }
+
+        &:first-child {
+            padding: 13px 10px;
+        }
+
+        &:not(:last-child) {
+            border-bottom: none;
+        }
+    }
+}
+
+.products__circle {
+    width: 18px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+
+    &.--black {
+        background-color: black;
+    }
+
+    &.--smoke {
+        background: linear-gradient(to left, #000000 50%, #ffffff 50%);
+        border: 1px solid black;
+    }
+
+    &.--white {
+        border: 1px solid black;
+    }
+}
+
+.products__bottom {
+    display: flex;
+    & button {
+        padding: 4px 10px;
+        border: 1px solid black;
+        box-shadow: 0 0 1px 0.5px black;
+        scale: 1;
+        transition: all 0.2s ease-in-out;
+
+        &:hover {
+            scale: 1.02;
+            transition: all 0.3s ease-in-out;
+        }
+    }
+}
+
+.products__bottom-right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    margin: auto 0 auto auto;
+}
+
+.products__bottom-element {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
