@@ -47,9 +47,8 @@ const clearSelectTab = () => {
 const selectTabContent = (name, content, classHide) =>
     content.forEach(item => {
         const tabContent = item.dataset.tab
-        if (name != tabContent) {
-            item.classList.add(classHide)
-        } else { item.classList.remove(classHide) }
+
+        name != tabContent ? item.classList.add(classHide) : item.classList.remove(classHide)
     });
 
 
