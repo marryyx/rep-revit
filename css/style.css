@@ -1,28 +1,28 @@
-@import url('https://fonts.googleapis.com/css2?family=Protest+Riot&display=swap');
+* {
+    padding: ;
+    margin: ;
+}
 
 body {
-    background: #222;
+    background:rgb(36, 36, 36);
+}
+
+#block, 
+.block {
+    background: rebeccapurple;
     color: white;
-}
+    width: 100px;
+    height: 200px;
+    border: 4px dashed black;
+    border-left: 0;
+    border-right: 10px solid rgb(100, 0, 146);
+    border-radius: 15px 40px 50px 25px;
+    border-bottom-right-radius: 90;
+    opacity: 0.9;
+    /*margin: 20px 50px 100px 150px;*/
+    margin-left: 5px;
 
-p.main-text {
-    color: wheat;
-    text-align: center;
-    font-size: 27px;
-    font-style: italic;
-    font-weight: bold;
-    text-transform: capitalize;
-    line-height: 60px;
-    word-spacing: 4px;
-    letter-spacing: 2px;
-    font-family: 'Protest Riot';
-}
+    padding: 10px 20px;
 
-p.main-text>b {
-    font-style: normal;
-    font-weight: lighter;
-    text-decoration: underline;
-    text-decoration-color: red;
-    color: red;
-    cursor: pointer;
+    display: table;
 }
