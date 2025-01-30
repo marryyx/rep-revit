@@ -38,9 +38,9 @@ const PLAN_PRICE_TWO = {
     }
 };
 
-const clearSelectTab = () => {
-    tabs.forEach(element => {
-        element.classList.remove('--is-active');
+const clearTabAndCard = (element, newClass) => {
+    element.forEach(item => {
+        item.classList.remove(newClass);
     });
 };
 
@@ -54,7 +54,7 @@ const selectTabContent = (name, content, classHide) =>
 
 tabs.forEach(element => {
     element.addEventListener("click", () => {
-        clearSelectTab();
+        clearTabAndCard(tabs, '--is-active');
         element.classList.add('--is-active');
         const tabNane = element.dataset.tab;
 
@@ -62,12 +62,6 @@ tabs.forEach(element => {
         selectTabContent(tabNane, tabFooterContent, '--footer-hide');
     });
 });
-
-const clearSelectCard = () => {
-    cardAll.forEach(element => {
-        element.classList.remove('--is-select');
-    });
-};
 
 const updatePrice = (key) => {
     const price = PLAN_PRICE[key].price;
@@ -93,7 +87,7 @@ cardAll.forEach(element => {
     updateContentOfPlan(element);
 
     element.addEventListener("click", () => {
-        clearSelectCard();
+        clearTabAndCard(cardAll, '--is-select');
 
         updatePrice(element.dataset.select);
 

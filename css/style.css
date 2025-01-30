@@ -253,7 +253,7 @@ body {
         }
     }
 
-    & .--btn-buy:hover{
+    & .--btn-buy:hover {
         border: 1px solid rgb(139, 85, 152);
     }
 
