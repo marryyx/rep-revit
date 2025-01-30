@@ -168,6 +168,10 @@
     overflow-y: auto;
     overflow-x: hidden;
 
+    &.--full {
+        height: 100%;
+    }
+
     @media (max-width: 730px) {
         height: 100%;
     }
