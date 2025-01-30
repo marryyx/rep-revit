@@ -36,7 +36,7 @@
 .header__burger {
     position: relative;
 
-    margin-right: 24px;
+    margin: 10px 24px 0 0;
 
     font-size: 20px;
     color: var(--color-light);
@@ -50,7 +50,8 @@
 
     &::after {
         position: absolute;
-        top: 50%;
+        top: 0;
+        bottom: 50%;
         right: -12px;
 
         width: 2px;
@@ -59,7 +60,6 @@
         content: '';
 
         background: var(--color-light-op-40);
-        transform: translate(0, -50%);
     }
 
     &.--active {
