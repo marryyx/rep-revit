@@ -1,71 +1,35 @@
-@import url('https://fonts.googleapis.com/css2?family=Protest+Riot&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Protest+Strike&display=swap');
 
 body {
-    padding: 50px 100px;
-    background: rgb(53, 53, 53);
-    font-family: 'Protest Riot';
-    font-size: 20px;
-    font-weight: bold;
+ background: #222;
+ color: white;
+ font-size: 20px;
+ font-family: '';
 }
 
-.item {
-    border: 1px solid black;
-    background: #555555;
-    color: #eeeeee;
+.text {
+    columns: 2 200px;
+    column-gap: 50px;
+    column-rule: 7px dashed purple;
+
+    /*column-count: 3;
+    column-fill: balance;
+    column-width: 200px;
+    columns: 2 200px;*/ 
+}
+
+.text h2 {
+    background-color: purple;
     padding: 15px;
+    color: aliceblue;
+    margin: 0 20px;
+    column-span: all;
 }
 
-.box {
-    display: grid;
-    grid-auto-columns: 200px;
-    grid-template: 100px 200px 150px / 400px 400px 400px;
-    row-gap: 0px;
-    gap: 10px;
-    grid-auto-flow: dense;
+span {
+    color: red;
 }
 
-.item:first-of-type {
-    grid-column: 1/3;
-    grid-row: 1/span 2;
+p {
+    break-inside: avoid;
 }
-
-.item:nth-of-type(2) {
-    grid-column: span 2;
-}
-
-.item:nth-of-type(7) {
-    grid-column: span 2/4;
-}
-
-
-/*.wrapper {
-    display: grid;
-    grid-template-rows: repeat(3, 100px);
-    grid-template-areas: 
-    "header header header"
-    "main main aside"
-    "footer footer footer";
-}
-
-.element {
-    border: 1px solid black;
-}
-
-
-.header {
-    grid-area: header;
-}
-
-
-.main {
-    grid-area: main;
-}
-
-.aside {
-    grid-area: aside;
-}
-
-.footer {
-    grid-area: footer;
-}*/
