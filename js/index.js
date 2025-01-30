@@ -122,3 +122,18 @@ const sqrtNum = document.querySelector('.math__sqrt');
 const sqrtValue = Math.sqrt(9);
 // const sqrtValue = Math.sqrt(-9); - будет выводить: Nan
 sqrtNum.innerHTML = sqrtValue;
+
+//////////////////////////////////////////////////////////
+
+const someString = document.querySelector('.bottom__string');
+
+function replaceNumbers(str) {
+    const regex = /\d+/g; 
+    return str.replace(regex, '&');
+};
+
+let str = "У меня есть 10 грн и 70 коп.";
+let replaceStr = replaceNumbers(str);
+
+someString.innerHTML = replaceStr;
+

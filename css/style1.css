@@ -3,6 +3,7 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 button {
@@ -167,4 +168,27 @@ body {
     margin-left: 20px;
     font-size: 16px;
     gap: 40px;
+}
+
+.bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+    padding: 48px 0;
+    font-family: "Rubik", sans-serif;
+
+    & .bottom__string {
+        color: rgb(251, 234, 110);
+        font-weight: 800;
+        font-size: 24px;
+    }
+}
+
+.bottom__top {
+    padding: 24px 0 48px;
+    text-align: center;
+    color: white;
+    font-size: 28px;
+    font-weight: 600;
 }
